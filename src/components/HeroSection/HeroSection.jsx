@@ -14,31 +14,19 @@ const HeroSection = () => {
         </p>
 
         <button
-          class="btn2 mt-12 px-10 py-6 relative border uppercase font-semibold tracking-wider leading-none overflow-hidden  bg-[#070B39] rounded-md text-white"
+          className="btn2 mt-12 px-10 py-6 relative border uppercase font-semibold tracking-wider leading-none overflow-hidden  bg-[#070B39] rounded-md text-white"
           type="button"
         >
-          <span class="absolute inset-0 bg-yellow-500"></span>
-          <span class="absolute inset-0 flex justify-center items-center font-bold">
+          <span className="absolute inset-0 bg-yellow-500"></span>
+          <span className="absolute inset-0 flex justify-center items-center font-bold">
             Explore Destinations
           </span>
           Explore Destinations
         </button>
       </div>
-      {/* <div className="h-screen bg-[url('/bg_hero.png')] bg-center bg-cover bg-no-repeat mt-[-120px]">
-      </div> */}
-      {/* <div className="h-screen bg-[url('/bg_hero.png')] bg-center bg-cover bg-no-repeat mt-[-120px] relative">
-        <div className="">
-          <Image
-            src="/bus.png"
-            alt="Running bus"
-            width={600}
-            height={600}
-            className="absolute right-20 bottom-20"
-          />
-        </div>
-      </div> */}
+  
 
-      <div className="h-screen bg-[url('/bg_hero.png')] bg-center bg-cover bg-no-repeat mt-[-120px] relative">
+      <div className="h-screen bg-[url('/bg_hero.png')] bg-center bg-cover bg-no-repeat mt-[-120px] relative -z-10">
         <div className="animate-bus absolute right-20 bottom-36">
           <Image
             src="/bus.png"
