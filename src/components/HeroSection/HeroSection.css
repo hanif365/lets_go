@@ -1,0 +1,27 @@
+.btn2 span:first-child {
+  transform: translateY(-101%);
+  transition: transform 0.3s ease-in;
+}
+.btn2:hover span {
+  transform: translateY(0);
+}
+
+/* If we need horizontally moved then just use X instead of Y */
+
+@keyframes busAnimation {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .animate-bus {
+    animation: busAnimation 5s infinite;
+  }
+  
+  
+  
+  
+  
