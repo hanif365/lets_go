@@ -85,7 +85,7 @@ const UpcomingEvents = () => {
   };
 
   return (
-    <div className="mt-80 text-center">
+    <div className="mt-96 text-center">
       <p className="text-base md:text-lg lg:text-xl">
         Check Our Best Promotional Tour
       </p>
@@ -95,17 +95,18 @@ const UpcomingEvents = () => {
       <Slider {...settings}>
         {eventsData.map((event, index) => (
           <div key={index} className="py-10 md:py-20">
-            <div className="bg-[#070B39] max-w-sm rounded-md shadow-lg mx-auto group/card cursor-pointer">
+            {/* <div className="bg-[#1A2D6D] max-w-sm rounded-md shadow-lg mx-auto group/card"> */}
+            <div className="bg-[#ebeaea60] max-w-sm rounded-md shadow-lg mx-auto group/card">
               {" "}
               {/* Add mx-auto to center the card */}
               <div className="flex justify-center items-center leading-none">
                 <img
                   src={event.imageSrc}
                   alt="pic"
-                  className="h-40 w-60 rounded-md shadow-2xl mt-6 transform -translate-y-12 group-hover/card:-translate-y-4 transition duration-700"
+                  className="h-40 w-60 rounded-md shadow-2xl mt-6  transform -translate-y-12 transition duration-700"
                 />
               </div>
-              <div className="py-3 text-white">
+              <div className="py-3 text-black font-bold">
                 <div className="flex justify-around text-xl">
                   <p className="">{event.place}</p>
                   <p className="">{event.cost}</p>
@@ -114,7 +115,10 @@ const UpcomingEvents = () => {
                   <p className="">{event.date} <span className="ms-5">{event.days}</span> </p>
                   {/* <p className="">{event.days}</p> */}
                 </div>
-                <p className="text-xs tracking-tighter mx-[2rem]">{event.description}</p>
+                <div>
+                  
+                </div>
+                {/* <p className="text-xs tracking-tighter mx-[2rem]">{event.description}</p> */}
               </div>
             </div>
           </div>
