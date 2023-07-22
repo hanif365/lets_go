@@ -17,7 +17,7 @@ const HeroSection = () => {
           className="explore_btn mt-12 px-10 py-6 relative border uppercase font-semibold tracking-wider leading-none overflow-hidden  bg-[#070B39] rounded-md text-white"
           type="button"
         >
-          <span className="absolute inset-0 bg-yellow-500"></span>
+          <span className="absolute inset-0 bg-yellow-400"></span>
           <span className="absolute inset-0 flex justify-center items-center font-bold">
             Explore Destinations
           </span>

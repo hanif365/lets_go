@@ -4,7 +4,7 @@ import "./AboutUs.css";
 
 const AboutUs = () => {
   return (
-    <div className="mt-40 lg:px-20 2xl:px-60">
+    <div className="mt-24 lg:mt-40 lg:px-20 2xl:px-60">
       <div className="flex flex-col lg:flex-row justify-between">
         <div className="flex-1 p-10 lg:p-0">
           <Image
@@ -30,7 +30,7 @@ const AboutUs = () => {
 
           <div className="flex justify-center lg:justify-normal">
             <button
-              className="text-[14px] lg:text-[16px] about_btn mt-12 px-10 py-6 relative border uppercase font-semibold tracking-wider leading-none overflow-hidden bg-yellow-500 rounded-md text-white"
+              className="text-[14px] lg:text-[16px] about_btn mt-12 px-10 py-6 relative border uppercase font-semibold tracking-wider leading-none overflow-hidden bg-yellow-400 rounded-md text-white"
               type="button"
             >
               <span className="absolute inset-0 bg-[#070B39]"></span>

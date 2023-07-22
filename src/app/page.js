@@ -1,6 +1,7 @@
 import AboutUs from "@/components/AboutUs/AboutUs";
 import Faq from "@/components/Faq/Faq";
 import HeroSection from "@/components/HeroSection/HeroSection";
+import Testimonials from "@/components/Testimonials/Testimonials";
 import UpcomingEvents from "@/components/UpcomingEvents/UpcomingEvents";
 import Image from "next/image";
 
@@ -10,6 +11,7 @@ export default function Home() {
       <HeroSection />
       <UpcomingEvents />
       <AboutUs />
+      <Testimonials />
       <Faq />
     </main>
   );

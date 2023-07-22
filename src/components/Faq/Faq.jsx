@@ -37,9 +37,9 @@ const Faq = () => {
   };
 
   return (
-    <div className="mt-40 lg:px-20 2xl:px-60">
+    <div className="mt-24 lg:mt-40 lg:px-20 2xl:px-60">
       <div className="text-center pb-10">
-        <p className="text-base md:text-lg lg:text-xl">Faq</p>
+        <p className="text-base md:text-lg lg:text-xl">FAQ</p>
         <h1 className="text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl font-extrabold mt-4 mb-10">
           Full range of travel service
         </h1>

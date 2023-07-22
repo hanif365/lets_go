@@ -54,6 +54,7 @@ const UpcomingEvents = () => {
     dots: true,
     arrows: false,
     infinite: true,
+    pauseOnHover: false,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
@@ -85,7 +86,7 @@ const UpcomingEvents = () => {
   };
 
   return (
-    <div className="mt-96 text-center">
+    <div className="mt-64 lg:mt-96 text-center">
       <p className="text-base md:text-lg lg:text-xl">
         Check Our Best Promotional Tour
       </p>
