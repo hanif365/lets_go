@@ -95,10 +95,10 @@ const Faq = () => {
         <div className="flex-1 p-10 lg:p-0">
           <Image
             src="/faq_img.png"
-            alt="Running bus"
+            alt="Faq Image"
             width={600}
             height={600}
-            className="mx-auto "
+            className="mx-auto"
           />
         </div>
       </div>

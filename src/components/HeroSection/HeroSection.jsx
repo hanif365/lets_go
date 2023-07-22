@@ -14,7 +14,7 @@ const HeroSection = () => {
         </p>
 
         <button
-          className="btn2 mt-12 px-10 py-6 relative border uppercase font-semibold tracking-wider leading-none overflow-hidden  bg-[#070B39] rounded-md text-white"
+          className="explore_btn mt-12 px-10 py-6 relative border uppercase font-semibold tracking-wider leading-none overflow-hidden  bg-[#070B39] rounded-md text-white"
           type="button"
         >
           <span className="absolute inset-0 bg-yellow-500"></span>
@@ -24,7 +24,6 @@ const HeroSection = () => {
           Explore Destinations
         </button>
       </div>
-  
 
       <div className="h-screen bg-[url('/bg_hero.png')] bg-center bg-cover bg-no-repeat mt-[-120px] relative -z-10">
         <div className="animate-bus absolute right-20 bottom-36">
@@ -37,7 +36,6 @@ const HeroSection = () => {
           />
         </div>
       </div>
-
     </div>
   );
 };

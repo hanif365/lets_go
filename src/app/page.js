@@ -9,7 +9,7 @@ export default function Home() {
     <main className="pt-48 2xl:pt-60">
       <HeroSection />
       <UpcomingEvents />
-      {/* <AboutUs /> */}
+      <AboutUs />
       <Faq />
     </main>
   );

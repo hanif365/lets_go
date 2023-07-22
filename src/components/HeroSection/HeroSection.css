@@ -1,8 +1,8 @@
-.btn2 span:first-child {
+.explore_btn span:first-child {
   transform: translateY(-101%);
   transition: transform 0.3s ease-in;
 }
-.btn2:hover span {
+.explore_btn:hover span {
   transform: translateY(0);
 }
 
