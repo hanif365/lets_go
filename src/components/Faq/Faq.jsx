@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { FaCaretDown } from "react-icons/fa6";
+import "./Faq.css";
 
 const faqData = [
   {
@@ -101,6 +102,18 @@ const Faq = () => {
             className="mx-auto"
           />
         </div>
+      </div>
+      <div className="flex justify-center">
+        <button
+          className="text-[14px] lg:text-[16px] faq_btn mt-12 px-10 py-6 relative border uppercase font-semibold tracking-wider leading-none overflow-hidden bg-yellow-400 rounded-md text-white"
+          type="button"
+        >
+          <span className="absolute inset-0 bg-[#070B39]"></span>
+          <span className="absolute inset-0 flex justify-center items-center font-bold">
+            Book Your Destination
+          </span>
+          Book Your Destination
+        </button>
       </div>
     </div>
   );
