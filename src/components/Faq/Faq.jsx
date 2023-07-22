@@ -37,7 +37,13 @@ const Faq = () => {
   };
 
   return (
-    <div className="mt-60 lg:px-20 2xl:px-60">
+    <div className="mt-40 lg:px-20 2xl:px-60">
+      <div className="text-center pb-10">
+        <p className="text-base md:text-lg lg:text-xl">Faq</p>
+        <h1 className="text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl font-extrabold mt-4 mb-10">
+          Full range of travel service
+        </h1>
+      </div>
       <div className="flex flex-col lg:flex-row justify-between">
         <div className="flex-1">
           {/* Accordion start */}
@@ -54,7 +60,7 @@ const Faq = () => {
                     <div
                       className={`${
                         isAccordionOpen(item.id)
-                          ? "text-blue-500 -rotate-180"
+                          ? "text-[#7EA0FF] -rotate-180"
                           : "text-gray-500"
                       } h-8 w-8 rounded-full items-center inline-flex justify-center transform transition ease duration-500 absolute left-0 `}
                     >
@@ -63,7 +69,7 @@ const Faq = () => {
                     <div
                       className={`${
                         isAccordionOpen(item.id)
-                          ? "text-blue-500"
+                          ? "text-[#7EA0FF]"
                           : "text-gray-500"
                       } font-bold uppercase transition ease duration-500 ml-8`}
                     >
