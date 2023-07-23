@@ -72,8 +72,8 @@ function Navbar() {
             >
               <ul className="h-screen md:h-auto items-center justify-center md:flex">
                 <li
-                  className={`text-xl text-black font-bold py-2 md:px-6 text-center border-b-2 md:border-b-0 hover:text-purple-600 transition duration-700 ease-in-out ${
-                    activeMenu === "Home" ? "text-purple-600" : ""
+                  className={`text-xl font-bold py-2 md:px-6 text-center border-b-2 md:border-b-0 hover:text-[#7EA0FF] transition duration-700 ease-in-out ${
+                    activeMenu === "Home" ? "text-[#7EA0FF]" : "text-[#00095E]"
                   }`}
                 >
                   <Link
@@ -90,8 +90,8 @@ function Navbar() {
                   </Link>
                 </li>
                 <li
-                  className={`text-xl text-black font-bold py-2 md:px-6 text-center border-b-2 md:border-b-0 hover:text-purple-600 transition duration-700 ease-in-out ${
-                    activeMenu === "About" ? "text-purple-600" : ""
+                  className={`text-xl font-bold py-2 md:px-6 text-center border-b-2 md:border-b-0 hover:text-[#7EA0FF] transition duration-700 ease-in-out ${
+                    activeMenu === "About" ? "text-[#7EA0FF]" : "text-[#00095E]"
                   }`}
                 >
                   <Link
@@ -108,8 +108,8 @@ function Navbar() {
                   </Link>
                 </li>
                 <li
-                  className={`text-xl text-black font-bold py-2 px-6 text-center border-b-2 md:border-b-0 hover:text-purple-600 transition duration-700 ease-in-out ${
-                    activeMenu === "Blogs" ? "text-purple-600" : ""
+                  className={`text-xl font-bold py-2 px-6 text-center border-b-2 md:border-b-0 hover:text-[#7EA0FF] transition duration-700 ease-in-out ${
+                    activeMenu === "Blogs" ? "text-[#7EA0FF]" : "text-[#00095E]"
                   }`}
                 >
                   <Link
@@ -126,8 +126,10 @@ function Navbar() {
                   </Link>
                 </li>
                 <li
-                  className={`text-xl text-black font-bold py-2 px-6 text-center border-b-2 md:border-b-0 hover:text-purple-600 transition duration-700 ease-in-out ${
-                    activeMenu === "Contact" ? "text-purple-600" : ""
+                  className={`text-xl text-black font-bold py-2 px-6 text-center border-b-2 md:border-b-0 hover:text-[#7EA0FF] transition duration-700 ease-in-out ${
+                    activeMenu === "Contact"
+                      ? "text-[#7EA0FF]"
+                      : "text-[#00095E]"
                   }`}
                 >
                   <Link
@@ -144,8 +146,10 @@ function Navbar() {
                   </Link>
                 </li>
                 <li
-                  className={`text-xl text-black font-bold py-2 px-6 text-center border-b-2 md:border-b-0 hover:text-purple-600 transition duration-700 ease-in-out ${
-                    activeMenu === "Projects" ? "text-purple-600" : ""
+                  className={`text-xl text-black font-bold py-2 px-6 text-center border-b-2 md:border-b-0 hover:text-[#7EA0FF] transition duration-700 ease-in-out ${
+                    activeMenu === "Projects"
+                      ? "text-[#7EA0FF]"
+                      : "text-[#00095E]"
                   }`}
                 >
                   <Link
