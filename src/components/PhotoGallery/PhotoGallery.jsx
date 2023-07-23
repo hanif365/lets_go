@@ -10,29 +10,29 @@ import { FaInstagram } from "react-icons/fa6";
 const PhotoGallery = () => {
   const photoData = [
     {
-      imageSrc: "/photo_gallery1.jpg",
+      imageSrc: "https://i.ibb.co/cYygt9n/photo-gallery1.jpg",
     },
 
     {
-      imageSrc: "/photo_gallery2.jpg",
+      imageSrc: "https://i.ibb.co/L9z6qtw/photo-gallery2.jpg",
     },
 
     {
-      imageSrc: "/photo_gallery3.jpg",
+      imageSrc: "https://i.ibb.co/VSPHqSg/photo-gallery3.jpg",
     },
 
     {
-      imageSrc: "/photo_gallery4.jpg",
+      imageSrc: "https://i.ibb.co/0KdxwCF/photo-gallery4.jpg",
     },
 
     {
-      imageSrc: "/photo_gallery5.jpg",
+      imageSrc: "https://i.ibb.co/bNyPBxX/photo-gallery5.jpg",
     },
     {
-      imageSrc: "/photo_gallery1.jpg",
+      imageSrc: "https://i.ibb.co/cYygt9n/photo-gallery1.jpg",
     },
     {
-      imageSrc: "/photo_gallery2.jpg",
+      imageSrc: "https://i.ibb.co/L9z6qtw/photo-gallery2.jpg",
     },
   ];
 
@@ -85,7 +85,6 @@ const PhotoGallery = () => {
             />
             <FaInstagram
               style={{ width: "50px", height: "50px", color: "#ffffff" }}
-            //   className="cursor-pointer absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 invisible group-hover/photo:visible"
               className="cursor-pointer absolute top-1/2 left-1/2 transform -translate-x-1/2  invisible group-hover/photo:visible transition-all ease-in duration-300 translate-y-[-10px] group-hover/photo:translate-y-[0px]"
             />
           </div>
