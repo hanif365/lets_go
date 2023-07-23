@@ -1,5 +1,4 @@
 import React from "react";
-import "./Footer.css";
 import Image from "next/image";
 import {
   FaLinkedin,
@@ -11,11 +10,11 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div className="mt-24 bg-[#172861] lg:px-20 2xl:px-60 pt-20">
-      <div className="flex flex-col lg:flex-row ">
+    <div className="mt-24 bg-[#172861] px-10 py-20 flex justify-center">
+      <div className="flex space-x-5">
         {/* first part */}
-        <div className="flex-auto lg:w-32 px-10 lg:px-0">
-          <div className="flex ">
+        <div className="flex-1">
+          <div className="flex">
             <Image
               src="/logo.png"
               width={80}
@@ -27,11 +26,10 @@ const Footer = () => {
               Let's Go
             </h2>
           </div>
-          <p className="text-[#8A8FBE] py-8 lg:pr-10 leading-8">
+          <p className="text-[#8A8FBE] py-8">
             Land behold it created good saw after she'd Our set living. Signs
             midst dominion creepeth morning laboris nisi ufsit aliquip.
           </p>
-
           {/* social links */}
           <div className="flex space-x-5">
             <Link
@@ -78,7 +76,7 @@ const Footer = () => {
         </div>
 
         {/* second part */}
-        <div className="flex-1 p-10 lg:p-0">
+        <div className="flex-1">
           <h4 className="text-white text-lg font-bold pb-5">Navigation</h4>
           <ul className="text-[#8A8FBE] space-y-4">
             <li>
@@ -125,8 +123,9 @@ const Footer = () => {
             </li>
           </ul>
         </div>
+
         {/* third part */}
-        <div className="flex-1 p-10 lg:p-0">
+        <div className="flex-1">
           <h4 className="text-white text-lg font-bold pb-5">Service</h4>
           <ul className="text-[#8A8FBE] space-y-4">
             <li>
@@ -163,14 +162,15 @@ const Footer = () => {
             </li>
           </ul>
         </div>
+
         {/* fourth part */}
-        <div className="flex-1 px-10 lg:px-0">
+        <div className="flex-1">
           <h4 className="text-white text-lg font-bold pb-5">Contact Us</h4>
           <ul className="text-[#8A8FBE] space-y-4">
             <li>
               <Link
                 href="/"
-                className="transition-all ease-out duration-300 pointer-events-none"
+                className="hover:text-white hover:underline hover:underline-offset-4 transition-all ease-out duration-300"
               >
                 76/A, Green Lane, Dhanmondi, NYC
               </Link>
@@ -178,7 +178,7 @@ const Footer = () => {
             <li>
               <Link
                 href="/"
-                className="transition-all ease-out duration-300 pointer-events-none"
+                className="hover:text-white hover:underline hover:underline-offset-4 transition-all ease-out duration-300"
               >
                 m.a.hanif380@gmail.com
               </Link>
@@ -186,7 +186,7 @@ const Footer = () => {
             <li>
               <Link
                 href="/"
-                className="text-yellow-400 transition-all ease-out duration-300 pointer-events-none"
+                className="hover:text-white hover:underline hover:underline-offset-4 transition-all ease-out duration-300"
               >
                 +10 (78) 738-9083
               </Link>
@@ -194,18 +194,6 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <p className="text-[#8A8FBE] text-sm text-center pt-20 pb-6 px-2">
-        Copyright &copy;{new Date().getFullYear()} All rights reserved | Build
-        by
-        <Link
-          href="https://hanif.netlify.app/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-yellow-400 pl-2"
-        >
-          M.A.Hanif
-        </Link>
-      </p>
     </div>
   );
 };
