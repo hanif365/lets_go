@@ -21,7 +21,7 @@ const Footer = () => {
               width={80}
               height={80}
               alt="logo"
-              className="h-16"
+              className="h-16 animate_rocket_footer"
             />
             <h2 className="self-center text-2xl font-bold text-white">
               Let's Go
@@ -40,8 +40,8 @@ const Footer = () => {
               rel="noopener noreferrer"
             >
               <FaSquareTwitter
-                style={{ width: "25px", height: "25px", color: "#ffffff" }}
-                className="cursor-pointer"
+                style={{ width: "25px", height: "25px" }}
+                className="cursor-pointer text-[#8A8FBE] hover:text-white transition-all ease-in-out duration-500"
               />
             </Link>
             <Link
@@ -50,8 +50,8 @@ const Footer = () => {
               rel="noopener noreferrer"
             >
               <FaSquareFacebook
-                style={{ width: "25px", height: "25px", color: "#ffffff" }}
-                className="cursor-pointer"
+                style={{ width: "25px", height: "25px" }}
+                className="cursor-pointer text-[#8A8FBE] hover:text-white transition-all ease-in-out duration-500"
               />
             </Link>
             <Link
@@ -60,8 +60,8 @@ const Footer = () => {
               rel="noopener noreferrer"
             >
               <FaLinkedin
-                style={{ width: "25px", height: "25px", color: "#ffffff" }}
-                className="cursor-pointer"
+                style={{ width: "25px", height: "25px" }}
+                className="cursor-pointer text-[#8A8FBE] hover:text-white transition-all ease-in-out duration-500"
               />
             </Link>
             <Link
@@ -70,8 +70,8 @@ const Footer = () => {
               rel="noopener noreferrer"
             >
               <FaSquarePinterest
-                style={{ width: "25px", height: "25px", color: "#ffffff" }}
-                className="cursor-pointer"
+                style={{ width: "25px", height: "25px" }}
+                className="cursor-pointer text-[#8A8FBE] hover:text-white transition-all ease-in-out duration-500"
               />
             </Link>
           </div>

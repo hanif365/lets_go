@@ -69,7 +69,7 @@ const Testimonials = () => {
           {peoplesData.map((people, index) => (
             <div key={index} className="py-5 md:py-10">
               <div>
-                <h3 className="text-2xl leading-10 px-5 lg:px-36 ">
+                <h3 className="text-lg lg:text-2xl lg:leading-10 px-5 lg:px-36 ">
                   " {people.description} "
                 </h3>
                 <div className="flex justify-center pt-5">

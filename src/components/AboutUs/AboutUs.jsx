@@ -16,7 +16,7 @@ const AboutUs = () => {
           />
         </div>
 
-        <div className="flex-1 self-center px-10 lg:px-20 lg:py-10">
+        <div className="flex-1 self-center px-10 lg:px-20 lg:py-10 text-center lg:text-left">
           <p className="text-base md:text-lg lg:text-xl">About Us</p>
           <h1 className="text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl font-extrabold mt-4 mb-10">
             Get ready for real time adventure

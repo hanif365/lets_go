@@ -1,0 +1,21 @@
+/* Rocket animation */
+@keyframes rocketAnimationsFooter {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-10px);
+    }
+    25%,
+    75% {
+      transform: translateX(5px);
+    }
+  }
+  
+  .animate_rocket_footer {
+    animation-name: rocketAnimationsFooter;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
