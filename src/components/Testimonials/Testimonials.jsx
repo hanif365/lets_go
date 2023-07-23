@@ -66,23 +66,23 @@ const Testimonials = () => {
       </h1>
       <div>
         <Slider {...settings}>
-          {peoplesData.map((event, index) => (
+          {peoplesData.map((people, index) => (
             <div key={index} className="py-5 md:py-10">
               <div>
                 <h3 className="text-2xl leading-10 px-5 lg:px-36 ">
-                  " {event.description} "
+                  " {people.description} "
                 </h3>
                 <div className="flex justify-center pt-5">
                   <Image
-                    src={event.imageSrc}
+                    src={people.imageSrc}
                     alt="Faq Image"
                     width={70}
                     height={70}
                     className="rounded-full"
                   />
                   <div className="pl-5 self-center  text-start">
-                    <h5 className="font-bold text-xl">{event.name}</h5>
-                    <h6>{event.designation}</h6>
+                    <h5 className="font-bold text-xl">{people.name}</h5>
+                    <h6>{people.designation}</h6>
                   </div>
                 </div>
               </div>

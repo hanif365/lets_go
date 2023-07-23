@@ -1,6 +1,7 @@
 import AboutUs from "@/components/AboutUs/AboutUs";
 import Faq from "@/components/Faq/Faq";
 import HeroSection from "@/components/HeroSection/HeroSection";
+import PhotoGallery from "@/components/PhotoGallery/PhotoGallery";
 import Testimonials from "@/components/Testimonials/Testimonials";
 import Thumbnails from "@/components/Thumbnails/Thumbnails";
 import UpcomingEvents from "@/components/UpcomingEvents/UpcomingEvents";
@@ -15,6 +16,7 @@ export default function Home() {
       <Testimonials />
       <Faq />
       <Thumbnails />
+      <PhotoGallery />
     </main>
   );
 }

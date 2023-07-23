@@ -8,9 +8,10 @@ import "slick-carousel/slick/slick-theme.css";
 const UpcomingEvents = () => {
   const eventsData = [
     {
-      imageSrc:"/coxbazar.jpg",
+      imageSrc: "/coxbazar.jpg",
       place: "Cox Bazar",
-      description: "When it is your time When it is your time When it is your time When it is your time When it is your time When it is your time",
+      description:
+        "When it is your time When it is your time When it is your time When it is your time When it is your time When it is your time",
       date: "16 Dec - 19 Dec",
       days: "3 days",
       cost: "$ 300",
@@ -47,7 +48,6 @@ const UpcomingEvents = () => {
       days: "3 days",
       cost: "$ 300",
     },
-    
   ];
 
   const settings = {
@@ -98,7 +98,6 @@ const UpcomingEvents = () => {
           <div key={index} className="py-10 md:py-20">
             {/* <div className="bg-[#1A2D6D] max-w-sm rounded-md shadow-lg mx-auto group/card"> */}
             <div className="bg-[#ebeaea60] max-w-sm rounded-md shadow-lg mx-auto group/card">
-              {" "}
               {/* Add mx-auto to center the card */}
               <div className="flex justify-center items-center leading-none">
                 <img
@@ -113,12 +112,12 @@ const UpcomingEvents = () => {
                   <p className="">{event.cost}</p>
                 </div>
                 <div className="flex mx-[3.4rem] text-xs my-3">
-                  <p className="">{event.date} <span className="ms-5">{event.days}</span> </p>
+                  <p className="">
+                    {event.date} <span className="ms-5">{event.days}</span>{" "}
+                  </p>
                   {/* <p className="">{event.days}</p> */}
                 </div>
-                <div>
-                  
-                </div>
+                <div></div>
                 {/* <p className="text-xs tracking-tighter mx-[2rem]">{event.description}</p> */}
               </div>
             </div>
