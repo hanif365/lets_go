@@ -9,12 +9,42 @@ import Image from "next/image";
 function Navbar() {
   const [navbar, setNavbar] = useState(false);
   const [activeMenu, setActiveMenu] = useState("Home");
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [showShadow, setShowShadow] = useState(false);
 
   console.log(activeMenu);
 
+  const changeBackgroundNavbar = () => {
+    if (window.scrollY >= 800) {
+      setShowNavbar(true);
+      setShowShadow(true);
+    } else if (window.scrollY <= 20) {
+      setShowNavbar(true);
+      setShowShadow(false);
+    } else {
+      setShowNavbar(false);
+    }
+    console.log("showNavbar", showNavbar);
+    console.log("showShadow", showShadow);
+    // console.log(window.scrollY);
+  };
+
+  window.addEventListener("scroll", changeBackgroundNavbar);
+
   return (
     <div>
-      <nav className="w-full bg-white fixed top-0 left-0 right-0 z-10">
+      {/* <nav className={showNavbar ? 'navbar showNavbar navbar-expand-lg fixed-top navbar-light' : 'navbar navbar-expand-lg fixed-top navbar-light'} style={{ backgroundColor: navBg }}></nav> */}
+
+      <nav
+        className={`${
+          showNavbar
+            ? showShadow
+              ? "translate-y-0 w-full bg-white fixed top-0 left-0 right-0 z-10 shadow-md"
+              : "translate-y-0 w-full bg-white fixed top-0 left-0 right-0 z-10"
+            : "w-full bg-white top-0 left-0 right-0 z-10 fixed -translate-y-full"
+        }  transform transition-all duration-1000 `}
+      >
+        {/* <nav className="w-full bg-white fixed top-0 left-0 right-0 z-10"> */}
         <div className="justify-between px-4 mx-auto lg:max-w-7xl 2xl:max-w-screen-2xl md:items-center md:flex md:px-8">
           <div>
             <div className="flex items-center justify-between py-3 md:py-5 md:block">
