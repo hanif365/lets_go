@@ -24,8 +24,9 @@ function Navbar() {
     } else {
       setShowNavbar(false);
     }
-    console.log("showNavbar", showNavbar);
-    console.log("showShadow", showShadow);
+
+    // console.log("showNavbar", showNavbar);
+    // console.log("showShadow", showShadow);
     // console.log(window.scrollY);
   };
 
@@ -39,9 +40,9 @@ function Navbar() {
         className={`${
           showNavbar
             ? showShadow
-              ? "translate-y-0 w-full bg-white fixed top-0 left-0 right-0 z-10 shadow-md"
+              ? "lg:translate-y-0 w-full bg-white fixed top-0 left-0 right-0 z-10 shadow-md"
               : "translate-y-0 w-full bg-white fixed top-0 left-0 right-0 z-10"
-            : "w-full bg-white top-0 left-0 right-0 z-10 fixed -translate-y-full"
+            : "w-full bg-white top-0 left-0 right-0 z-10 fixed lg:-translate-y-full"
         }  transform transition-all duration-1000 `}
       >
         {/* <nav className="w-full bg-white fixed top-0 left-0 right-0 z-10"> */}
