@@ -86,7 +86,7 @@ const UpcomingEvents = () => {
   };
 
   return (
-    <div className="mt-64 lg:mt-96 text-center">
+    <div className="mt-64 lg:mt-96 text-center" id="upcomingEvents">
       <p className="text-base md:text-lg lg:text-xl">
         Check Our Best Promotional Tour
       </p>
