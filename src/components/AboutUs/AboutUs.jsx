@@ -11,7 +11,7 @@ const AboutUs = () => {
       <div className="flex flex-col lg:flex-row justify-between">
         <div className="flex-1 p-10 lg:p-0">
           <Image
-            src="/about_us.png"
+            src="/travellerphoto1.png"
             alt="about us Image"
             width={600}
             height={600}
