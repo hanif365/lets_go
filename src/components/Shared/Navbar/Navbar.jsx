@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaAlignLeft, FaBars, FaEquals, FaXmark } from "react-icons/fa6";
 import "./Navbar.css";
 import Image from "next/image";
@@ -30,7 +30,15 @@ function Navbar() {
     // console.log(window.scrollY);
   };
 
-  window.addEventListener("scroll", changeBackgroundNavbar);
+  useEffect(() => {
+    // Add the event listener on the client-side only
+    window.addEventListener("scroll", changeBackgroundNavbar);
+
+    // Clean up the event listener when the component is unmounted
+    return () => {
+      window.removeEventListener("scroll", changeBackgroundNavbar);
+    };
+  }, []);
 
   return (
     <div>
