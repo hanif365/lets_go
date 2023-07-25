@@ -59,6 +59,7 @@ const UpcomingEvents = () => {
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
+    autoplaySpeed: 5000,
     swipeToSlide: true,
     centerMode: true, // Enable center mode
     centerPadding: "0px", // Adjust padding to center the cards (60px for left and right showing)
@@ -103,7 +104,7 @@ const UpcomingEvents = () => {
                 <img
                   src={event.imageSrc}
                   alt="pic"
-                  className="h-40 w-60 rounded-md shadow-2xl mt-6  transform -translate-y-12 transition duration-700"
+                  className="h-40 w-60 rounded-md shadow-2xl mt-6 group-hover/card:scale-125  transform -translate-y-12 transition duration-700"
                 />
               </div>
               <div className="py-3 text-black font-bold">
