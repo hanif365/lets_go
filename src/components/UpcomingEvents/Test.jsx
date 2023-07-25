@@ -4,6 +4,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Image from "next/image";
 
 const Test = () => {
   const eventsData = [
@@ -87,7 +88,7 @@ const Test = () => {
   };
 
   return (
-    <div className="mt-24 lg:mt-40" id="upcomingEvents">
+    <div className="mt-64 lg:mt-96" id="upcomingEvents">
       <p className="text-base text-center md:text-lg lg:text-xl">
         Check Our Best Promotional Tour
       </p>
@@ -96,24 +97,27 @@ const Test = () => {
       </h1>
       <Slider {...settings}>
         {eventsData.map((event, index) => (
-          <div key={index} className="py-10 md:py-20">
-            <div className="relative ">
+          <div key={index} className="py-5 lg:py-10">
+            <div className="relative cursor-pointer">
               <div className="relative group">
-                <img src="/coxbazar.jpg" alt="Image" className="w-full h-96" />
+                {/* <img src="/coxbazar.jpg" alt="Image" className="w-full h-96" /> */}
+                <Image
+                  src={event.imageSrc}
+                  alt="upcoming event Image"
+                  width={1000}
+                  height={1000}
+                  className="w-full h-[20rem] 2xl:h-[24rem]"
+                />
 
                 <div className="absolute mx-5 bottom-5 text-white group-hover:text-black text-left  transition-all duration-300  z-10">
-                  {/*  */}
                   <p>{event.cost}</p>
                   <p className="text-2xl font-bold">{event.place}</p>
-                  <div className="flex text-base my-3 font-bold">
+                  <div className="flex text-base my-2 font-bold">
                     <p className="">
                       {event.date}{" "}
                       <span className="ms-5 lg:ms-10">{event.days}</span>
                     </p>
                   </div>
-                  {/* <p>Lorem ipsum dolor sit amet.</p> */}
-
-                  {/*  */}
                 </div>
 
                 <div className="absolute bottom-0 left-0 w-full h-0 bg-white origin-bottom transition-all duration-500 group-hover:h-40 opacity-0 group-hover:opacity-100"></div>

@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <main className="pt-48 2xl:pt-60">
       <HeroSection />
-      <UpcomingEvents />
+      {/* <UpcomingEvents /> */}
       <Test />
       <AboutUs />
       <Testimonials />
