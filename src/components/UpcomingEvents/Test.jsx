@@ -5,6 +5,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
+import { FaLocationArrow, FaLocationDot } from "react-icons/fa6";
+import Link from "next/link";
 
 const Test = () => {
   const eventsData = [
@@ -98,7 +100,7 @@ const Test = () => {
       <Slider {...settings}>
         {eventsData.map((event, index) => (
           <div key={index} className="py-5 lg:py-10">
-            <div className="relative cursor-pointer">
+            <div className="relative">
               <div className="relative group">
                 {/* <img src="/coxbazar.jpg" alt="Image" className="w-full h-96" /> */}
                 <Image
@@ -106,13 +108,26 @@ const Test = () => {
                   alt="upcoming event Image"
                   width={1000}
                   height={1000}
-                  className="w-full h-[20rem] 2xl:h-[24rem]"
+                  className="w-full h-[20rem] 2xl:h-[24rem] group-hover:opacity-70 transition-all duration-500"
                 />
 
                 <div className="absolute mx-5 bottom-5 text-white group-hover:text-black text-left  transition-all duration-300  z-10">
                   <p>{event.cost}</p>
-                  <p className="text-2xl font-bold">{event.place}</p>
-                  <div className="flex text-base my-2 font-bold">
+                  <div className="flex space-x-36 2xl:space-x-48">
+                    <div className="flex">
+                      <FaLocationDot
+                        className="self-center text-yellow-500"
+                        style={{ width: "20px", height: "20px" }}
+                      />
+                      <p className="text-xl lg:text-2xl font-bold self-center">
+                        {event.place}
+                      </p>
+                    </div>
+                    <Link href="/about">
+                      <FaLocationArrow className="self-center text-yellow-500 invisible group-hover:visible cursor-pointer transition-all group-hover:delay-300 w-10 h-10 lg:w-14 lg:h-14" />
+                    </Link>
+                  </div>
+                  <div className="flex text-base  font-bold">
                     <p className="">
                       {event.date}{" "}
                       <span className="ms-5 lg:ms-10">{event.days}</span>

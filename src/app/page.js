@@ -6,13 +6,12 @@ import Testimonials from "@/components/Testimonials/Testimonials";
 import Thumbnails from "@/components/Thumbnails/Thumbnails";
 import Test from "@/components/UpcomingEvents/Test";
 import UpcomingEvents from "@/components/UpcomingEvents/UpcomingEvents";
-import Image from "next/image";
 
 export default function Home() {
   return (
     <main className="pt-48 2xl:pt-60">
       <HeroSection />
-      {/* <UpcomingEvents /> */}
+      <UpcomingEvents />
       <Test />
       <AboutUs />
       <Testimonials />
