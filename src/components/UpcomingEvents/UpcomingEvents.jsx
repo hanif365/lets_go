@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 import { FaLocationArrow, FaLocationDot } from "react-icons/fa6";
 import Link from "next/link";
+import upcomingEventsData from '../../data/UpcomingEventsData.json';
 
 const UpcomingEvents = () => {
   const eventsData = [
@@ -98,13 +99,13 @@ const UpcomingEvents = () => {
         Upcoming Events
       </h1>
       <Slider {...settings}>
-        {eventsData.map((event, index) => (
+        {upcomingEventsData.map((event, index) => (
           <div key={index} className="py-5 lg:py-10">
             <div className="relative">
               <div className="relative group">
                 {/* <img src="/coxbazar.jpg" alt="Image" className="w-full h-96" /> */}
                 <Image
-                  src={event.imageSrc}
+                  src={event.locationThumbnailImg}
                   alt="upcoming event Image"
                   width={1000}
                   height={1000}
@@ -120,10 +121,10 @@ const UpcomingEvents = () => {
                         style={{ width: "20px", height: "20px" }}
                       />
                       <p className="text-xl lg:text-2xl font-bold self-center">
-                        {event.place}
+                        {event.eventLocation}
                       </p>
                     </div>
-                    <Link href="/about">
+                    <Link href={`/upcomingevents/${event.eventLocationLink}`}>
                       <FaLocationArrow className="self-center text-yellow-500 invisible group-hover:visible cursor-pointer transition-all group-hover:delay-300 w-10 h-10 lg:w-14 lg:h-14" />
                     </Link>
                   </div>
