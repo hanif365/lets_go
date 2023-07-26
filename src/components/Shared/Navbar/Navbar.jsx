@@ -49,7 +49,7 @@ function Navbar() {
           showNavbar
             ? showShadow
               ? "lg:translate-y-0 w-full bg-white  fixed top-0 left-0 right-0 z-10 shadow-md"
-              : "translate-y-0 w-full bg-transparent  fixed top-0 left-0 right-0 z-10"
+              : "translate-y-0 w-full bg-white lg:bg-transparent  fixed top-0 left-0 right-0 z-10"
             : "w-full bg-white top-0 left-0 right-0 z-10 fixed lg:-translate-y-full"
         }  transform transition-all duration-1000 `}
       >
