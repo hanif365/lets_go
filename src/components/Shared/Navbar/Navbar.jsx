@@ -5,23 +5,12 @@ import { useEffect, useState } from "react";
 import { FaAlignLeft, FaBars, FaEquals, FaXmark } from "react-icons/fa6";
 import "./Navbar.css";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
 
 function Navbar() {
   const [navbar, setNavbar] = useState(false);
   const [activeMenu, setActiveMenu] = useState("Home");
   const [showNavbar, setShowNavbar] = useState(true);
   const [showShadow, setShowShadow] = useState(false);
-
-  const pathname = usePathname();
-  console.log(pathname);
-   // Check if the pathname is not equal to '/'
-   const isNotRootPath = pathname !== '/';
-   console.log(isNotRootPath);
-
-   // Conditionally set the background class based on the pathname
-   const backgroundClass = isNotRootPath ? 'bg-transparent' : 'bg-white';
-   console.log(backgroundClass)
 
   // console.log(activeMenu);
 
