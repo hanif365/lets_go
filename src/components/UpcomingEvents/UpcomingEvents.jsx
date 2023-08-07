@@ -10,49 +10,6 @@ import Link from "next/link";
 import upcomingEventsData from '../../data/UpcomingEventsData.json';
 
 const UpcomingEvents = () => {
-  const eventsData = [
-    {
-      imageSrc: "/coxbazar.jpg",
-      place: "Cox Bazar",
-      description:
-        "When it is your time When it is your time When it is your time When it is your time When it is your time When it is your time",
-      date: "16 Dec - 19 Dec",
-      days: "3 days",
-      cost: "$ 300",
-    },
-    {
-      imageSrc: "/saintmartin.jpg",
-      place: "Saint Martin",
-      description: "When it is your time",
-      date: "16 Dec - 19 Dec",
-      days: "3 days",
-      cost: "$ 300",
-    },
-    {
-      imageSrc: "/saintmartin.jpg",
-      place: "Saint Martin",
-      description: "When it is your time",
-      date: "16 Dec - 19 Dec",
-      days: "3 days",
-      cost: "$ 300",
-    },
-    {
-      imageSrc: "/saintmartin.jpg",
-      place: "Saint Martin",
-      description: "When it is your time",
-      date: "16 Dec - 19 Dec",
-      days: "3 days",
-      cost: "$ 300",
-    },
-    {
-      imageSrc: "/saintmartin.jpg",
-      place: "Saint Martin",
-      description: "When it is your time",
-      date: "16 Dec - 19 Dec",
-      days: "3 days",
-      cost: "$ 300",
-    },
-  ];
 
   const settings = {
     dots: true,
