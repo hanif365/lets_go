@@ -15,16 +15,18 @@ const UpcomingEvents = () => {
     dots: true,
     arrows: false,
     infinite: true,
-    pauseOnHover: false,
-    speed: 500,
+    // pauseOnHover: false,
+    speed: 500,  // Animation speed in milliseconds
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 2000,   // Delay between each auto scroll (in milliseconds)
     swipeToSlide: true,
     centerMode: true, // Enable center mode
     centerPadding: "0px", // Adjust padding to center the cards (60px for left and right showing)
     // lazyLoad: "ondemand",
+    // centerMode: true,
+    // centerPadding: '30px',
     responsive: [
       {
         breakpoint: 1536,
