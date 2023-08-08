@@ -14,7 +14,7 @@ const page = ({ params }) => {
   const filteredEvents = upcomingEventsData.filter(
     (event) => event.eventLocationLink === params?.eventLocation[0]
   );
-  console.log(filteredEvents[0].locationThumbnailImg);
+  // console.log(filteredEvents[0].locationThumbnailImg);
   return (
     <div>
       <UPCHeroSection eventData={filteredEvents} />

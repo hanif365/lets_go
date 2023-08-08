@@ -8,9 +8,5 @@ export const metadata = {
 };
 
 export default function UpcomingEventsLayout({ children }) {
-  return (
-    <section>
-        {children}
-    </section>
-  );
+  return <section>{children}</section>;
 }

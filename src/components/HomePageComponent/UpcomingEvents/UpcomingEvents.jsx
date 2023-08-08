@@ -95,7 +95,7 @@ const UpcomingEvents = () => {
                         {event.eventLocation}
                       </p>
                     </div>
-                    <Link href={`/upcomingevents/${event.eventLocationLink}`}>
+                    <Link href={`/events/${event.eventLocationLink}`}>
                       <FaArrowRightLong className="self-center text-yellow-500 invisible group-hover:visible cursor-pointer transition-all group-hover:delay-300 w-6 h-6 lg:w-10 lg:h-10" />
                       {/* <FaLocationArrow className="self-center text-yellow-500 invisible group-hover:visible cursor-pointer transition-all group-hover:delay-300 w-10 h-10 lg:w-14 lg:h-14" /> */}
                     </Link>

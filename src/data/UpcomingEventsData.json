@@ -1,116 +1,222 @@
 [
-    {
-      "id": "1",
-      "eventLocation": "Cox's Bazar",
-      "eventLocationLink": "Cox'sBazar",
-      "country": "Bangladesh",
-      "locationHeaderImg": "https://i.ibb.co/pxmjtJY/cox-sbazarheroimage.jpg",
-      "locationThumbnailImg": "https://i.ibb.co/fDJMZzM/cox-sbazargalleryimg6.jpg",
-      "gallery": [
-        "https://i.ibb.co/56WDc7K/cox-sbazargalleryimg4.jpg",
-        "https://i.ibb.co/rMQGpJ2/cox-sbazargalleryimg7.jpg",
-        "https://i.ibb.co/d0Gwrd1/cox-sbazargalleryimg2.jpg",
-        "https://i.ibb.co/fDJMZzM/cox-sbazargalleryimg6.jpg",
-        "https://i.ibb.co/qy5jpRB/cox-sbazargalleryimg3.jpg",
-        "https://i.ibb.co/thszGYk/cox-sbazargalleryimg5.jpg",
-        "https://i.ibb.co/mTJ4pgg/cox-sbazargalleryimg1.jpg",
-        "https://i.ibb.co/JdrXbZ9/cox-sbazargalleryimg9.jpg",
-        "https://i.ibb.co/fGwP6Hr/cox-sbazargalleryimg8.jpg"
-      ],
-      "date": "2023-08-15",
-      "days": "5 days",
-      "cost": "1200",
-      "specialOffer": "20% off",
-      "title": "Bangladesh's Serene Coastal Paradise",
-      "locationIntroduction": "Welcome to the vibrant city of New York!",
-      "famousFor": "Iconic landmarks like the Statue of Liberty and Times Square",
-      "eventsDescription": "Enjoy Broadway shows and cultural festivals",
-      "conclusion": "Experience the energy of the city that never sleeps."
-    },
-    {
-      "id": "2",
-      "eventLocation": "Paris",
-      "eventLocationLink": "Paris",
-      "locationHeaderImg": "https://i.ibb.co/d0Gwrd1/cox-sbazargalleryimg2.jpg",
-      "locationThumbnailImg": "https://i.ibb.co/d0Gwrd1/cox-sbazargalleryimg2.jpg",
-      "gallery": ["paris_1.jpg", "paris_2.jpg", "paris_3.jpg"],
-      "date": "2023-09-10",
-      "days": "7 days",
-      "cost": "1800",
-      "specialOffer": "15% off",
-      "title": "Romantic Parisian Getaway",
-      "locationIntroduction": "Bienvenue à Paris, the city of love!",
-      "famousFor": "Eiffel Tower, Louvre Museum, and charming cafes",
-      "eventsDescription": "Stroll along the Seine and enjoy classical concerts",
-      "conclusion": "Create lasting memories in the most romantic city in the world."
-    },
-    {
-      "id": "3",
-      "eventLocation": "Tokyo",
-      "eventLocationLink": "Tokyo",
-      "locationHeaderImg": "https://i.ibb.co/pxmjtJY/cox-sbazarheroimage.jpg",
-      "locationThumbnailImg": "https://i.ibb.co/pxmjtJY/cox-sbazarheroimage.jpg",
-      "gallery": ["tokyo_1.jpg", "tokyo_2.jpg", "tokyo_3.jpg"],
-      "date": "2023-11-05",
-      "days": "6 days",
-      "cost": "2200",
-      "specialOffer": "10% off",
-      "title": "Discover Tokyo's Wonders",
-      "locationIntroduction": "Konnichiwa! Welcome to Tokyo, a blend of tradition and modernity.",
-      "famousFor": "Skyscrapers, ancient temples, and sushi delights",
-      "eventsDescription": "Witness traditional tea ceremonies and sumo wrestling",
-      "conclusion": "Immerse yourself in the unique culture of Tokyo."
-    },
-    {
-      "id": "4",
-      "eventLocation": "London",
-      "eventLocationLink": "London",
-      "locationHeaderImg": "https://i.ibb.co/pxmjtJY/cox-sbazarheroimage.jpg",
-      "locationThumbnailImg": "https://i.ibb.co/pxmjtJY/cox-sbazarheroimage.jpg",
-      "gallery": ["london_1.jpg", "london_2.jpg", "london_3.jpg"],
-      "date": "2023-10-20",
-      "days": "4 days",
-      "cost": "1500",
-      "specialOffer": "25% off",
-      "title": "London Calling",
-      "locationIntroduction": "Welcome to the historic city of London!",
-      "famousFor": "The Tower of London, Buckingham Palace, and vibrant markets",
-      "eventsDescription": "Experience West End theater and classical music concerts",
-      "conclusion": "Explore the rich history and cultural diversity of London."
-    },
-    {
-      "id": "5",
-      "eventLocation": "Sydney",
-      "eventLocationLink": "Sydney",
-      "locationHeaderImg": "https://i.ibb.co/pxmjtJY/cox-sbazarheroimage.jpg",
-      "locationThumbnailImg": "https://i.ibb.co/pxmjtJY/cox-sbazarheroimage.jpg",
-      "gallery": ["sydney_1.jpg", "sydney_2.jpg", "sydney_3.jpg"],
-      "date": "2024-01-05",
-      "days": "8 days",
-      "cost": "2400",
-      "specialOffer": "30% off",
-      "title": "Sydney Adventure",
-      "locationIntroduction": "G'day mate! Welcome to the stunning city of Sydney!",
-      "famousFor": "Sydney Opera House, Bondi Beach, and Sydney Harbour Bridge",
-      "eventsDescription": "Experience exciting water sports and beach festivals",
-      "conclusion": "Discover the laid-back lifestyle and natural beauty of Sydney."
-    },
-    {
-      "id": "6",
-      "eventLocation": "Rome",
-      "eventLocationLink": "Rome",
-      "locationHeaderImg": "https://i.ibb.co/pxmjtJY/cox-sbazarheroimage.jpg",
-      "locationThumbnailImg": "https://i.ibb.co/pxmjtJY/cox-sbazarheroimage.jpg",
-      "gallery": ["rome_1.jpg", "rome_2.jpg", "rome_3.jpg"],
-      "date": "2024-03-15",
-      "days": "6 days",
-      "cost": "2100",
-      "specialOffer": "10% off",
-      "title": "Eternal City Exploration",
-      "locationIntroduction": "Benvenuti a Roma! Welcome to the eternal city!",
-      "famousFor": "The Colosseum, Vatican City, and delicious Italian cuisine",
-      "eventsDescription": "Enjoy art exhibits and open-air opera performances",
-      "conclusion": "Experience the charm and history of the Eternal City."
-    }
-  ]
-  
+  {
+    "id": "1",
+    "eventLocation": "Cox's Bazar",
+    "eventLocationLink": "Cox'sBazar",
+    "country": "Bangladesh",
+    "locationHeaderImg": "https://i.ibb.co/pxmjtJY/cox-sbazarheroimage.jpg",
+    "locationThumbnailImg": "https://i.ibb.co/fGwP6Hr/cox-sbazargalleryimg8.jpg",
+    "gallery": [
+      "https://i.ibb.co/56WDc7K/cox-sbazargalleryimg4.jpg",
+      "https://i.ibb.co/rMQGpJ2/cox-sbazargalleryimg7.jpg",
+      "https://i.ibb.co/d0Gwrd1/cox-sbazargalleryimg2.jpg",
+      "https://i.ibb.co/fDJMZzM/cox-sbazargalleryimg6.jpg",
+      "https://i.ibb.co/qy5jpRB/cox-sbazargalleryimg3.jpg",
+      "https://i.ibb.co/thszGYk/cox-sbazargalleryimg5.jpg",
+      "https://i.ibb.co/mTJ4pgg/cox-sbazargalleryimg1.jpg",
+      "https://i.ibb.co/JdrXbZ9/cox-sbazargalleryimg9.jpg",
+      "https://i.ibb.co/fGwP6Hr/cox-sbazargalleryimg8.jpg"
+    ],
+    "date": "2023-08-15",
+    "days": "5 days",
+    "cost": "1200",
+    "specialOffer": "20% off",
+    "title": "Bangladesh's Serene Coastal Paradise",
+    "locationIntroduction": "Welcome to the vibrant city of New York!",
+    "famousFor": "Iconic landmarks like the Statue of Liberty and Times Square",
+    "eventsMainDescription": "Pristine beaches, longest natural sea stretch in Bangladesh.",
+    "conclusion": "Experience the energy of the city that never sleeps.",
+    "events": [
+      {
+        "eventName": "Sunset Beach Party",
+        "eventDescription": "Don't miss the breathtaking sunsets over the Bay of Bengal. Every evening, you'll be treated to a stunning display of colors that you won't want to miss.",
+        "eventImage": "https://i.ibb.co/thszGYk/cox-sbazargalleryimg5.jpg"
+      },
+      {
+        "eventName": "Water Thrills",
+        "eventDescription": "If you love water, you're in for a treat. Try exciting activities like jet skiing and parasailing. It's an opportunity to feel the sea breeze and have fun on the waves.",
+        "eventImage": "https://i.ibb.co/d0Gwrd1/cox-sbazargalleryimg2.jpg"
+      },
+      {
+        "eventName": "Horse Riding on Seabeach",
+        "eventDescription": "Experience the joy of horseback riding along the shoreline. Enjoy the stunning views as you ride along the beach, creating unforgettable memories.",
+        "eventImage": "https://i.ibb.co/56WDc7K/cox-sbazargalleryimg4.jpg"
+      },
+      {
+        "eventName": "Relaxing by the Sea",
+        "eventDescription": "Simply sit and watch the tranquil sea. Let the calming sound of the waves wash over you as you take in the breathtaking beauty of Cox's Bazar.",
+        "eventImage": "https://i.ibb.co/qy5jpRB/cox-sbazargalleryimg3.jpg"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "eventLocation": "Paris",
+    "eventLocationLink": "Paris",
+    "locationHeaderImg": "https://i.ibb.co/d0Gwrd1/cox-sbazargalleryimg2.jpg",
+    "locationThumbnailImg": "https://i.ibb.co/d0Gwrd1/cox-sbazargalleryimg2.jpg",
+    "gallery": ["paris_1.jpg", "paris_2.jpg", "paris_3.jpg"],
+    "date": "2023-09-10",
+    "days": "7 days",
+    "cost": "1800",
+    "specialOffer": "15% off",
+    "title": "Romantic Parisian Getaway",
+    "locationIntroduction": "Bienvenue à Paris, the city of love!",
+    "famousFor": "Eiffel Tower, Louvre Museum, and charming cafes",
+    "eventsMainDescription": "Stroll along the Seine and enjoy classical concerts",
+    "conclusion": "Create lasting memories in the most romantic city in the world.",
+    "events": [
+      {
+        "eventName": "Candlelit Seine Cruise",
+        "eventDescription": "Experience a magical evening on a candlelit cruise along the Seine River, admiring the illuminated landmarks of Paris.",
+        "eventImage": "https://i.ibb.co/ZS1zHpr/paris-cruise.jpg"
+      },
+      {
+        "eventName": "Art and Wine Tasting",
+        "eventDescription": "Indulge in the finest French wines while exploring world-renowned art collections in Parisian galleries.",
+        "eventImage": "https://i.ibb.co/b3tbXwm/art-wine-tasting.jpg"
+      },
+      {
+        "eventName": "Montmartre Bohemian Night",
+        "eventDescription": "Join a night of bohemian revelry in Montmartre, with live music, dance, and the vibrant spirit of Parisian artistry.",
+        "eventImage": "https://i.ibb.co/n7yvbW6/montmartre-night.jpg"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "eventLocation": "Tokyo",
+    "eventLocationLink": "Tokyo",
+    "locationHeaderImg": "https://i.ibb.co/pxmjtJY/cox-sbazarheroimage.jpg",
+    "locationThumbnailImg": "https://i.ibb.co/pxmjtJY/cox-sbazarheroimage.jpg",
+    "gallery": ["tokyo_1.jpg", "tokyo_2.jpg", "tokyo_3.jpg"],
+    "date": "2023-11-05",
+    "days": "6 days",
+    "cost": "2200",
+    "specialOffer": "10% off",
+    "title": "Discover Tokyo's Wonders",
+    "locationIntroduction": "Konnichiwa! Welcome to Tokyo, a blend of tradition and modernity.",
+    "famousFor": "Skyscrapers, ancient temples, and sushi delights",
+    "eventsMainDescription": "Witness traditional tea ceremonies and sumo wrestling",
+    "conclusion": "Immerse yourself in the unique culture of Tokyo.",
+    "events": [
+      {
+        "eventName": "Shinjuku Neon Nights",
+        "eventDescription": "Experience the vibrant nightlife of Shinjuku with its dazzling neon lights, entertainment districts, and izakayas.",
+        "eventImage": "https://i.ibb.co/cgTH1jx/shinjuku-night.jpg"
+      },
+      {
+        "eventName": "Harajuku Fashion Walk",
+        "eventDescription": "Join a guided tour through the trendy streets of Harajuku, where colorful street fashion and quirky styles collide.",
+        "eventImage": "https://i.ibb.co/QPtjfYX/harajuku-fashion.jpg"
+      },
+      {
+        "eventName": "Traditional Tea Ceremony",
+        "eventDescription": "Participate in an authentic Japanese tea ceremony, learning about the art and significance of tea in Japanese culture.",
+        "eventImage": "https://i.ibb.co/nDzvn5g/tea-ceremony.jpg"
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "eventLocation": "London",
+    "eventLocationLink": "London",
+    "locationHeaderImg": "https://i.ibb.co/pxmjtJY/cox-sbazarheroimage.jpg",
+    "locationThumbnailImg": "https://i.ibb.co/pxmjtJY/cox-sbazarheroimage.jpg",
+    "gallery": ["london_1.jpg", "london_2.jpg", "london_3.jpg"],
+    "date": "2023-10-20",
+    "days": "4 days",
+    "cost": "1500",
+    "specialOffer": "25% off",
+    "title": "London Calling",
+    "locationIntroduction": "Welcome to the historic city of London!",
+    "famousFor": "The Tower of London, Buckingham Palace, and vibrant markets",
+    "eventsMainDescription": "Experience West End theater and classical music concerts",
+    "conclusion": "Explore the rich history and cultural diversity of London.",
+    "events": [
+      {
+        "eventName": "West End Theater Extravaganza",
+        "eventDescription": "Indulge in the world of London's West End with a night of captivating theater performances and musicals.",
+        "eventImage": "https://i.ibb.co/YWnLdJz/west-end-theater.jpg"
+      },
+      {
+        "eventName": "Afternoon Tea at The Ritz",
+        "eventDescription": "Savor a quintessential British experience with an elegant afternoon tea at the iconic Ritz hotel in London.",
+        "eventImage": "https://i.ibb.co/2yKdd2r/ritz-tea.jpg"
+      },
+      {
+        "eventName": "British Museum Exploration",
+        "eventDescription": "Embark on a cultural journey through history at the British Museum, home to a vast collection of world treasures.",
+        "eventImage": "https://i.ibb.co/FYpF5cG/british-museum.jpg"
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "eventLocation": "Sydney",
+    "eventLocationLink": "Sydney",
+    "locationHeaderImg": "https://i.ibb.co/pxmjtJY/cox-sbazarheroimage.jpg",
+    "locationThumbnailImg": "https://i.ibb.co/pxmjtJY/cox-sbazarheroimage.jpg",
+    "gallery": ["sydney_1.jpg", "sydney_2.jpg", "sydney_3.jpg"],
+    "date": "2024-01-05",
+    "days": "8 days",
+    "cost": "2400",
+    "specialOffer": "30% off",
+    "title": "Sydney Adventure",
+    "locationIntroduction": "G'day mate! Welcome to the stunning city of Sydney!",
+    "famousFor": "Sydney Opera House, Bondi Beach, and Sydney Harbour Bridge",
+    "eventsMainDescription": "Experience exciting water sports and beach festivals",
+    "conclusion": "Discover the laid-back lifestyle and natural beauty of Sydney.",
+    "events": [
+      {
+        "eventName": "Harbour Bridge Climb",
+        "eventDescription": "Embark on a thrilling climb to the top of the Sydney Harbour Bridge, enjoying panoramic views of the city and harbor.",
+        "eventImage": "https://i.ibb.co/FWKyHgK/bridge-climb.jpg"
+      },
+      {
+        "eventName": "Bondi Beach Surfing",
+        "eventDescription": "Learn to ride the waves with a professional surf lesson at famous Bondi Beach, a paradise for surf enthusiasts.",
+        "eventImage": "https://i.ibb.co/YLny5Rf/bondi-surf.jpg"
+      },
+      {
+        "eventName": "Sydney Festival Celebration",
+        "eventDescription": "Join the vibrant Sydney Festival, featuring music, art, and performances that showcase the city's creative spirit.",
+        "eventImage": "https://i.ibb.co/QmMQw9p/sydney-festival.jpg"
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "eventLocation": "Rome",
+    "eventLocationLink": "Rome",
+    "locationHeaderImg": "https://i.ibb.co/pxmjtJY/cox-sbazarheroimage.jpg",
+    "locationThumbnailImg": "https://i.ibb.co/pxmjtJY/cox-sbazarheroimage.jpg",
+    "gallery": ["rome_1.jpg", "rome_2.jpg", "rome_3.jpg"],
+    "date": "2024-03-15",
+    "days": "6 days",
+    "cost": "2100",
+    "specialOffer": "10% off",
+    "title": "Eternal City Exploration",
+    "locationIntroduction": "Benvenuti a Roma! Welcome to the eternal city!",
+    "famousFor": "The Colosseum, Vatican City, and delicious Italian cuisine",
+    "eventsMainDescription": "Enjoy art exhibits and open-air opera performances",
+    "conclusion": "Experience the charm and history of the Eternal City.",
+    "events": [
+      {
+        "eventName": "Colosseum Guided Tour",
+        "eventDescription": "Embark on a captivating guided tour of the ancient Colosseum, learning about its history and grandeur.",
+        "eventImage": "https://i.ibb.co/9t5BGYx/colosseum-tour.jpg"
+      },
+      {
+        "eventName": "Vatican Museums Discovery",
+        "eventDescription": "Explore the awe-inspiring Vatican Museums, home to an extraordinary collection of art and historical treasures.",
+        "eventImage": "https://i.ibb.co/f08FCSd/vatican-museums.jpg"
+      },
+      {
+        "eventName": "Rooftop Opera Experience",
+        "eventDescription": "Savor an unforgettable evening with a rooftop opera performance, set against the backdrop of Rome's iconic skyline.",
+        "eventImage": "https://i.ibb.co/rGFZbGP/rooftop-opera.jpg"
+      }
+    ]
+  }
+]
