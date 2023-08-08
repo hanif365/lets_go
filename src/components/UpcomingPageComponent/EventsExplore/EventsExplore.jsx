@@ -1,20 +1,19 @@
 import Image from "next/image";
 import React from "react";
+import "./EventsExplore.css";
+import Link from "next/link";
 
-const ReasonsToVisit = ({ eventData }) => {
+const EventsExplore = ({ eventData }) => {
   return (
-    <div>
-      {/* {eventData[0].events.eventImage} */}
-      {/* <h1 className="text-[#071952] text-2xl lg:text-8xl 2xl:text-9xl font-bold ">
-        {eventData[0].title}
-      </h1> */}
-      <div class="min-h-screen bg-blue-500 py-6 flex flex-col justify-center sm:py-12">
+    <div className="mt-20">
+      <h2 className="text-[#071952] text-xl lg:text-4xl 2xl:text-6xl font-bold text-center px-2 lg:px-0">
+        Which Place we Explore in{" "}
+        <span className="text-yellow-400">{eventData[0]?.eventLocation}</span>
+      </h2>
+      <div class="min-h-screen  py-6 flex flex-col justify-center sm:py-12">
         <div class="py-3 sm:max-w-6xl sm:mx-auto w-full px-2 sm:px-0">
           <div class="relative text-gray-700 antialiased text-sm font-semibold">
-            {/* <!-- Vertical bar running through middle --> */}
-            <div class="hidden sm:block w-1 bg-blue-300 absolute h-full left-1/2 transform -translate-x-1/2"></div>
-
-            {/* <!-- Left section, set by justify-start and sm:pr-8 --> */}
+            <div class="hidden sm:block w-1 bg-[#0719529a] absolute h-full left-1/2 transform -translate-x-1/2"></div>
 
             {/* One set start */}
             {eventData[0]?.events[0] && (
@@ -31,7 +30,7 @@ const ReasonsToVisit = ({ eventData }) => {
                       />
                     </div>
                     <div class="w-full sm:w-1/2 sm:pl-8">
-                      <div class="p-4 bg-white rounded shadow">
+                      <div class="px-4 py-6 bg-white rounded shadow">
                         <h3 className="text-xl font-bold">
                           {eventData[0]?.events[0]?.eventName}
                         </h3>
@@ -41,7 +40,7 @@ const ReasonsToVisit = ({ eventData }) => {
                       </div>
                     </div>
                   </div>
-                  <div class="rounded-full bg-blue-500 border-white border-4 w-8 h-8 absolute left-1/2 -translate-y-12 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
+                  <div class="rounded-full bg-[#071952] border-white border-4 w-8 h-8 absolute left-1/2 -translate-y-12 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
                     <h4 className="text-xl text-white font-bold">1</h4>
                   </div>
                 </div>
@@ -54,7 +53,7 @@ const ReasonsToVisit = ({ eventData }) => {
                 <div class="flex flex-col sm:flex-row items-center">
                   <div class="flex flex-col-reverse sm:flex-row justify-start w-full mx-auto items-center">
                     <div class="w-full sm:w-1/2 sm:pr-8 pt-2 lg:pt-0">
-                      <div class="p-4 bg-white rounded shadow">
+                      <div class="px-4 py-6 bg-white rounded shadow">
                         <h3 className="text-xl font-bold">
                           {eventData[0]?.events[1]?.eventName}
                         </h3>
@@ -74,7 +73,7 @@ const ReasonsToVisit = ({ eventData }) => {
                       />
                     </div>
                   </div>
-                  <div class="rounded-full bg-blue-500 border-white border-4 w-8 h-8 absolute left-1/2 -translate-y-12 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
+                  <div class="rounded-full bg-[#071952] border-white border-4 w-8 h-8 absolute left-1/2 -translate-y-12 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
                     <h4 className="text-xl text-white font-bold">2</h4>
                   </div>
                 </div>
@@ -97,7 +96,7 @@ const ReasonsToVisit = ({ eventData }) => {
                       />
                     </div>
                     <div class="w-full sm:w-1/2 sm:pl-8">
-                      <div class="p-4 bg-white rounded shadow">
+                      <div class="px-4 py-6 bg-white rounded shadow">
                         <h3 className="text-xl font-bold">
                           {eventData[0]?.events[2]?.eventName}
                         </h3>
@@ -107,7 +106,7 @@ const ReasonsToVisit = ({ eventData }) => {
                       </div>
                     </div>
                   </div>
-                  <div class="rounded-full bg-blue-500 border-white border-4 w-8 h-8 absolute left-1/2 -translate-y-12 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
+                  <div class="rounded-full bg-[#071952] border-white border-4 w-8 h-8 absolute left-1/2 -translate-y-12 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
                     <h4 className="text-xl text-white font-bold">3</h4>
                   </div>
                 </div>
@@ -121,7 +120,7 @@ const ReasonsToVisit = ({ eventData }) => {
                   <div class="flex flex-col-reverse sm:flex-row justify-start w-full mx-auto items-center">
                     {/* text */}
                     <div class="w-full sm:w-1/2 sm:pr-8 pt-2 lg:pt-0">
-                      <div class="p-4 bg-white rounded shadow">
+                      <div class="px-4 py-6 bg-white rounded shadow">
                         <h3 className="text-xl font-bold">
                           {eventData[0]?.events[3]?.eventName}
                         </h3>
@@ -141,20 +140,36 @@ const ReasonsToVisit = ({ eventData }) => {
                       />
                     </div>
                   </div>
-                  <div class="rounded-full bg-blue-500 border-white border-4 w-8 h-8 absolute left-1/2 -translate-y-12 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
+                  <div class="rounded-full bg-[#071952] border-white border-4 w-8 h-8 absolute left-1/2 -translate-y-12 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
                     <h4 className="text-xl text-white font-bold">4</h4>
                   </div>
                 </div>
               </div>
             )}
             {/* Two set End */}
-
-            {/* ************************************************************************************************************************ */}
           </div>
         </div>
+      </div>
+      <div className="flex justify-center">
+        <Link
+          activeClass="active"
+          href="/buyticket"
+          spy={true}
+          smooth={true}
+          offset={-120}
+          duration={500}
+          className="text-[14px] lg:text-[16px] buy_btn mt-12 px-10 py-6 relative border uppercase font-semibold tracking-wider leading-none overflow-hidden bg-[#070B39] rounded-md text-white cursor-pointer"
+          type="button"
+        >
+          <span className="absolute inset-0  bg-yellow-400"></span>
+          <span className="absolute inset-0 flex justify-center items-center font-bold">
+            Buy Ticket
+          </span>
+          Buy Ticket
+        </Link>
       </div>
     </div>
   );
 };
 
-export default ReasonsToVisit;
+export default EventsExplore;

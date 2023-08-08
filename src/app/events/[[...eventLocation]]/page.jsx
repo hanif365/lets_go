@@ -3,8 +3,8 @@
 import React from "react";
 import upcomingEventsData from "../../../data/UpcomingEventsData.json";
 import Image from "next/image";
-import ReasonsToVisit from "@/components/UpcomingPageComponent/ReasonsToVisit/ReasonsToVisit";
 import UPCHeroSection from "@/components/UpcomingPageComponent/UPCHeroSection/UPCHeroSection";
+import EventsExplore from "@/components/UpcomingPageComponent/EventsExplore/EventsExplore";
 console.log(upcomingEventsData);
 
 const page = ({ params }) => {
@@ -18,7 +18,7 @@ const page = ({ params }) => {
   return (
     <div>
       <UPCHeroSection eventData={filteredEvents} />
-      <ReasonsToVisit eventData={filteredEvents} />
+      <EventsExplore eventData={filteredEvents} />
     </div>
   );
 };
