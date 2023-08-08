@@ -13,7 +13,7 @@ import {
 } from "react-icons/fa6";
 import { FaCalendarAlt } from "react-icons/fa";
 import Link from "next/link";
-import upcomingEventsData from "../../data/UpcomingEventsData.json";
+import upcomingEventsData from "../../../data/UpcomingEventsData.json";
 
 const UpcomingEvents = () => {
   const settings = {

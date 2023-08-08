@@ -1,10 +1,12 @@
-import AboutUs from "@/components/AboutUs/AboutUs";
-import Faq from "@/components/Faq/Faq";
-import HeroSection from "@/components/HeroSection/HeroSection";
-import PhotoGallery from "@/components/PhotoGallery/PhotoGallery";
-import Testimonials from "@/components/Testimonials/Testimonials";
-import Thumbnails from "@/components/Thumbnails/Thumbnails";
-import UpcomingEvents from "@/components/UpcomingEvents/UpcomingEvents";
+import AboutUs from "@/components/HomePageComponent/AboutUs/AboutUs";
+import Faq from "@/components/HomePageComponent/Faq/Faq";
+import HeroSection from "@/components/HomePageComponent/HeroSection/HeroSection";
+import PhotoGallery from "@/components/HomePageComponent/PhotoGallery/PhotoGallery";
+import Testimonials from "@/components/HomePageComponent/Testimonials/Testimonials";
+import Thumbnails from "@/components/HomePageComponent/Thumbnails/Thumbnails";
+import UpcomingEvents from "@/components/HomePageComponent/UpcomingEvents/UpcomingEvents";
+
+
 
 export default function Home() {
   return (
