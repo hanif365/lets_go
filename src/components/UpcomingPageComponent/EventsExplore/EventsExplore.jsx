@@ -10,17 +10,17 @@ const EventsExplore = ({ eventData }) => {
         Which Place we Explore in{" "}
         <span className="text-yellow-400">{eventData[0]?.eventLocation}</span>
       </h2>
-      <div class="min-h-screen  py-6 flex flex-col justify-center sm:py-12">
-        <div class="py-3 sm:max-w-6xl sm:mx-auto w-full px-2 sm:px-0">
-          <div class="relative text-gray-700 antialiased text-sm font-semibold">
-            <div class="hidden sm:block w-1 bg-[#0719529a] absolute h-full left-1/2 transform -translate-x-1/2"></div>
+      <div className="min-h-screen  py-6 flex flex-col justify-center sm:py-12">
+        <div className="py-3 sm:max-w-6xl sm:mx-auto w-full px-2 sm:px-0">
+          <div className="relative text-gray-700 antialiased text-sm font-semibold">
+            <div className="hidden sm:block w-1 bg-[#0719529a] absolute h-full left-1/2 transform -translate-x-1/2"></div>
 
             {/* One set start */}
             {eventData[0]?.events[0] && (
-              <div class="mt-16 sm:mt-0 sm:mb-12">
-                <div class="flex flex-col sm:flex-row items-center">
-                  <div class="flex flex-col sm:flex-row justify-start w-full mx-auto items-center space-y-2 lg:space-y-0">
-                    <div class="w-full sm:w-1/2 sm:pr-8">
+              <div className="mt-16 sm:mt-0 sm:mb-12">
+                <div className="flex flex-col sm:flex-row items-center">
+                  <div className="flex flex-col sm:flex-row justify-start w-full mx-auto items-center space-y-2 lg:space-y-0">
+                    <div className="w-full sm:w-1/2 sm:pr-8">
                       <Image
                         src={eventData[0]?.events[0]?.eventImage}
                         alt="Event Photo"
@@ -29,8 +29,8 @@ const EventsExplore = ({ eventData }) => {
                         className="rounded-md"
                       />
                     </div>
-                    <div class="w-full sm:w-1/2 sm:pl-8">
-                      <div class="px-4 py-6 bg-white rounded shadow">
+                    <div className="w-full sm:w-1/2 sm:pl-8">
+                      <div className="px-4 py-6 bg-white rounded shadow">
                         <h3 className="text-xl font-bold">
                           {eventData[0]?.events[0]?.eventName}
                         </h3>
@@ -40,7 +40,7 @@ const EventsExplore = ({ eventData }) => {
                       </div>
                     </div>
                   </div>
-                  <div class="rounded-full bg-[#071952] border-white border-4 w-8 h-8 absolute left-1/2 -translate-y-12 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
+                  <div className="rounded-full bg-[#071952] border-white border-4 w-8 h-8 absolute left-1/2 -translate-y-12 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
                     <h4 className="text-xl text-white font-bold">1</h4>
                   </div>
                 </div>
@@ -49,11 +49,11 @@ const EventsExplore = ({ eventData }) => {
 
             {/* new ****************************************************************************************** */}
             {eventData[0]?.events[1] && (
-              <div class="mt-24 sm:mt-0 sm:mb-12">
-                <div class="flex flex-col sm:flex-row items-center">
-                  <div class="flex flex-col-reverse sm:flex-row justify-start w-full mx-auto items-center">
-                    <div class="w-full sm:w-1/2 sm:pr-8 pt-2 lg:pt-0">
-                      <div class="px-4 py-6 bg-white rounded shadow">
+              <div className="mt-24 sm:mt-0 sm:mb-12">
+                <div className="flex flex-col sm:flex-row items-center">
+                  <div className="flex flex-col-reverse sm:flex-row justify-start w-full mx-auto items-center">
+                    <div className="w-full sm:w-1/2 sm:pr-8 pt-2 lg:pt-0">
+                      <div className="px-4 py-6 bg-white rounded shadow">
                         <h3 className="text-xl font-bold">
                           {eventData[0]?.events[1]?.eventName}
                         </h3>
@@ -63,7 +63,7 @@ const EventsExplore = ({ eventData }) => {
                       </div>
                     </div>
 
-                    <div class="w-full sm:w-1/2 sm:pl-8">
+                    <div className="w-full sm:w-1/2 sm:pl-8">
                       <Image
                         src={eventData[0]?.events[1]?.eventImage}
                         alt="Event Photo"
@@ -73,7 +73,7 @@ const EventsExplore = ({ eventData }) => {
                       />
                     </div>
                   </div>
-                  <div class="rounded-full bg-[#071952] border-white border-4 w-8 h-8 absolute left-1/2 -translate-y-12 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
+                  <div className="rounded-full bg-[#071952] border-white border-4 w-8 h-8 absolute left-1/2 -translate-y-12 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
                     <h4 className="text-xl text-white font-bold">2</h4>
                   </div>
                 </div>
@@ -83,10 +83,10 @@ const EventsExplore = ({ eventData }) => {
 
             {/* Two set start */}
             {eventData[0]?.events[2] && (
-              <div class="mt-24 sm:mt-0 sm:mb-12">
-                <div class="flex flex-col sm:flex-row items-center">
-                  <div class="flex flex-col sm:flex-row justify-start w-full mx-auto items-center space-y-2 lg:space-y-0">
-                    <div class="w-full sm:w-1/2 sm:pr-8">
+              <div className="mt-24 sm:mt-0 sm:mb-12">
+                <div className="flex flex-col sm:flex-row items-center">
+                  <div className="flex flex-col sm:flex-row justify-start w-full mx-auto items-center space-y-2 lg:space-y-0">
+                    <div className="w-full sm:w-1/2 sm:pr-8">
                       <Image
                         src={eventData[0]?.events[2]?.eventImage}
                         alt="Event Photo"
@@ -95,8 +95,8 @@ const EventsExplore = ({ eventData }) => {
                         className="rounded-md"
                       />
                     </div>
-                    <div class="w-full sm:w-1/2 sm:pl-8">
-                      <div class="px-4 py-6 bg-white rounded shadow">
+                    <div className="w-full sm:w-1/2 sm:pl-8">
+                      <div className="px-4 py-6 bg-white rounded shadow">
                         <h3 className="text-xl font-bold">
                           {eventData[0]?.events[2]?.eventName}
                         </h3>
@@ -106,7 +106,7 @@ const EventsExplore = ({ eventData }) => {
                       </div>
                     </div>
                   </div>
-                  <div class="rounded-full bg-[#071952] border-white border-4 w-8 h-8 absolute left-1/2 -translate-y-12 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
+                  <div className="rounded-full bg-[#071952] border-white border-4 w-8 h-8 absolute left-1/2 -translate-y-12 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
                     <h4 className="text-xl text-white font-bold">3</h4>
                   </div>
                 </div>
@@ -115,12 +115,12 @@ const EventsExplore = ({ eventData }) => {
 
             {/* new ****************************************************************************************** */}
             {eventData[0]?.events[3] && (
-              <div class="mt-24 sm:mt-0 sm:mb-12">
-                <div class="flex flex-col sm:flex-row items-center">
-                  <div class="flex flex-col-reverse sm:flex-row justify-start w-full mx-auto items-center">
+              <div className="mt-24 sm:mt-0 sm:mb-12">
+                <div className="flex flex-col sm:flex-row items-center">
+                  <div className="flex flex-col-reverse sm:flex-row justify-start w-full mx-auto items-center">
                     {/* text */}
-                    <div class="w-full sm:w-1/2 sm:pr-8 pt-2 lg:pt-0">
-                      <div class="px-4 py-6 bg-white rounded shadow">
+                    <div className="w-full sm:w-1/2 sm:pr-8 pt-2 lg:pt-0">
+                      <div className="px-4 py-6 bg-white rounded shadow">
                         <h3 className="text-xl font-bold">
                           {eventData[0]?.events[3]?.eventName}
                         </h3>
@@ -130,7 +130,7 @@ const EventsExplore = ({ eventData }) => {
                       </div>
                     </div>
 
-                    <div class="w-full sm:w-1/2 sm:pl-8">
+                    <div className="w-full sm:w-1/2 sm:pl-8">
                       <Image
                         src={eventData[0]?.events[3]?.eventImage}
                         alt="Event Photo"
@@ -140,7 +140,7 @@ const EventsExplore = ({ eventData }) => {
                       />
                     </div>
                   </div>
-                  <div class="rounded-full bg-[#071952] border-white border-4 w-8 h-8 absolute left-1/2 -translate-y-12 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
+                  <div className="rounded-full bg-[#071952] border-white border-4 w-8 h-8 absolute left-1/2 -translate-y-12 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
                     <h4 className="text-xl text-white font-bold">4</h4>
                   </div>
                 </div>
@@ -152,7 +152,7 @@ const EventsExplore = ({ eventData }) => {
       </div>
       <div className="flex justify-center">
         <Link
-          activeClass="active"
+          activeclassName="active"
           href="/buyticket"
           spy={true}
           smooth={true}

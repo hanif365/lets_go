@@ -17,7 +17,7 @@ const UPCHeroSection = ({ eventData }) => {
           <h1 className="text-[#071952] text-2xl lg:text-8xl 2xl:text-9xl font-bold ">
             {eventData[0].title}
           </h1>
-          <p className="text-lg lg:text-2xl font-bold pt-10 text-[#071952]">
+          <p className="text-lg lg:text-2xl 2xl:text-4xl font-bold pt-10 text-[#071952]">
             {eventData[0].eventsMainDescription}
           </p>
         </div>
