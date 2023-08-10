@@ -40,7 +40,7 @@ const EventsExplore = ({ eventData }) => {
                       </div>
                     </div>
                   </div>
-                  <div className="rounded-full bg-[#071952] border-white border-4 w-8 h-8 absolute left-1/2 -translate-y-12 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
+                  <div className="rounded-full p-4 bg-[#071952] border-white border-4 w-8 h-8 absolute left-1/2 -translate-y-12 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
                     <h4 className="text-xl text-white font-bold">1</h4>
                   </div>
                 </div>
@@ -73,7 +73,7 @@ const EventsExplore = ({ eventData }) => {
                       />
                     </div>
                   </div>
-                  <div className="rounded-full bg-[#071952] border-white border-4 w-8 h-8 absolute left-1/2 -translate-y-12 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
+                  <div className="rounded-full p-4 bg-[#071952] border-white border-4 w-8 h-8 absolute left-1/2 -translate-y-12 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
                     <h4 className="text-xl text-white font-bold">2</h4>
                   </div>
                 </div>
@@ -106,7 +106,7 @@ const EventsExplore = ({ eventData }) => {
                       </div>
                     </div>
                   </div>
-                  <div className="rounded-full bg-[#071952] border-white border-4 w-8 h-8 absolute left-1/2 -translate-y-12 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
+                  <div className="rounded-full p-4 bg-[#071952] border-white border-4 w-8 h-8 absolute left-1/2 -translate-y-12 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
                     <h4 className="text-xl text-white font-bold">3</h4>
                   </div>
                 </div>
@@ -140,7 +140,7 @@ const EventsExplore = ({ eventData }) => {
                       />
                     </div>
                   </div>
-                  <div className="rounded-full bg-[#071952] border-white border-4 w-8 h-8 absolute left-1/2 -translate-y-12 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
+                  <div className="rounded-full p-4 bg-[#071952] border-white border-4 w-8 h-8 absolute left-1/2 -translate-y-12 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
                     <h4 className="text-xl text-white font-bold">4</h4>
                   </div>
                 </div>
@@ -150,6 +150,11 @@ const EventsExplore = ({ eventData }) => {
           </div>
         </div>
       </div>
+
+      <h4 className="text-xl lg:text-4xl 2xl:text-6xl text-center font-bold">
+        Are you want to explore with us?
+      </h4>
+
       <div className="flex justify-center">
         <Link
           activeclassName="active"
@@ -158,7 +163,7 @@ const EventsExplore = ({ eventData }) => {
           smooth={true}
           offset={-120}
           duration={500}
-          className="text-[14px] lg:text-[16px] buy_btn mt-12 px-10 py-6 relative border uppercase font-semibold tracking-wider leading-none overflow-hidden bg-[#070B39] rounded-md text-white cursor-pointer"
+          className="text-[14px] lg:text-[16px] buy_btn mt-6 px-10 py-6 relative border uppercase font-semibold tracking-wider leading-none overflow-hidden bg-[#070B39] rounded-md text-white cursor-pointer"
           type="button"
         >
           <span className="absolute inset-0  bg-yellow-400"></span>
