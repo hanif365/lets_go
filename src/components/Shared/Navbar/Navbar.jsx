@@ -3,16 +3,24 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { FaAlignLeft, FaBars, FaEquals, FaXmark } from "react-icons/fa6";
+import { signIn, signOut, useSession } from "next-auth/react";
+import { useRouter, usePathname } from "next/navigation";
 import "./Navbar.css";
 import Image from "next/image";
 
 function Navbar() {
+  const session = useSession();
+  const router = useRouter();
+  const pathname = usePathname();
   const [navbar, setNavbar] = useState(false);
-  const [activeMenu, setActiveMenu] = useState("Home");
   const [showNavbar, setShowNavbar] = useState(true);
   const [showShadow, setShowShadow] = useState(false);
 
-  // console.log(activeMenu);
+  const handleLogin = () => {
+    router.push("/login");
+  };
+
+  console.log(pathname);
 
   const changeBackgroundNavbar = () => {
     if (window.scrollY >= 800) {
@@ -60,7 +68,6 @@ function Navbar() {
               <Link
                 href="/"
                 onClick={() => {
-                  setActiveMenu("Home");
                 }}
               >
                 <div className="flex items-center">
@@ -112,16 +119,13 @@ function Navbar() {
               <ul className="h-screen md:h-auto items-center justify-center md:flex">
                 <li
                   className={`text-xl font-bold py-2 md:px-6 text-center border-b-2 md:border-b-0 hover:text-[#7EA0FF] transition duration-700 ease-in-out ${
-                    activeMenu === "Home" ? "text-[#7EA0FF]" : "text-[#00095E]"
+                    pathname === "/" ? "text-[#7EA0FF]" : "text-[#00095E]"
                   }`}
                 >
                   <Link
-                    className={`${
-                      activeMenu === "Home" ? "" : "underline_design"
-                    }`}
+                    className={`${pathname === "/" ? "" : "underline_design"}`}
                     href="/"
                     onClick={() => {
-                      setActiveMenu("Home");
                       setNavbar((prev) => !prev);
                     }}
                   >
@@ -130,16 +134,15 @@ function Navbar() {
                 </li>
                 <li
                   className={`text-xl font-bold py-2 md:px-6 text-center border-b-2 md:border-b-0 hover:text-[#7EA0FF] transition duration-700 ease-in-out ${
-                    activeMenu === "About" ? "text-[#7EA0FF]" : "text-[#00095E]"
+                    pathname === "/about" ? "text-[#7EA0FF]" : "text-[#00095E]"
                   }`}
                 >
                   <Link
                     className={`${
-                      activeMenu === "About" ? "" : "underline_design"
+                      pathname === "/about" ? "" : "underline_design"
                     }`}
                     href="/about"
                     onClick={() => {
-                      setActiveMenu("About");
                       setNavbar((prev) => !prev);
                     }}
                   >
@@ -148,62 +151,72 @@ function Navbar() {
                 </li>
                 <li
                   className={`text-xl font-bold py-2 px-6 text-center border-b-2 md:border-b-0 hover:text-[#7EA0FF] transition duration-700 ease-in-out ${
-                    activeMenu === "Blogs" ? "text-[#7EA0FF]" : "text-[#00095E]"
+                    pathname === "/blogs" ? "text-[#7EA0FF]" : "text-[#00095E]"
                   }`}
                 >
                   <Link
                     className={`${
-                      activeMenu === "Blogs" ? "" : "underline_design"
+                      pathname === "/blogs" ? "" : "underline_design"
                     }`}
-                    href="/blog"
+                    href="/blogs"
                     onClick={() => {
-                      setActiveMenu("Blogs");
                       setNavbar((prev) => !prev);
                     }}
                   >
                     Blogs
                   </Link>
                 </li>
-                <li
-                  className={`text-xl text-black font-bold py-2 px-6 text-center border-b-2 md:border-b-0 hover:text-[#7EA0FF] transition duration-700 ease-in-out ${
-                    activeMenu === "Contact"
-                      ? "text-[#7EA0FF]"
-                      : "text-[#00095E]"
-                  }`}
-                >
-                  <Link
-                    className={`${
-                      activeMenu === "Contact" ? "" : "underline_design"
+
+                {/* new */}
+                {session.status === "authenticated" && (
+                  <li
+                    className={`text-xl font-bold py-2 md:px-6 text-center border-b-2 md:border-b-0 hover:text-[#7EA0FF] transition duration-700 ease-in-out ${
+                      pathname === "/dashboard"
+                        ? "text-[#7EA0FF]"
+                        : "text-[#00095E]"
                     }`}
-                    href="/contact"
-                    onClick={() => {
-                      setActiveMenu("Contact");
-                      setNavbar((prev) => !prev);
-                    }}
                   >
-                    Contact
-                  </Link>
-                </li>
-                <li
-                  className={`text-xl text-black font-bold py-2 px-6 text-center border-b-2 md:border-b-0 hover:text-[#7EA0FF] transition duration-700 ease-in-out ${
-                    activeMenu === "Projects"
-                      ? "text-[#7EA0FF]"
-                      : "text-[#00095E]"
-                  }`}
-                >
-                  <Link
-                    className={`${
-                      activeMenu === "Projects" ? "" : "underline_design"
+                    <Link
+                      className={`${
+                        pathname === "/dashboard" ? "" : "underline_design"
+                      }`}
+                      href="/dashboard"
+                      onClick={() => {
+                        setNavbar((prev) => !prev);
+                      }}
+                    >
+                      Dashboard
+                    </Link>
+                  </li>
+                )}
+
+                {/* new Login*/}
+                {session.status === "authenticated" ? (
+                  <li
+                    className={`text-xl text-black font-bold py-2 px-6 text-center border-b-2 md:border-b-0 transition duration-700 ease-in-out`}
+                  >
+                    <button
+                      className="text-red-500 hover:text-red-600"
+                      onClick={() => signOut()}
+                    >
+                      Logout
+                    </button>
+                  </li>
+                ) : (
+                  <li
+                    className={`text-xl text-black font-bold py-2 px-6 text-center border-b-2 md:border-b-0 transition duration-700 ease-in-out ${
+                      pathname === "/login"
+                        ? "text-green-600"
+                        : "text-green-400"
                     }`}
-                    href="/projects"
-                    onClick={() => {
-                      setActiveMenu("Projects");
-                      setNavbar((prev) => !prev);
-                    }}
                   >
-                    Projects
-                  </Link>
-                </li>
+                    <button
+                      onClick={handleLogin}
+                    >
+                      Login
+                    </button>
+                  </li>
+                )}
               </ul>
             </div>
           </div>
