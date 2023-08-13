@@ -65,7 +65,7 @@ const Login = ({ url }) => {
       </button>
       <br />
       <span>- OR -</span>
-      <Link href="/register">Create new account</Link>
+      <Link href="/register" className="text-green-500">Create new account</Link>
     </div>
   );
 };

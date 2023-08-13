@@ -16,6 +16,9 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    phoneNumber: String,
+    dateOfBirth: Date,
+    address: String,
   },
   { timestamps: true }
 );

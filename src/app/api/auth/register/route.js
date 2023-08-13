@@ -4,7 +4,21 @@ import bcrypt from "bcryptjs";
 import { NextResponse } from "next/server";
 
 export const POST = async (request) => {
-  const { name, email, password } = await request.json();
+  const {
+    name,
+    email,
+    password,
+    confirmPassword,
+    phoneNumber,
+    dateOfBirth,
+    address,
+  } = await request.json();
+
+  if (password !== confirmPassword) {
+    return new NextResponse("Passwords do not match", {
+      status: 400,
+    });
+  }
 
   await connectDB();
 
@@ -14,6 +28,9 @@ export const POST = async (request) => {
     name,
     email,
     password: hashedPassword,
+    phoneNumber,
+    dateOfBirth,
+    address,
   });
 
   try {
