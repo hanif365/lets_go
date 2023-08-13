@@ -61,15 +61,12 @@ const Register = () => {
   return (
     <div className="relative min-h-screen flex">
       <div className="flex flex-col sm:flex-row items-center md:items-start sm:justify-center md:justify-start flex-auto min-w-0 bg-white">
-        <div className="sm:w-1/2 xl:w-2/5 h-full hidden md:flex flex-auto items-center justify-start p-10 overflow-hidden bg-purple-900 text-white bg-no-repeat bg-cover relative">
-          <div className="absolute bg-gradient-to-b from-blue-900 to-gray-900 opacity-75 inset-0 z-0"></div>
-          <div className="absolute triangle  min-h-screen right-0 w-16"></div>
+        {/* image box start */}
+        <div className="sm:w-1/2 xl:w-2/5 h-full hidden md:flex flex-auto justify-start  overflow-hidden text-white bg-no-repeat bg-cover relative rounded-br-2xl">
+          {/* <div className="absolute bg-gradient-to-b from-blue-900 to-gray-900 opacity-75 inset-0 z-0"></div> */}
+          {/* <div className="absolute triangle  min-h-screen right-0 w-16"></div> */}
 
-          <img
-            src="https://jasper-pimstorage-skullcandy.s3.us-west-1.amazonaws.com/bd2253a9671dac36a95faf821b52e78935050140be1718ce001f6aace45cf25c.png"
-            className="h-96 absolute right-5 mr-5"
-          />
-          <div className="w-full  max-w-md z-10">
+          {/* <div className="w-full  max-w-md z-10">
             <div className="sm:text-4xl xl:text-5xl font-bold leading-tight mb-6">
               Reference site about Lorem Ipsum..
             </div>
@@ -81,7 +78,41 @@ const Register = () => {
               unknown printer took a galley of type and scrambled it to make a
               type specimen book it has?
             </div>
+          </div> */}
+          {/* new code */}
+          <div className=" relative text-center">
+            <Image
+              src="/coxbazar.jpg"
+              alt="upcoming event Image"
+              width={2000}
+              height={2000}
+              // objectFit="cover"
+              className="w-full h-[155vh] 2xl:h-[125vh] bg-cover"
+              // className="w-full min-h-screen lg:max-h-screen"
+            />
+            <div className="absolute top-0 left-0 right-0 bottom-0 flex flex-col items-center justify-center px-10 z-[1]">
+              <h1 className="text-[#071952] text-2xl lg:text-8xl 2xl:text-9xl font-bold ">
+                Hello world
+              </h1>
+              <p className="text-lg lg:text-2xl 2xl:text-4xl font-bold pt-10 text-[#071952]">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos,
+                saepe. Deserunt, quia facere. Vitae, inventore. Aliquam quos ut
+                accusamus commodi.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos,
+                saepe. Deserunt, quia facere. Vitae, inventore. Aliquam quos ut
+                accusamus commodi.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos,
+                saepe. Deserunt, quia facere. Vitae, inventore. Aliquam quos ut
+                accusamus commodi.
+                accusamus commodi.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos,
+                saepe. Deserunt, quia facere. Vitae, inventore. Aliquam quos ut
+                accusamus commodi.
+              </p>
+            </div>
+            <div className="absolute top-0 left-0 right-0 bottom-0  bg-gradient-to-b from-blue-300 via-blue-500 to-blue-800 opacity-20"></div>
           </div>
+          {/*  */}
           <ul className="circles">
             <li></li>
             <li></li>
@@ -95,8 +126,10 @@ const Register = () => {
             <li></li>
           </ul>
         </div>
+        {/* image box start */}
+
         <div className="md:flex md:items-center md:justify-center w-full sm:w-auto md:h-full xl:w-2/5 p-8 md:p-10 lg:p-14 sm:rounded-lg md:rounded-none bg-white">
-          <div className="max-w-md w-full space-y-8">
+          <div className="max-w-md w-full space-y-8 pt-20">
             <div className="">
               <h2 className="mt-6 text-3xl font-bold text-gray-900">
                 Hello Travelers!
