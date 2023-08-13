@@ -57,7 +57,7 @@ const Register = () => {
     }));
   };
 
-  console.log(error)
+  console.log(error);
   return (
     <div className="relative min-h-screen flex">
       <div className="flex flex-col sm:flex-row items-center md:items-start sm:justify-center md:justify-start flex-auto min-w-0 bg-white">
@@ -161,7 +161,7 @@ const Register = () => {
                 <div className="absolute right-3">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6 text-green-500"
+                    className="h-10 w-8 text-green-500"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -201,6 +201,22 @@ const Register = () => {
 
               {/* confirm password */}
               <div className="relative">
+                <div className="absolute right-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-10 w-8 text-green-500"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    ></path>
+                  </svg>
+                </div>
                 <input
                   className="w-full text-base px-4 py-2 border-b border-gray-300 focus:outline-none rounded-2xl focus:border-indigo-500"
                   type="password"
@@ -240,18 +256,17 @@ const Register = () => {
               <div className="relative">
                 <textarea
                   className="w-full text-base px-4 py-2 border-b bg-gray-50 border-gray-300 focus:outline-none rounded-2xl focus:border-indigo-500"
-                //   type="text"
+                  //   type="text"
                   name="address"
                   rows="4"
                   placeholder="Address"
                   value={formData.address}
                   onChange={handleInputChange}
                 />
-
               </div>
 
               {/* other component */}
-              
+
               <div className="flex items-center justify-between">
                 <div className="flex items-center">
                   <input
