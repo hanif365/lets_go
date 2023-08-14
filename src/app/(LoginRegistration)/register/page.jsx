@@ -62,7 +62,7 @@ const Register = () => {
     <div className="relative min-h-screen flex">
       <div className="flex flex-col sm:flex-row items-center md:items-start sm:justify-center md:justify-start flex-auto min-w-0 bg-white">
         {/* image box start */}
-        <div className="sm:w-1/2 xl:w-2/5 h-full hidden md:flex flex-auto justify-start  overflow-hidden text-white bg-no-repeat bg-cover relative rounded-br-2xl">
+        <div className="sm:w-1/2 md:w-2/5 h-full hidden md:flex flex-auto justify-center items-center  overflow-hidden text-white bg-no-repeat bg-cover relative rounded-br-2xl bg-gradient-to-r from-sky-500 to-indigo-400">
           {/* <div className="absolute bg-gradient-to-b from-blue-900 to-gray-900 opacity-75 inset-0 z-0"></div> */}
           {/* <div className="absolute triangle  min-h-screen right-0 w-16"></div> */}
 
@@ -80,37 +80,32 @@ const Register = () => {
             </div>
           </div> */}
           {/* new code */}
-          <div className=" relative text-center">
-            <Image
-              src="/coxbazar.jpg"
+          <div className="relative">
+            {/* <Image
+              src="/bg-reg4.jpg"
               alt="upcoming event Image"
               width={2000}
               height={2000}
               // objectFit="cover"
-              className="w-full h-[155vh] 2xl:h-[125vh] bg-cover"
+              className="w-full h-[155vh] 2xl:h-[125vh]"
               // className="w-full min-h-screen lg:max-h-screen"
-            />
-            <div className="absolute top-0 left-0 right-0 bottom-0 flex flex-col items-center justify-center px-10 z-[1]">
-              <h1 className="text-[#071952] text-2xl lg:text-8xl 2xl:text-9xl font-bold ">
-                Hello world
+            /> */}
+            
+            {/* when Image show uncomment below line */}
+            {/* <div className="absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center px-10 z-[1]"> */}
+            <div className="text-white flex flex-col  px-10 z-[1]">
+              <h1 className="text-2xl lg:text-5xl 2xl:text-7xl font-bold ">
+                Glad to see you!
               </h1>
-              <p className="text-lg lg:text-2xl 2xl:text-4xl font-bold pt-10 text-[#071952]">
+              <p className="text-lg lg:text-xl 2xl:text-2xl font-bold pt-80">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos,
                 saepe. Deserunt, quia facere. Vitae, inventore. Aliquam quos ut
                 accusamus commodi.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos,
-                saepe. Deserunt, quia facere. Vitae, inventore. Aliquam quos ut
-                accusamus commodi.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos,
-                saepe. Deserunt, quia facere. Vitae, inventore. Aliquam quos ut
-                accusamus commodi.
-                accusamus commodi.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos,
-                saepe. Deserunt, quia facere. Vitae, inventore. Aliquam quos ut
-                accusamus commodi.
+                
               </p>
             </div>
-            <div className="absolute top-0 left-0 right-0 bottom-0  bg-gradient-to-b from-blue-300 via-blue-500 to-blue-800 opacity-20"></div>
+            {/* when Image show uncomment below line */}
+            {/* <div className="absolute top-0 left-0 right-0 bottom-0  bg-gradient-to-b from-blue-300 via-blue-500 to-blue-800 opacity-20"></div> */}
           </div>
           {/*  */}
           <ul className="circles">
@@ -124,12 +119,22 @@ const Register = () => {
             <li></li>
             <li></li>
             <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
           </ul>
         </div>
-        {/* image box start */}
+        {/* image box end */}
 
-        <div className="md:flex md:items-center md:justify-center w-full sm:w-auto md:h-full xl:w-2/5 p-8 md:p-10 lg:p-14 sm:rounded-lg md:rounded-none bg-white">
-          <div className="max-w-md w-full space-y-8 pt-20">
+        <div className="md:flex md:items-center md:justify-center w-full sm:w-auto md:h-full md:w-3/5 p-8 md:p-10 lg:p-14 sm:rounded-lg md:rounded-none bg-white">
+          <div className="max-w-3xl w-full space-y-8 pt-20">
             <div className="">
               <h2 className="mt-6 text-3xl font-bold text-gray-900">
                 Hello Travelers!
