@@ -81,7 +81,7 @@ const Register = () => {
           </div> */}
           {/* new code */}
           <div className="relative">
-            {/* <Image
+            <Image
               src="/bg-reg4.jpg"
               alt="upcoming event Image"
               width={2000}
@@ -89,11 +89,11 @@ const Register = () => {
               // objectFit="cover"
               className="w-full h-[155vh] 2xl:h-[125vh]"
               // className="w-full min-h-screen lg:max-h-screen"
-            /> */}
+            />
             
             {/* when Image show uncomment below line */}
-            {/* <div className="absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center px-10 z-[1]"> */}
-            <div className="text-white flex flex-col  px-10 z-[1]">
+            <div className="absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center px-10 z-[1]">
+            {/* <div className="text-white flex flex-col  px-10 z-[1]"> */}
               <h1 className="text-2xl lg:text-5xl 2xl:text-7xl font-bold ">
                 Glad to see you!
               </h1>
@@ -105,7 +105,7 @@ const Register = () => {
               </p>
             </div>
             {/* when Image show uncomment below line */}
-            {/* <div className="absolute top-0 left-0 right-0 bottom-0  bg-gradient-to-b from-blue-300 via-blue-500 to-blue-800 opacity-20"></div> */}
+            <div className="absolute top-0 left-0 right-0 bottom-0  bg-gradient-to-b from-blue-300 via-blue-500 to-blue-800 opacity-70"></div>
           </div>
           {/*  */}
           <ul className="circles">
