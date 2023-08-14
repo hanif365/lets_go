@@ -2,9 +2,13 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 import "./page.css";
 import { FaFacebookF, FaGithub, FaGoogle } from "react-icons/fa6";
+import upcomingEventsData from "../../../data/UpcomingEventsData.json";
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -58,78 +62,81 @@ const Register = () => {
   };
 
   console.log(error);
+
+  const settings = {
+    // dots: true,
+    arrows: false,
+    infinite: true,
+    fade: true,
+    pauseOnHover: false,
+    speed: 3000, // Animation speed in milliseconds
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 6000, // Delay between each auto scroll (in milliseconds)
+    swipeToSlide: true,
+    centerMode: true, // Enable center mode
+    centerPadding: "0px", // Adjust padding to center the cards (60px for left and right showing)
+  };
+
   return (
     <div className="relative min-h-screen flex">
       <div className="flex flex-col sm:flex-row items-center md:items-start sm:justify-center md:justify-start flex-auto min-w-0 bg-white">
         {/* image box start */}
-        <div className="sm:w-1/2 md:w-2/5 h-full hidden md:flex flex-auto justify-center items-center  overflow-hidden text-white bg-no-repeat bg-cover relative rounded-br-2xl bg-gradient-to-r from-sky-500 to-indigo-400">
-          {/* <div className="absolute bg-gradient-to-b from-blue-900 to-gray-900 opacity-75 inset-0 z-0"></div> */}
-          {/* <div className="absolute triangle  min-h-screen right-0 w-16"></div> */}
+        <div className="sm:w-1/2 md:w-2/5 hidden md:block">
+          <Slider {...settings}>
+            {upcomingEventsData.map((event, index) => (
+              <div className="sm:w-1/2 md:w-2/5 h-full hidden md:flex flex-auto justify-center items-center  overflow-hidden text-white bg-no-repeat bg-cover relative  bg-gradient-to-r from-sky-500 to-indigo-400">
+                <div className="relative">
+                  <Image
+                    src={event.locationThumbnailImg}
+                    alt="upcoming event Image"
+                    width={2000}
+                    height={2000}
+                    className="w-full h-[155vh] 2xl:h-[125vh]"
+                  />
 
-          {/* <div className="w-full  max-w-md z-10">
-            <div className="sm:text-4xl xl:text-5xl font-bold leading-tight mb-6">
-              Reference site about Lorem Ipsum..
-            </div>
-            <div className="sm:text-sm xl:text-md text-gray-200 font-normal">
-              {" "}
-              What is Lorem Ipsum Lorem Ipsum is simply dummy text of the
-              printing and typesetting industry Lorem Ipsum has been the
-              industry's standard dummy text ever since the 1500s when an
-              unknown printer took a galley of type and scrambled it to make a
-              type specimen book it has?
-            </div>
-          </div> */}
-          {/* new code */}
-          <div className="relative">
-            <Image
-              src="/bg-reg4.jpg"
-              alt="upcoming event Image"
-              width={2000}
-              height={2000}
-              // objectFit="cover"
-              className="w-full h-[155vh] 2xl:h-[125vh]"
-              // className="w-full min-h-screen lg:max-h-screen"
-            />
-            
-            {/* when Image show uncomment below line */}
-            <div className="absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center px-10 z-[1]">
-            {/* <div className="text-white flex flex-col  px-10 z-[1]"> */}
-              <h1 className="text-2xl lg:text-5xl 2xl:text-7xl font-bold ">
-                Glad to see you!
-              </h1>
-              <p className="text-lg lg:text-xl 2xl:text-2xl font-bold pt-80">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos,
-                saepe. Deserunt, quia facere. Vitae, inventore. Aliquam quos ut
-                accusamus commodi.
-                
-              </p>
-            </div>
-            {/* when Image show uncomment below line */}
-            <div className="absolute top-0 left-0 right-0 bottom-0  bg-gradient-to-b from-blue-300 via-blue-500 to-blue-800 opacity-70"></div>
-          </div>
-          {/*  */}
-          <ul className="circles">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
+                  {/* when Image show uncomment below line */}
+                  <div className="absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center px-10 z-[1]">
+                    {/* <div className="text-white flex flex-col  px-10 z-[1]"> */}
+                    <h1 className="text-2xl lg:text-5xl 2xl:text-7xl font-bold ">
+                      Glad to see you!
+                    </h1>
+                    <p className="text-lg lg:text-xl 2xl:text-2xl font-bold pt-80">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Eos, saepe. Deserunt, quia facere. Vitae, inventore.
+                      Aliquam quos ut accusamus commodi.
+                    </p>
+                  </div>
+                  {/* when Image show uncomment below line */}
+                  <div className="absolute top-0 left-0 right-0 bottom-0  bg-gradient-to-b from-blue-300 via-blue-500 to-blue-800 opacity-70"></div>
+                </div>
+                {/*  */}
+                <ul className="circles">
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+              </div>
+            ))}
+          </Slider>
         </div>
         {/* image box end */}
 
@@ -143,41 +150,6 @@ const Register = () => {
                 Please register to explore more
               </p>
             </div>
-
-            {/* <div className="flex flex-row justify-center items-center space-x-3">
-              
-              <a
-                href=""
-                target="_blank"
-                className="w-11 h-11 items-center justify-center inline-flex rounded-2xl font-bold text-lg bg-blue-500 hover:shadow-lg cursor-pointer transition ease-in duration-300"
-              >
-                <FaGoogle className="w-6 h-6 text-white" />
-              </a>
-              <a
-                href=""
-                target="_blank"
-                className="w-11 h-11 items-center justify-center inline-flex rounded-2xl font-bold text-lg bg-blue-400 hover:shadow-lg cursor-pointer transition ease-in duration-300"
-              >
-                <FaGithub className="w-6 h-6 text-white" />
-              </a>
-
-              <a
-                href=""
-                target="_blank"
-                className="w-11 h-11 items-center justify-center inline-flex rounded-2xl font-bold text-lg bg-blue-900 hover:shadow-lg cursor-pointer transition ease-in duration-300"
-              >
-                <FaFacebookF className="w-6 h-6 text-white" />
-              </a>
-              
-            </div> */}
-
-            {/* <div className="flex items-center justify-center space-x-2">
-              <span className="h-px w-16 bg-gray-200"></span>
-              <span className="text-gray-300 font-normal">
-                or continue with
-              </span>
-              <span className="h-px w-16 bg-gray-200"></span>
-            </div> */}
             <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
               {/* <input type="hidden" name="remember" value="true" /> */}
 
