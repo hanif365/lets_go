@@ -320,12 +320,12 @@ const Register = () => {
 
             <p className="flex space-x-5  text-md text-gray-500">
               <span>Already have an account?</span>
-              <a
+              <Link
                 href="/login"
                 className="text-indigo-400 hover:text-blue-500 no-underline hover:underline cursor-pointer transition ease-in duration-300"
               >
                 Log in
-              </a>
+              </Link>
             </p>
 
             {/* <div className="flex items-center justify-center space-x-2">

@@ -4,21 +4,16 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { FaAlignLeft, FaBars, FaEquals, FaXmark } from "react-icons/fa6";
 import { signIn, signOut, useSession } from "next-auth/react";
-import { useRouter, usePathname } from "next/navigation";
+import { usePathname } from "next/navigation";
 import "./Navbar.css";
 import Image from "next/image";
 
 function Navbar() {
   const session = useSession();
-  const router = useRouter();
   const pathname = usePathname();
   const [navbar, setNavbar] = useState(false);
   const [showNavbar, setShowNavbar] = useState(true);
   const [showShadow, setShowShadow] = useState(false);
-
-  const handleLogin = () => {
-    router.push("/login");
-  };
 
   console.log(pathname);
 
