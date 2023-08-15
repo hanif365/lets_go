@@ -65,11 +65,7 @@ function Navbar() {
         <div className="justify-between px-4 mx-auto lg:max-w-7xl 2xl:max-w-screen-2xl md:items-center md:flex md:px-8">
           <div>
             <div className="flex items-center justify-between py-3 md:py-5 md:block">
-              <Link
-                href="/"
-                onClick={() => {
-                }}
-              >
+              <Link href="/" onClick={() => {}}>
                 <div className="flex items-center">
                   <Image
                     src="/logo.png"
@@ -204,17 +200,20 @@ function Navbar() {
                   </li>
                 ) : (
                   <li
-                    className={`text-xl text-black font-bold py-2 px-6 text-center border-b-2 md:border-b-0 transition duration-700 ease-in-out ${
+                    className={`text-xl  font-bold py-2 px-6 text-center border-b-2 md:border-b-0 transition duration-700 ease-in-out ${
                       pathname === "/login"
                         ? "text-green-600"
                         : "text-green-400"
                     }`}
                   >
-                    <button
-                      onClick={handleLogin}
+                    <Link
+                      href="/login"
+                      onClick={() => {
+                        setNavbar((prev) => !prev);
+                      }}
                     >
                       Login
-                    </button>
+                    </Link>
                   </li>
                 )}
               </ul>

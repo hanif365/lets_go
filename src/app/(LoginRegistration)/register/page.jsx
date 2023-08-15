@@ -109,7 +109,7 @@ const Register = () => {
                     </p>
                   </div>
                   {/* when Image show uncomment below line */}
-                  <div className="absolute top-0 left-0 right-0 bottom-0  bg-gradient-to-b from-blue-300 via-blue-500 to-blue-800 opacity-70"></div>
+                  <div className="absolute top-0 left-0 right-0 bottom-0  bg-gradient-to-b from-blue-300 via-blue-500 to-blue-800 opacity-40"></div>
                 </div>
                 {/*  */}
                 <ul className="circles">
