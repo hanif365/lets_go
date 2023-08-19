@@ -9,6 +9,7 @@ import Image from "next/image";
 import "./page.css";
 import { FaFacebookF, FaGithub, FaGoogle } from "react-icons/fa6";
 import upcomingEventsData from "../../../data/UpcomingEventsData.json";
+import { TypeAnimation } from "react-type-animation";
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -111,8 +112,24 @@ const Register = () => {
                   {/* when Image show uncomment below line */}
                   <div className="absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center px-10 z-[1]">
                     {/* <div className="text-white flex flex-col  px-10 z-[1]"> */}
-                    <h1 className="text-2xl lg:text-5xl 2xl:text-7xl font-bold ">
-                      Glad to see you!
+                    <h1 className="text-2xl lg:text-4xl 2xl:text-7xl font-bold ">
+                      {/* Glad to see you! */}
+                      <TypeAnimation
+                        sequence={[
+                          "Begin Your Journey, Start Exploring, Feel Nature",
+                          1000,
+                          "Begin Your Journey, Start Exploring, Know Cultures",
+                          1000,
+                          "Begin Your Journey, Start Exploring, Enjoy Life",
+                          1000,
+                          "Begin Your Journey, Start Exploring, Create Stories",
+                          1000,
+                          "Begin Your Journey, Start Exploring, Find Harmony",
+                          1000,
+                        ]}
+                        speed={50}
+                        repeat={Infinity}
+                      />
                     </h1>
                     <p className="text-lg lg:text-xl 2xl:text-2xl font-bold pt-80">
                       {event.title}
