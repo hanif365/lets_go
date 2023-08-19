@@ -326,9 +326,13 @@ const Register = () => {
               <div>
                 <button
                   type="submit"
-                  className="w-full flex justify-center bg-gradient-to-r from-indigo-500 to-blue-600 hover:bg-gradient-to-l hover:from-blue-500 hover:to-indigo-600 text-gray-100 p-4 rounded-lg tracking-wide font-semibold shadow-lg cursor-pointer transition ease-in duration-500"
+                  // className="w-full register_btn relative flex justify-center bg-gradient-to-r from-indigo-500 to-blue-600 hover:bg-gradient-to-l hover:from-blue-500 hover:to-indigo-600 text-gray-100 p-4 rounded-lg tracking-wide font-semibold shadow-lg cursor-pointer transition ease-in duration-500"
+                  className="text-[14px] lg:text-[16px] register_btn w-full flex justify-center items-center px-10 py-8 relative border uppercase font-semibold tracking-wider leading-none overflow-hidden bg-[#070B39] rounded-md text-white cursor-pointer"
                 >
-                  Register
+                  <span className="absolute inset-0 bg-yellow-400 rounded"></span>
+                  <span className="absolute inset-0 flex justify-center items-center font-bold">
+                    Register
+                  </span>
                 </button>
               </div>
               {error && <p className="text-red-500">{error}</p>}
