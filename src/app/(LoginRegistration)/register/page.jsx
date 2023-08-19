@@ -115,9 +115,7 @@ const Register = () => {
                       Glad to see you!
                     </h1>
                     <p className="text-lg lg:text-xl 2xl:text-2xl font-bold pt-80">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Eos, saepe. Deserunt, quia facere. Vitae, inventore.
-                      Aliquam quos ut accusamus commodi.
+                      {event.title}
                     </p>
                   </div>
                   {/* when Image show uncomment below line */}

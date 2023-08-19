@@ -70,7 +70,15 @@ function Navbar() {
                     className="h-16 animate-rocket"
                   />
                   <h1 className="text-black text-1xl hidden md:block  md:text-3xl font-extrabold ml-2">
-                    Let's Go
+                    <div class="loader">
+                      <span>L</span>
+                      <span>e</span>
+                      <span>t'</span>
+                      <span>s</span>
+                      <span className="px-1"> </span>
+                      <span>G</span>
+                      <span>o</span>
+                    </div>
                   </h1>
                 </div>
               </Link>
