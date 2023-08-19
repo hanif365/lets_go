@@ -156,7 +156,7 @@ const Register = () => {
               {/* name */}
               <div className="relative">
                 <input
-                  className="w-full text-base px-4 py-2 border-b border-gray-300 focus:outline-none rounded-2xl focus:border-indigo-500"
+                  className="w-full text-base px-4 py-2 border-b border-gray-300 focus:outline-none rounded-2xl focus:border-[#4C50E8]"
                   type="text"
                   name="name"
                   placeholder="Name"
@@ -186,7 +186,7 @@ const Register = () => {
                 </div>
 
                 <input
-                  className="w-full text-base px-4 py-2 border-b border-gray-300 focus:outline-none rounded-2xl focus:border-indigo-500"
+                  className="w-full text-base px-4 py-2 border-b border-gray-300 focus:outline-none rounded-2xl focus:border-[#4C50E8]"
                   type="text"
                   name="email"
                   placeholder="Email"
@@ -199,7 +199,7 @@ const Register = () => {
               {/* password */}
               <div className="relative">
                 <input
-                  className="w-full text-base px-4 py-2 border-b border-gray-300 focus:outline-none rounded-2xl focus:border-indigo-500"
+                  className="w-full text-base px-4 py-2 border-b border-gray-300 focus:outline-none rounded-2xl focus:border-[#4C50E8]"
                   type="password"
                   name="password"
                   placeholder="Password"
@@ -228,7 +228,7 @@ const Register = () => {
                   </svg>
                 </div>
                 <input
-                  className="w-full text-base px-4 py-2 border-b border-gray-300 focus:outline-none rounded-2xl focus:border-indigo-500"
+                  className="w-full text-base px-4 py-2 border-b border-gray-300 focus:outline-none rounded-2xl focus:border-[#4C50E8]"
                   type="password"
                   name="confirmPassword"
                   placeholder="Confirm Password"
@@ -241,7 +241,7 @@ const Register = () => {
               {/* Phone number */}
               <div className="relative">
                 <input
-                  className="w-full text-base px-4 py-2 border-b border-gray-300 focus:outline-none rounded-2xl focus:border-indigo-500"
+                  className="w-full text-base px-4 py-2 border-b border-gray-300 focus:outline-none rounded-2xl focus:border-[#4C50E8]"
                   type="text"
                   name="phoneNumber"
                   placeholder="Phone Number"
@@ -253,7 +253,7 @@ const Register = () => {
               {/* DOB */}
               <div className="relative">
                 <input
-                  className="w-full text-base px-4 py-2 border-b border-gray-300 focus:outline-none rounded-2xl focus:border-indigo-500"
+                  className="w-full text-base px-4 py-2 border-b border-gray-300 focus:outline-none rounded-2xl focus:border-[#4C50E8]"
                   type="date"
                   name="dateOfBirth"
                   placeholder="Date of Birth"
@@ -265,7 +265,7 @@ const Register = () => {
               {/* Address */}
               <div className="relative">
                 <textarea
-                  className="w-full text-base px-4 py-2 border-b bg-gray-50 border-gray-300 focus:outline-none rounded-2xl focus:border-indigo-500"
+                  className="w-full text-base px-4 py-2 border-b bg-gray-50 border-gray-300 focus:outline-none rounded-2xl focus:border-[#4C50E8]"
                   //   type="text"
                   name="address"
                   rows="4"
