@@ -61,6 +61,18 @@ const Register = () => {
     }));
   };
 
+  const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+  // Function to check if the email is valid
+  const isEmailValid = (email) => {
+    return emailRegex.test(email);
+  };
+
+  // Function to check if password and confirmPassword match
+  const doPasswordsMatch = () => {
+    return formData.password === formData.confirmPassword;
+  };
+
   console.log(error);
 
   const settings = {
@@ -168,25 +180,31 @@ const Register = () => {
 
               {/* email */}
               <div className="relative">
-                <div className="absolute right-3">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-10 w-8 text-green-500"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                    ></path>
-                  </svg>
-                </div>
+                {isEmailValid(formData.email) && (
+                  <div className="absolute right-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-10 w-8 text-green-500"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                      ></path>
+                    </svg>
+                  </div>
+                )}
 
                 <input
-                  className="w-full text-base px-4 py-2 border-b border-gray-300 focus:outline-none rounded-2xl focus:border-[#4C50E8]"
+                  className={`w-full text-base px-4 py-2 border-b border-gray-300 focus:outline-none rounded-2xl ${
+                    isEmailValid(formData.email)
+                      ? "focus:border-[#4C50E8]"
+                      : "focus:border-red-500"
+                  }`}
                   type="text"
                   name="email"
                   placeholder="Email"
@@ -211,24 +229,31 @@ const Register = () => {
 
               {/* confirm password */}
               <div className="relative">
-                <div className="absolute right-3">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-10 w-8 text-green-500"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                    ></path>
-                  </svg>
-                </div>
+                {formData.confirmPassword !== "" && doPasswordsMatch() && (
+                  <div className="absolute right-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-10 w-8 text-green-500"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      title="Password matched"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                      ></path>
+                    </svg>
+                  </div>
+                )}
                 <input
-                  className="w-full text-base px-4 py-2 border-b border-gray-300 focus:outline-none rounded-2xl focus:border-[#4C50E8]"
+                  className={`w-full text-base px-4 py-2 border-b border-gray-300 focus:outline-none rounded-2xl ${
+                    formData.confirmPassword !== "" && doPasswordsMatch()
+                      ? "focus:border-[#4C50E8]"
+                      : "focus:border-red-500"
+                  }`}
                   type="password"
                   name="confirmPassword"
                   placeholder="Confirm Password"
@@ -277,7 +302,7 @@ const Register = () => {
 
               {/* other component */}
 
-              <div className="flex items-center justify-between">
+              {/* <div className="flex items-center justify-between">
                 <div className="flex items-center">
                   <input
                     id="remember_me"
@@ -297,7 +322,7 @@ const Register = () => {
                     Forgot your password?
                   </a>
                 </div>
-              </div>
+              </div> */}
               <div>
                 <button
                   type="submit"
