@@ -31,7 +31,17 @@ const Login = () => {
   }, [params]);
 
   if (session.status === "loading") {
-    return <p>Loading....</p>;
+    return (
+      <div className="mt-40">
+        <Image
+          src="/loading.gif"
+          alt="Loading Image"
+          width={30}
+          height={30}
+          className="mx-auto"
+        />
+      </div>
+    );
   }
 
   if (session.status === "authenticated") {

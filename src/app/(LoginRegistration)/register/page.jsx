@@ -10,8 +10,10 @@ import "./page.css";
 import { FaFacebookF, FaGithub, FaGoogle } from "react-icons/fa6";
 import upcomingEventsData from "../../../data/UpcomingEventsData.json";
 import { TypeAnimation } from "react-type-animation";
+import { useSession } from "next-auth/react";
 
 const Register = () => {
+  const session = useSession();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -91,6 +93,20 @@ const Register = () => {
     centerMode: true, // Enable center mode
     centerPadding: "0px", // Adjust padding to center the cards (60px for left and right showing)
   };
+
+  if (session.status === "loading") {
+    return (
+      <div className="mt-40">
+        <Image
+          src="/loading.gif"
+          alt="Loading Image"
+          width={30}
+          height={30}
+          className="mx-auto"
+        />
+      </div>
+    );
+  }
 
   return (
     <div className="relative min-h-screen flex">
