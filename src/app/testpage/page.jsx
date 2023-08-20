@@ -8,7 +8,8 @@ import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 import "./page.css";
 import { FaFacebookF, FaGithub, FaGoogle } from "react-icons/fa6";
-import upcomingEventsData from "../../../data/UpcomingEventsData.json";
+import upcomingEventsData from "../../data/UpcomingEventsData.json";
+import { TypeAnimation } from "react-type-animation";
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -61,6 +62,18 @@ const Register = () => {
     }));
   };
 
+  const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+  // Function to check if the email is valid
+  const isEmailValid = (email) => {
+    return emailRegex.test(email);
+  };
+
+  // Function to check if password and confirmPassword match
+  const doPasswordsMatch = () => {
+    return formData.password === formData.confirmPassword;
+  };
+
   console.log(error);
 
   const settings = {
@@ -81,12 +94,12 @@ const Register = () => {
 
   return (
     <div className="relative min-h-screen flex">
-      <div className="flex flex-col sm:flex-row items-center md:items-start sm:justify-center md:justify-start flex-auto min-w-0 bg-white">
+      <div className="flex flex-col sm:flex-row-reverse items-center md:items-start sm:justify-center md:justify-start flex-auto min-w-0 bg-white">
         {/* image box start */}
-        <div className="sm:w-1/2 md:w-2/5 hidden md:block">
+        <div className="sm:w-1/2 md:w-1/2 hidden md:block">
           <Slider {...settings}>
             {upcomingEventsData.map((event, index) => (
-              <div className="sm:w-1/2 md:w-2/5 h-full hidden md:flex flex-auto justify-center items-center  overflow-hidden text-white bg-no-repeat bg-cover relative  bg-gradient-to-r from-sky-500 to-indigo-400">
+              <div className="sm:w-1/2 md:w-2/5 h-full hidden md:flex flex-auto justify-center items-center  overflow-hidden text-white bg-no-repeat bg-cover relative  bg-gradient-to-r from-sky-500 to-indigo-400  rounded-bl-[10px]">
                 <div className="relative">
                   <Image
                     src={event.locationThumbnailImg}
@@ -97,15 +110,29 @@ const Register = () => {
                   />
 
                   {/* when Image show uncomment below line */}
-                  <div className="absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center px-10 z-[1]">
+                  <div className="absolute top-40 2xl:top-60 left-0 right-0 bottom-0 flex flex-col  px-10 z-[1]">
                     {/* <div className="text-white flex flex-col  px-10 z-[1]"> */}
-                    <h1 className="text-2xl lg:text-5xl 2xl:text-7xl font-bold ">
-                      Glad to see you!
+                    <h1 className="text-2xl lg:text-4xl 2xl:text-6xl font-bold ">
+                      {/* Glad to see you! */}
+                      <TypeAnimation
+                        sequence={[
+                          "Begin Your Journey, Start Exploring, Feel Nature",
+                          1000,
+                          "Begin Your Journey, Start Exploring, Know Cultures",
+                          1000,
+                          "Begin Your Journey, Start Exploring, Enjoy Life",
+                          1000,
+                          "Begin Your Journey, Start Exploring, Create Stories",
+                          1000,
+                          "Begin Your Journey, Start Exploring, Find Harmony",
+                          1000,
+                        ]}
+                        speed={50}
+                        repeat={Infinity}
+                      />
                     </h1>
-                    <p className="text-lg lg:text-xl 2xl:text-2xl font-bold pt-80">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Eos, saepe. Deserunt, quia facere. Vitae, inventore.
-                      Aliquam quos ut accusamus commodi.
+                    <p className="text-lg lg:text-xl 2xl:text-2xl font-bold pt-40">
+                      {event.title}
                     </p>
                   </div>
                   {/* when Image show uncomment below line */}
@@ -140,7 +167,7 @@ const Register = () => {
         </div>
         {/* image box end */}
 
-        <div className="md:flex md:items-center md:justify-center w-full sm:w-auto md:h-full md:w-3/5 p-8 md:p-10 lg:p-14 sm:rounded-lg md:rounded-none bg-white">
+        <div className="md:flex md:items-center md:justify-center w-full sm:w-auto md:h-full md:w-1/2 p-8 md:p-10 lg:p-14 sm:rounded-lg md:rounded-none bg-white">
           <div className="max-w-3xl w-full space-y-8 pt-20">
             <div className="">
               <h2 className="mt-6 text-3xl font-bold text-gray-900">
@@ -168,25 +195,31 @@ const Register = () => {
 
               {/* email */}
               <div className="relative">
-                <div className="absolute right-3">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-10 w-8 text-green-500"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                    ></path>
-                  </svg>
-                </div>
+                {isEmailValid(formData.email) && (
+                  <div className="absolute right-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-10 w-8 text-green-500"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                      ></path>
+                    </svg>
+                  </div>
+                )}
 
                 <input
-                  className="w-full text-base px-4 py-2 border-b border-gray-300 focus:outline-none rounded-2xl focus:border-[#4C50E8]"
+                  className={`w-full text-base px-4 py-2 border-b border-gray-300 focus:outline-none rounded-2xl ${
+                    isEmailValid(formData.email)
+                      ? "focus:border-[#4C50E8]"
+                      : "focus:border-red-500"
+                  }`}
                   type="text"
                   name="email"
                   placeholder="Email"
@@ -211,24 +244,31 @@ const Register = () => {
 
               {/* confirm password */}
               <div className="relative">
-                <div className="absolute right-3">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-10 w-8 text-green-500"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                    ></path>
-                  </svg>
-                </div>
+                {formData.confirmPassword !== "" && doPasswordsMatch() && (
+                  <div className="absolute right-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-10 w-8 text-green-500"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      title="Password matched"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                      ></path>
+                    </svg>
+                  </div>
+                )}
                 <input
-                  className="w-full text-base px-4 py-2 border-b border-gray-300 focus:outline-none rounded-2xl focus:border-[#4C50E8]"
+                  className={`w-full text-base px-4 py-2 border-b border-gray-300 focus:outline-none rounded-2xl ${
+                    formData.confirmPassword !== "" && doPasswordsMatch()
+                      ? "focus:border-[#4C50E8]"
+                      : "focus:border-red-500"
+                  }`}
                   type="password"
                   name="confirmPassword"
                   placeholder="Confirm Password"
@@ -277,7 +317,7 @@ const Register = () => {
 
               {/* other component */}
 
-              <div className="flex items-center justify-between">
+              {/* <div className="flex items-center justify-between">
                 <div className="flex items-center">
                   <input
                     id="remember_me"
@@ -297,13 +337,17 @@ const Register = () => {
                     Forgot your password?
                   </a>
                 </div>
-              </div>
+              </div> */}
               <div>
                 <button
                   type="submit"
-                  className="w-full flex justify-center bg-gradient-to-r from-indigo-500 to-blue-600 hover:bg-gradient-to-l hover:from-blue-500 hover:to-indigo-600 text-gray-100 p-4 rounded-lg tracking-wide font-semibold shadow-lg cursor-pointer transition ease-in duration-500"
+                  // className="w-full register_btn relative flex justify-center bg-gradient-to-r from-indigo-500 to-blue-600 hover:bg-gradient-to-l hover:from-blue-500 hover:to-indigo-600 text-gray-100 p-4 rounded-lg tracking-wide font-semibold shadow-lg cursor-pointer transition ease-in duration-500"
+                  className="text-[14px] lg:text-[16px] register_btn w-full flex justify-center items-center px-10 py-8 relative border uppercase font-semibold tracking-wider leading-none overflow-hidden bg-[#070B39] rounded-md text-white cursor-pointer"
                 >
-                  Register
+                  <span className="absolute inset-0 bg-yellow-400 rounded"></span>
+                  <span className="absolute inset-0 flex justify-center items-center font-bold">
+                    Register
+                  </span>
                 </button>
               </div>
               {error && <p className="text-red-500">{error}</p>}

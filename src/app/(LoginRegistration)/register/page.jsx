@@ -99,7 +99,7 @@ const Register = () => {
         <div className="sm:w-1/2 md:w-2/5 hidden md:block">
           <Slider {...settings}>
             {upcomingEventsData.map((event, index) => (
-              <div className="sm:w-1/2 md:w-2/5 h-full hidden md:flex flex-auto justify-center items-center  overflow-hidden text-white bg-no-repeat bg-cover relative  bg-gradient-to-r from-sky-500 to-indigo-400">
+              <div className="sm:w-1/2 md:w-2/5 h-full hidden md:flex flex-auto justify-center items-center  overflow-hidden text-white bg-no-repeat bg-cover relative  bg-gradient-to-r from-sky-500 to-indigo-400 rounded-br-[10px]">
                 <div className="relative">
                   <Image
                     src={event.locationThumbnailImg}
