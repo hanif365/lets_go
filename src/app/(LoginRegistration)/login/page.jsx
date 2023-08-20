@@ -7,7 +7,13 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 import "./page.css";
-import { FaFacebookF, FaGithub, FaGoogle } from "react-icons/fa6";
+import {
+  FaEye,
+  FaEyeSlash,
+  FaFacebookF,
+  FaGithub,
+  FaGoogle,
+} from "react-icons/fa6";
 import upcomingEventsData from "../../../data/UpcomingEventsData.json";
 import { TypeAnimation } from "react-type-animation";
 import { signIn, useSession } from "next-auth/react";
@@ -22,6 +28,7 @@ const Login = () => {
   const params = useSearchParams();
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
 
   console.log(session.status);
 
@@ -184,7 +191,7 @@ const Login = () => {
                   <div className="absolute right-3">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-10 w-8 text-green-500"
+                      className="h-14 w-8 text-green-500"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -218,13 +225,31 @@ const Login = () => {
               <div className="relative">
                 <input
                   className="w-full text-base px-4 py-4 border-b border-gray-300 focus:outline-none rounded-2xl focus:border-[#4C50E8]"
-                  type="password"
+                  type={showPassword ? "text" : "password"}
                   name="password"
                   placeholder="Password"
                   value={formData.password}
                   onChange={handleInputChange}
                   required
                 />
+
+                {formData.password ? (
+                  showPassword ? (
+                    <FaEye
+                      className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer"
+                      style={{ width: "20px", height: "20px" }}
+                      onClick={() => setShowPassword(!showPassword)}
+                    />
+                  ) : (
+                    <FaEyeSlash
+                      className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer"
+                      style={{ width: "20px", height: "20px" }}
+                      onClick={() => setShowPassword(!showPassword)}
+                    />
+                  )
+                ) : (
+                  <></>
+                )}
               </div>
 
               {/* other component */}
