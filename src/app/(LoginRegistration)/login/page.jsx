@@ -200,7 +200,7 @@ const Login = () => {
                 )}
 
                 <input
-                  className={`w-full text-base px-4 py-2 border-b border-gray-300 focus:outline-none rounded-2xl ${
+                  className={`w-full text-base px-4 py-4 border-b border-gray-300 focus:outline-none rounded-2xl ${
                     isEmailValid(formData.email)
                       ? "focus:border-[#4C50E8]"
                       : "focus:border-red-500"
@@ -217,7 +217,7 @@ const Login = () => {
               {/* password */}
               <div className="relative">
                 <input
-                  className="w-full text-base px-4 py-2 border-b border-gray-300 focus:outline-none rounded-2xl focus:border-[#4C50E8]"
+                  className="w-full text-base px-4 py-4 border-b border-gray-300 focus:outline-none rounded-2xl focus:border-[#4C50E8]"
                   type="password"
                   name="password"
                   placeholder="Password"
@@ -276,11 +276,11 @@ const Login = () => {
             </p>
 
             <div className="flex items-center justify-center space-x-2">
-              <span className="h-px w-16 bg-gray-200"></span>
-              <span className="text-gray-300 font-normal">
+              <span className="h-px w-16 bg-gray-400"></span>
+              <span className="text-gray-400 font-normal">
                 or continue with
               </span>
-              <span className="h-px w-16 bg-gray-200"></span>
+              <span className="h-px w-16 bg-gray-400"></span>
             </div>
 
             <div className="flex flex-row justify-center items-center space-x-3">
