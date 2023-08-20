@@ -110,9 +110,9 @@ const Register = () => {
                   />
 
                   {/* when Image show uncomment below line */}
-                  <div className="absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center px-10 z-[1]">
+                  <div className="absolute top-40 2xl:top-60 left-0 right-0 bottom-0 flex flex-col  px-10 z-[1]">
                     {/* <div className="text-white flex flex-col  px-10 z-[1]"> */}
-                    <h1 className="text-2xl lg:text-4xl 2xl:text-7xl font-bold ">
+                    <h1 className="text-2xl lg:text-4xl 2xl:text-6xl font-bold ">
                       {/* Glad to see you! */}
                       <TypeAnimation
                         sequence={[
@@ -131,7 +131,7 @@ const Register = () => {
                         repeat={Infinity}
                       />
                     </h1>
-                    <p className="text-lg lg:text-xl 2xl:text-2xl font-bold pt-80">
+                    <p className="text-lg lg:text-xl 2xl:text-2xl font-bold pt-40">
                       {event.title}
                     </p>
                   </div>
