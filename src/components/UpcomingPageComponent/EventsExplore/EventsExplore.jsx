@@ -5,19 +5,8 @@ import Link from "next/link";
 
 const EventsExplore = ({ eventData }) => {
   const handleBuyTicket = async () => {
-    // const response = await fetch("http://localhost:3000/api/buytickets", {
-    //   method: "POST",
-    //   body: JSON.stringify(eventData),
-    //   "Content-Type": "application/json",
-    // });
-
-    // console.log("Response", response);
-
-    // const responseData = await response.json();
-    // console.log("Response Data: *****************************: ", responseData);
-
     try {
-      const response = await fetch("http://localhost:3000/api/buytickets", {
+      const response = await fetch("/api/buytickets", {
         method: "POST",
         body: JSON.stringify(eventData),
         headers: {
@@ -25,13 +14,13 @@ const EventsExplore = ({ eventData }) => {
         },
       });
 
-      console.log("Response", response);
-
       const responseData = await response.json();
       console.log(
         "Response Data: *****************************: ",
-        responseData
+        responseData.url
       );
+      window.location.replace(responseData.url);
+
     } catch (error) {
       console.error("Error making POST request:", error);
     }

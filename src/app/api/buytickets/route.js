@@ -6,7 +6,9 @@ const SSLCommerzPayment = require("sslcommerz-lts");
 export const POST = async (request) => {
   const order = await request.json();
   const { cost, currency } = order[0];
-  console.log(cost);
+  console.log(cost, currency);
+  console.log(typeof(cost), typeof(currency));
+  console.log(process.env.SITE_URL)
 
   await connectDB();
 
@@ -18,19 +20,19 @@ export const POST = async (request) => {
     Math.floor(Math.random() * (9999999999 - 1000000000 + 1)) + 1000000000;
   const data = {
     total_amount: cost,
-    currency,
+    currency: currency,
     tran_id: transactionId, // use unique tran_id for each api call
-    success_url: `${process.env.SERVER_URL}/payment/success?transactionId=${transactionId}`,
-    fail_url: `${process.env.SERVER_URL}/payment/fail?transactionId=${transactionId}`,
-    cancel_url: `${process.env.SERVER_URL}/payment/cancel`,
-    ipn_url: `${process.env.SERVER_URL}/ipn`,
+    success_url: `${process.env.SITE_URL}/api/payment/success?transactionId=${transactionId}`,
+    fail_url: `${process.env.SITE_URL}/api/payment/fail?transactionId=${transactionId}`,
+    cancel_url: `${process.env.SITE_URL}/cancel`,
+    ipn_url: 'http://localhost:3000/ipn',
     shipping_method: "Courier",
     product_name: "Computer.",
     product_category: "Electronic",
     product_profile: "general",
-    cus_name: "order.customer",
-    cus_email: "order.email",
-    cus_add1: "order.address",
+    cus_name: "Hanif",
+    cus_email: "abuhanif.cse3@gmail.com",
+    cus_add1: "Dhaka",
     cus_add2: "Dhaka",
     cus_city: "Dhaka",
     cus_state: "Dhaka",
@@ -38,12 +40,12 @@ export const POST = async (request) => {
     cus_country: "Bangladesh",
     cus_phone: "01711111111",
     cus_fax: "01711111111",
-    ship_name: "Customer Name",
+    ship_name: "Rofiq",
     ship_add1: "Dhaka",
     ship_add2: "Dhaka",
     ship_city: "Dhaka",
     ship_state: "Dhaka",
-    ship_postcode: "6670",
+    ship_postcode: "1000",
     ship_country: "Bangladesh",
   };
 
@@ -63,7 +65,7 @@ export const POST = async (request) => {
 
     await newOrder.save();
 
-    return NextResponse.json(GatewayPageURL);
+    return NextResponse.json({url:GatewayPageURL});
   } catch (err) {
     console.log("Error: ", err);
     return {

@@ -15,6 +15,9 @@ const orderSchema = new mongoose.Schema(
       type: Boolean,
       required: true,
     },
+    paidAt: {
+      type: Date,
+    },
   },
   { timestamps: true }
 );
