@@ -1,18 +1,16 @@
-'use client'
- 
-import { useSearchParams  } from 'next/navigation'
-import React from 'react';
+"use client";
+
+import { useSearchParams } from "next/navigation";
+import React from "react";
 
 const Page = () => {
-  const searchParams  = useSearchParams()
-  const transactionId = searchParams.get('transactionId')
-  const errorMsg = searchParams.get('errorMsg')
-  console.log(transactionId)
-  console.log(errorMsg)
-  
-  return (
-    <div className='m-40 text-red-500'>{errorMsg}</div>
-  );
+  const searchParams = useSearchParams();
+  const transactionId = searchParams.get("transactionId");
+  const errorMsg = searchParams.get("errorMsg");
+  console.log(transactionId);
+  console.log(errorMsg);
+
+  return <div className="m-40 text-red-500">{errorMsg}</div>;
 };
 
 export default Page;
