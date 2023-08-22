@@ -12,12 +12,30 @@ export const POST = async (request) => {
 
   await connectDB();
 
+  // show eror if transaction id not present
   if (!transactionId) {
-    // return NextResponse.redirect(`${process.env.SITE_URL}/api/payment/fail`);
-    return NextResponse.redirect(`${process.env.SITE_URL}/fail`);
+    // return NextResponse.redirect(`${process.env.SITE_URL}/fail`);
+    const errorMsg =
+      "Transaction not complete, Something went wrong! Please try again later.";
+
+    // const redirectFailPageURL = `${
+    //   process.env.SITE_URL
+    // }/fail?transactionId=${encodeURIComponent(
+    //   transactionId
+    // )}&errorMsg=${encodeURIComponent(errorMsg)}`;
+
+    const redirectFailPageURL = `${process.env.SITE_URL}/fail?transactionId=${transactionId}&errorMsg=${errorMsg}`;
+    console.log(redirectFailPageURL);
+
+    return new Response(null, {
+      status: 302, // Found/Temporary Redirect
+      headers: {
+        Location: redirectFailPageURL,
+      },
+    });
   }
 
-  //for convert GMT+6 timezone
+  // for convert GMT+6 timezone
   const gmtOffset = 6 * 60 * 60 * 1000; // 6 hours offset in milliseconds
   const currentTime = new Date(); // Get the current time in your local timezone
   const gmtTime = new Date(currentTime.getTime() + gmtOffset);
@@ -31,11 +49,27 @@ export const POST = async (request) => {
   console.log("Update Order: *************************: ", updatedOrder);
 
   if (!updatedOrder) {
-    return NextResponse.json({ error: "Order not found or already paid." });
+    const errorMsg = "Order not found or already paid!";
+
+    // const redirectFailPageURL = `${
+    //   process.env.SITE_URL
+    // }/fail?transactionId=${encodeURIComponent(
+    //   transactionId
+    // )}&errorMsg=${encodeURIComponent(errorMsg)}`;
+
+    const redirectFailPageURL = `${process.env.SITE_URL}/fail?transactionId=${transactionId}&errorMsg=${errorMsg}`;
+    console.log(redirectFailPageURL);
+
+    return new Response(null, {
+      status: 302, // Found/Temporary Redirect
+      headers: {
+        Location: redirectFailPageURL,
+      },
+    });
   }
 
-  const redirectSuccessPageURL = `${process.env.SITE_URL}/success?transactionId=${transactionId}`
-  console.log(redirectSuccessPageURL);
+//   const redirectSuccessPageURL = `${process.env.SITE_URL}/success?transactionId=${transactionId}`;
+//   console.log(redirectSuccessPageURL);
 
   //   if (updatedOrder.paid) {
   // return NextResponse.json({ transactionId: transactionId });
@@ -45,8 +79,25 @@ export const POST = async (request) => {
   // return NextResponse.redirect(new NextURL(request.nextUrl.pathname, redirectSuccessPageURL));
   //   }
 
-
   if (updatedOrder.paid) {
+    // return new Response(null, {
+    //   status: 302, // Found/Temporary Redirect
+    //   headers: {
+    //     Location: redirectSuccessPageURL,
+    //   },
+    // });
+
+    const successMsg = "Transaction complete successfully!";
+
+    // const redirectSuccessPageURL = `${
+    //   process.env.SITE_URL
+    // }/success?transactionId=${encodeURIComponent(
+    //   transactionId
+    // )}&successMsg=${encodeURIComponent(successMsg)}`;
+
+    const redirectSuccessPageURL = `${process.env.SITE_URL}/success?transactionId=${transactionId}&successMsg=${successMsg}`;
+    console.log(redirectSuccessPageURL);
+
     return new Response(null, {
       status: 302, // Found/Temporary Redirect
       headers: {

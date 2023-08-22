@@ -19,7 +19,6 @@ const orderSchema = new mongoose.Schema(
       type: Date,
     },
   },
-  { timestamps: true }
 );
 
 export default mongoose.models.Orders || mongoose.model("Orders", orderSchema);
