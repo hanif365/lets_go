@@ -11,7 +11,7 @@ const Login = ({ url }) => {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
 
-  console.log(session.status);
+  // console.log(session.status);
 
   useEffect(() => {
     setError(params.get("error"));

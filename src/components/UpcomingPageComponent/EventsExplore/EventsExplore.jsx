@@ -4,6 +4,39 @@ import "./EventsExplore.css";
 import Link from "next/link";
 
 const EventsExplore = ({ eventData }) => {
+  const handleBuyTicket = async () => {
+    // const response = await fetch("http://localhost:3000/api/buytickets", {
+    //   method: "POST",
+    //   body: JSON.stringify(eventData),
+    //   "Content-Type": "application/json",
+    // });
+
+    // console.log("Response", response);
+
+    // const responseData = await response.json();
+    // console.log("Response Data: *****************************: ", responseData);
+
+    try {
+      const response = await fetch("http://localhost:3000/api/buytickets", {
+        method: "POST",
+        body: JSON.stringify(eventData),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      console.log("Response", response);
+
+      const responseData = await response.json();
+      console.log(
+        "Response Data: *****************************: ",
+        responseData
+      );
+    } catch (error) {
+      console.error("Error making POST request:", error);
+    }
+  };
+
   return (
     <div className="mt-20">
       <h2 className="text-[#071952] text-xl lg:text-4xl 2xl:text-6xl font-bold text-center px-2 lg:px-0">
@@ -156,13 +189,9 @@ const EventsExplore = ({ eventData }) => {
       </h4>
 
       <div className="flex justify-center">
-        <Link
+        <button
           activeclassName="active"
-          href="/buyticket"
-          spy={true}
-          smooth={true}
-          offset={-120}
-          duration={500}
+          onClick={handleBuyTicket}
           className="text-[14px] lg:text-[16px] buy_btn mt-6 px-10 py-6 relative border uppercase font-semibold tracking-wider leading-none overflow-hidden bg-[#070B39] rounded-md text-white cursor-pointer"
           type="button"
         >
@@ -171,7 +200,7 @@ const EventsExplore = ({ eventData }) => {
             Buy Ticket
           </span>
           Buy Ticket
-        </Link>
+        </button>
       </div>
     </div>
   );

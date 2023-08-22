@@ -15,7 +15,7 @@ function Navbar() {
   const [showNavbar, setShowNavbar] = useState(true);
   const [showShadow, setShowShadow] = useState(false);
 
-  console.log(pathname);
+  // console.log(pathname);
 
   const changeBackgroundNavbar = () => {
     if (window.scrollY >= 800) {
