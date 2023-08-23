@@ -10,7 +10,11 @@ const Page = () => {
   console.log(transactionId);
   console.log(errorMsg);
 
-  return <div className="m-40 text-red-500">{errorMsg}</div>;
+  return (
+    <div className="m-40 text-red-500">
+      <p>{errorMsg}</p>
+    </div>
+  );
 };
 
 export default Page;

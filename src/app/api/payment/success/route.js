@@ -16,7 +16,7 @@ export const POST = async (request) => {
     const errorMsg =
       "Transaction not complete, Something went wrong! Please try again later.";
 
-    const redirectFailPageURL = `${process.env.SITE_URL}/fail?transactionId=${transactionId}&errorMsg=${errorMsg}`;
+    const redirectFailPageURL = `${process.env.SITE_URL}/payment/fail?transactionId=${transactionId}&errorMsg=${errorMsg}`;
     console.log(redirectFailPageURL);
 
     return new Response(null, {
@@ -43,7 +43,7 @@ export const POST = async (request) => {
   if (!updatedOrder) {
     const errorMsg = "Order not found or already paid!";
 
-    const redirectFailPageURL = `${process.env.SITE_URL}/fail?transactionId=${transactionId}&errorMsg=${errorMsg}`;
+    const redirectFailPageURL = `${process.env.SITE_URL}/payment/fail?transactionId=${transactionId}&errorMsg=${errorMsg}`;
     console.log(redirectFailPageURL);
 
     return new Response(null, {
@@ -56,7 +56,7 @@ export const POST = async (request) => {
 
   if (updatedOrder.paid) {
     const successMsg = "Transaction complete successfully!";
-    const redirectSuccessPageURL = `${process.env.SITE_URL}/success?transactionId=${transactionId}&successMsg=${successMsg}`;
+    const redirectSuccessPageURL = `${process.env.SITE_URL}/payment/success?transactionId=${transactionId}&successMsg=${successMsg}`;
     console.log(redirectSuccessPageURL);
 
     return new Response(null, {

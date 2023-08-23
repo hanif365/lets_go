@@ -16,7 +16,7 @@ export const POST = async (request) => {
     const errorMsg =
       "Transaction not complete, Something went wrong! Please try again later.";
 
-    const redirectFailPageURL = `${process.env.SITE_URL}/fail?transactionId=${transactionId}&errorMsg=${errorMsg}`;
+    const redirectFailPageURL = `${process.env.SITE_URL}/payment/fail?transactionId=${transactionId}&errorMsg=${errorMsg}`;
     console.log(redirectFailPageURL);
 
     return new Response(null, {
@@ -32,7 +32,7 @@ export const POST = async (request) => {
     const errorMsg =
       "Transaction Aborted, Something went wrong! Please try again later.";
 
-    const redirectFailPageURL = `${process.env.SITE_URL}/fail?transactionId=${transactionId}&errorMsg=${errorMsg}`;
+    const redirectFailPageURL = `${process.env.SITE_URL}/payment/fail?transactionId=${transactionId}&errorMsg=${errorMsg}`;
     console.log(redirectFailPageURL);
 
     return new Response(null, {
