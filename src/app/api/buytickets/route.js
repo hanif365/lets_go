@@ -7,8 +7,8 @@ export const POST = async (request) => {
   const order = await request.json();
   const { cost, currency } = order[0];
   console.log(cost, currency);
-  console.log(typeof(cost), typeof(currency));
-  console.log(process.env.SITE_URL)
+  console.log(typeof cost, typeof currency);
+  console.log(process.env.SITE_URL);
 
   await connectDB();
 
@@ -25,7 +25,7 @@ export const POST = async (request) => {
     success_url: `${process.env.SITE_URL}/api/payment/success?transactionId=${transactionId}`,
     fail_url: `${process.env.SITE_URL}/api/payment/fail?transactionId=${transactionId}`,
     cancel_url: `${process.env.SITE_URL}/cancel`,
-    ipn_url: 'http://localhost:3000/ipn',
+    ipn_url: `${process.env.SITE_URL}/ipn`,
     shipping_method: "Courier",
     product_name: "Computer.",
     product_category: "Electronic",
@@ -65,7 +65,7 @@ export const POST = async (request) => {
 
     await newOrder.save();
 
-    return NextResponse.json({url:GatewayPageURL});
+    return NextResponse.json({ url: GatewayPageURL });
   } catch (err) {
     console.log("Error: ", err);
     return {
