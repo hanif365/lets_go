@@ -40,7 +40,7 @@ const Dashboard = () => {
             {isDark ? "Light" : "Dark"}
           </button>
 
-          <div class="bg-[#bada55] dark:bg-[yellow] text-[#fff] text-[42px] after:content-['Festivus']">
+          <div className="bg-[#bada55] dark:bg-[yellow] text-[#fff] text-[42px] after:content-['Festivus']">
             Hello
           </div>
         </div>

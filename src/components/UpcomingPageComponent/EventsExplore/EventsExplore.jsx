@@ -4,7 +4,8 @@ import "./EventsExplore.css";
 import Link from "next/link";
 
 const EventsExplore = ({ eventData }) => {
-  const handleBuyTicket = async () => {
+  // console.log(eventData)
+  const handleBookTicket = async () => {
     try {
       const response = await fetch("/api/buytickets", {
         method: "POST",
@@ -20,7 +21,6 @@ const EventsExplore = ({ eventData }) => {
         responseData.url
       );
       window.location.replace(responseData.url);
-
     } catch (error) {
       console.error("Error making POST request:", error);
     }
@@ -178,18 +178,19 @@ const EventsExplore = ({ eventData }) => {
       </h4>
 
       <div className="flex justify-center">
-        <button
-          activeclassName="active"
-          onClick={handleBuyTicket}
+        <Link
+          href={`/bookticket/${eventData[0].eventLocationLink}`}
+          // activeclassName="active"
+          // onClick={handleBookTicket}
           className="text-[14px] lg:text-[16px] buy_btn mt-6 px-10 py-6 relative border uppercase font-semibold tracking-wider leading-none overflow-hidden bg-[#070B39] rounded-md text-white cursor-pointer"
           type="button"
         >
           <span className="absolute inset-0  bg-yellow-400"></span>
           <span className="absolute inset-0 flex justify-center items-center font-bold">
-            Buy Ticket
+            Book Your Ticket
           </span>
-          Buy Ticket
-        </button>
+          Book Your Ticket
+        </Link>
       </div>
     </div>
   );

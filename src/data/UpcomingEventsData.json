@@ -1,6 +1,7 @@
 [
   {
     "id": "1",
+    "eventTitle": "Let's explore Cox's Bazar",
     "eventLocation": "Cox's Bazar",
     "eventLocationLink": "Cox'sBazar",
     "country": "Bangladesh",
@@ -20,6 +21,7 @@
     "date": "2023-08-15",
     "days": "5 days",
     "cost": 1200,
+    "costOfChild": 900,
     "currency": "BDT",
     "specialOffer": "20% off",
     "title": "Bangladesh's Serene Coastal Paradise",
@@ -52,6 +54,7 @@
   },
   {
     "id": "2",
+    "eventTitle": "Let's explore Paris",
     "eventLocation": "Paris",
     "eventLocationLink": "Paris",
     "locationHeaderImg": "https://i.ibb.co/d0Gwrd1/cox-sbazargalleryimg2.jpg",
@@ -60,6 +63,7 @@
     "date": "2023-09-10",
     "days": "7 days",
     "cost": 1800,
+    "costOfChild": 1200,
     "currency": "BDT",
     "specialOffer": "15% off",
     "title": "Romantic Parisian Getaway",
@@ -87,6 +91,7 @@
   },
   {
     "id": "3",
+    "eventTitle": "Let's explore Cox's Bazar",
     "eventLocation": "Tokyo",
     "eventLocationLink": "Tokyo",
     "locationHeaderImg": "https://i.ibb.co/pxmjtJY/cox-sbazarheroimage.jpg",
@@ -95,6 +100,7 @@
     "date": "2023-11-05",
     "days": "6 days",
     "cost": 2200,
+    "costOfChild": 1800,
     "currency": "BDT",
     "specialOffer": "10% off",
     "title": "Discover Tokyo's Wonders",
@@ -122,6 +128,7 @@
   },
   {
     "id": "4",
+    "eventTitle": "Let's explore Cox's Bazar",
     "eventLocation": "London",
     "eventLocationLink": "London",
     "locationHeaderImg": "https://i.ibb.co/pxmjtJY/cox-sbazarheroimage.jpg",
@@ -130,6 +137,7 @@
     "date": "2023-10-20",
     "days": "4 days",
     "cost": 1500,
+    "costOfChild": 1200,
     "currency": "BDT",
     "specialOffer": "25% off",
     "title": "London Calling",
@@ -157,6 +165,7 @@
   },
   {
     "id": "5",
+    "eventTitle": "Let's explore Cox's Bazar",
     "eventLocation": "Sydney",
     "eventLocationLink": "Sydney",
     "locationHeaderImg": "https://i.ibb.co/pxmjtJY/cox-sbazarheroimage.jpg",
@@ -165,6 +174,7 @@
     "date": "2024-01-05",
     "days": "8 days",
     "cost": 2400,
+    "costOfChild": 2000,
     "currency": "BDT",
     "specialOffer": "30% off",
     "title": "Sydney Adventure",
@@ -192,6 +202,7 @@
   },
   {
     "id": "6",
+    "eventTitle": "Let's explore Cox's Bazar",
     "eventLocation": "Rome",
     "eventLocationLink": "Rome",
     "locationHeaderImg": "https://i.ibb.co/pxmjtJY/cox-sbazarheroimage.jpg",
@@ -200,6 +211,7 @@
     "date": "2024-03-15",
     "days": "6 days",
     "cost": 2100,
+    "costOfChild": 1800,
     "currency": "BDT",
     "specialOffer": "10% off",
     "title": "Eternal City Exploration",
