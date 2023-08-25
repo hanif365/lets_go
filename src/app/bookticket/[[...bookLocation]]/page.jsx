@@ -7,8 +7,19 @@ import FareDetails from "@/components/BookTicketComponent/FareDetails/FareDetail
 import BookingInfo from "@/components/BookTicketComponent/BookingInfo/BookingInfo";
 import upcomingEventsData from "../../../data/UpcomingEventsData.json";
 import JourneyDetails from "@/components/BookTicketComponent/JourneyDetails/JourneyDetails";
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 const BookTicket = ({ params }) => {
+  const session = useSession();
+  const router = useRouter();
+  const userData = session?.data?.user;
+  console.log(
+    "session: **********************************************: ",
+    userData
+  );
+
   const [selectedSeats, setSelectedSeats] = useState([]);
   const [passengerData, setPassengerData] = useState([]);
 
@@ -126,7 +137,8 @@ const BookTicket = ({ params }) => {
     const orderedData = {
       filteredEvents: filteredEvents,
       bookedSeats: bookedSeats,
-      passengers: passengerData, // Passengers data
+      passengers: passengerData,
+      user: userData,
     };
 
     console.log("Ordered Data: ******************:, ", orderedData);
@@ -168,20 +180,6 @@ const BookTicket = ({ params }) => {
     setChildCount(newChildCount);
   };
 
-  // const renderPassengerForms = () => {
-  //   return passengerData.map((passenger, index) => (
-  //     <PassengerDetails
-  //       key={index}
-  //       passenger={passenger}
-  //       onChange={(updatedPassenger) =>
-  //         handlePassengerChange(index, updatedPassenger)
-  //       }
-  //       passengerNumber={index + 1}
-  //       seatName={passenger.seatName}
-  //     />
-  //   ));
-  // };
-
   const renderPassengerForms = () => {
     return passengerData.map((passenger, index) => {
       const isCompleted =
@@ -201,43 +199,63 @@ const BookTicket = ({ params }) => {
     });
   };
 
-  return (
-    <div>
-      <div className="flex mt-40">
-        <div className="flex-1">
-          {renderSeatRow("A", 1)}
-          {renderSeatRow("B", 5)}
-          {renderSeatRow("C", 9)}
-          {renderSeatRow("D", 13)}
-          {renderSeatRow("E", 17)}
-          {renderSeatRow("F", 21)}
-          {renderSeatRow("G", 25)}
-          {renderSeatRow("H", 29)}
-          {renderSeatRow("I", 33)}
-          {renderSeatRow("J", 37)}
-        </div>
-        <div className="flex-1">
-          <JourneyDetails
-            filteredEvents={filteredEvents}
-            selectedSeatNames={selectedSeatNames}
-          />
-        </div>
+  if (session.status === "loading") {
+    return (
+      <div className="mt-40">
+        <Image
+          src="/loading.gif"
+          alt="Loading Image"
+          width={30}
+          height={30}
+          className="mx-auto"
+        />
       </div>
+    );
+  }
 
-      <div className="flex mt-10">
-        <div className="flex-1">{renderPassengerForms()}</div>
-        <div className="flex-1">
-          <FareDetails
-            adultCount={adultCount}
-            childCount={childCount}
-            filteredEvents={filteredEvents}
-            onConfirmSeats={confirmSeats}
-            passengerData={passengerData}
-          />
+  if (session.status === "unauthenticated") {
+    router?.push("/login");
+  }
+
+  if (session.status === "authenticated") {
+    return (
+      <div>
+        <div className="flex mt-40">
+          <div className="flex-1">
+            {renderSeatRow("A", 1)}
+            {renderSeatRow("B", 5)}
+            {renderSeatRow("C", 9)}
+            {renderSeatRow("D", 13)}
+            {renderSeatRow("E", 17)}
+            {renderSeatRow("F", 21)}
+            {renderSeatRow("G", 25)}
+            {renderSeatRow("H", 29)}
+            {renderSeatRow("I", 33)}
+            {renderSeatRow("J", 37)}
+          </div>
+          <div className="flex-1">
+            <JourneyDetails
+              filteredEvents={filteredEvents}
+              selectedSeatNames={selectedSeatNames}
+            />
+          </div>
+        </div>
+
+        <div className="flex mt-10">
+          <div className="flex-1">{renderPassengerForms()}</div>
+          <div className="flex-1">
+            <FareDetails
+              adultCount={adultCount}
+              childCount={childCount}
+              filteredEvents={filteredEvents}
+              onConfirmSeats={confirmSeats}
+              passengerData={passengerData}
+            />
+          </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  }
 };
 
 export default BookTicket;

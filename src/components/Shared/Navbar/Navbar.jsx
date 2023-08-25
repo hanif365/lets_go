@@ -15,7 +15,7 @@ function Navbar() {
   const [showNavbar, setShowNavbar] = useState(true);
   const [showShadow, setShowShadow] = useState(false);
 
-  // console.log(pathname);
+  // console.log("session: **********************************************: ", session?.data?.user);
 
   const changeBackgroundNavbar = () => {
     if (window.scrollY >= 800) {
