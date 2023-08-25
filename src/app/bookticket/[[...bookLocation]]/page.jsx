@@ -1,7 +1,7 @@
 // BookTicket.js
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import PassengerDetails from "@/components/BookTicketComponent/PassengerDetails/PassengerDetails";
 import FareDetails from "@/components/BookTicketComponent/FareDetails/FareDetails";
 import BookingInfo from "@/components/BookTicketComponent/BookingInfo/BookingInfo";
@@ -19,6 +19,41 @@ const BookTicket = ({ params }) => {
     "session: **********************************************: ",
     userData
   );
+
+  const [allReservedSeatIds, setAllReservedSeatIds] = useState([]);
+
+  console.log("allReservedSeatIds: ******: ", allReservedSeatIds);
+
+  useEffect(() => {
+    async function fetchOrders() {
+      try {
+        const response = await fetch("/api/buytickets");
+        const data = await response.json();
+
+        const alreadyBookedSeatIds = [];
+        for (const order of data) {
+          for (const bookedSeat of order.bookedSeats) {
+            alreadyBookedSeatIds.push(bookedSeat.id);
+          }
+        }
+
+        setAllReservedSeatIds(alreadyBookedSeatIds);
+
+        const updatedSeatsData = initialSeatsData.map((seat) => ({
+          ...seat,
+          isReserved: alreadyBookedSeatIds.includes(seat.id),
+        }));
+
+        setSeatsData(updatedSeatsData);
+      } catch (error) {
+        console.error("Error fetching orders:", error);
+      }
+    }
+
+    fetchOrders();
+  }, []);
+
+  //
 
   const [selectedSeats, setSelectedSeats] = useState([]);
   const [passengerData, setPassengerData] = useState([]);
@@ -46,15 +81,23 @@ const BookTicket = ({ params }) => {
 
   const rows = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; // Letters for rows
 
-  const initialSeatsData = Array.from({ length: totalSeats }, (_, index) => ({
-    id: index + 1,
-    name: `${rows[Math.floor(index / seatsPerRow)]}${
-      (index % seatsPerRow) + 1
-    }`,
-    isBooked: false,
-  }));
+  const initialSeatsData = Array.from({ length: totalSeats }, (_, index) => {
+    const seatNumber = index + 1;
+    const isReserved = allReservedSeatIds.includes(seatNumber);
+    return {
+      id: seatNumber,
+      name: `${rows[Math.floor(index / seatsPerRow)]}${
+        (index % seatsPerRow) + 1
+      }`,
+      isBooked: false,
+      isReserved: isReserved, // Check if the seat is reserved
+    };
+  });
 
   const [seatsData, setSeatsData] = useState(initialSeatsData);
+
+  console.log("initialSeatsData: ", initialSeatsData);
+  console.log("SeatsData: ", seatsData);
 
   const selectedSeatNames = selectedSeats.map(
     (seatId) => seatsData.find((seat) => seat.id === seatId)?.name
@@ -120,6 +163,7 @@ const BookTicket = ({ params }) => {
               <BookingInfo
                 seatName={seat.name}
                 isBooked={seat.isBooked}
+                isReserved={seat.isReserved}
                 onClick={() => handleSeatClick(seat.id)}
               />
               {seatIndex === 1 && <div className="w-10" />}

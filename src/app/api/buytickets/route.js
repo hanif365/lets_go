@@ -108,3 +108,16 @@ export const POST = async (request) => {
     };
   }
 };
+
+export const GET = async (request, response) => {
+  await connectDB();
+
+  try {
+    const allOrders = await Orders.find();
+    return NextResponse.json(allOrders);
+    // return response.status(200).json(allOrders);
+  } catch (error) {
+    return NextResponse.json({error: "Data not fetched Correctly!"});
+  }
+  
+}

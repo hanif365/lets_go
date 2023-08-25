@@ -42,8 +42,10 @@ const FareDetails = ({
           <div className="group">
             <button
               type="submit"
-              className={`mt-32 text-[14px] lg:text-[16px] confirmSeats_btn w-full flex justify-center items-center px-10 py-8 relative border uppercase font-semibold tracking-wider leading-none overflow-hidden bg-[#070B39] rounded-md text-white cursor-pointer ${
-                isPassengerDetailsComplete ? "" : "cursor-not-allowed"
+              className={`mt-32 text-[14px] lg:text-[16px]  w-full flex justify-center items-center px-10 py-8 relative border uppercase font-semibold tracking-wider leading-none overflow-hidden  rounded-md text-white  ${
+                isPassengerDetailsComplete
+                  ? "cursor-pointer bg-[#070B39] confirmSeats_btn"
+                  : "cursor-not-allowed bg-[#070b39ad]"
               }`}
               onClick={onConfirmSeats}
               disabled={!isPassengerDetailsComplete}
