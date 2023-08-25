@@ -30,18 +30,21 @@ const BookTicket = ({ params }) => {
         const response = await fetch("/api/buytickets");
         const data = await response.json();
 
-        const alreadyBookedSeatIds = [];
+        const reservedAndPaidSeatIds = [];
+
         for (const order of data) {
-          for (const bookedSeat of order.bookedSeats) {
-            alreadyBookedSeatIds.push(bookedSeat.id);
+          if (order.paid === true) {
+            for (const bookedSeat of order.bookedSeats) {
+              reservedAndPaidSeatIds.push(bookedSeat.id);
+            }
           }
         }
 
-        setAllReservedSeatIds(alreadyBookedSeatIds);
+        setAllReservedSeatIds(reservedAndPaidSeatIds);
 
         const updatedSeatsData = initialSeatsData.map((seat) => ({
           ...seat,
-          isReserved: alreadyBookedSeatIds.includes(seat.id),
+          isReserved: reservedAndPaidSeatIds.includes(seat.id),
         }));
 
         setSeatsData(updatedSeatsData);
