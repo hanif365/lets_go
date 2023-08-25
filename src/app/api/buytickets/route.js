@@ -31,6 +31,7 @@ export const POST = async (request) => {
   };
   const bookedSeatDetails = bookedSeats.map((seat) => {
     return {
+      id: seat.id,
       name: seat.name,
       isBooked: seat.isBooked,
     };

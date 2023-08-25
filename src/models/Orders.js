@@ -17,6 +17,10 @@ const orderSchema = new mongoose.Schema({
   },
   bookedSeats: [
     {
+      id: {
+        type: Number,
+        required: true,
+      },
       name: {
         type: String,
         required: true,
