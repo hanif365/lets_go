@@ -1,6 +1,6 @@
 import React from "react";
 
-const BookingInfo = ({ seatName, isBooked, isReserved, onClick }) => {
+const BookingInfo = ({ seatName, isBooked, isReserved, onClick, reservedSeatCount }) => {
   const seatColor = isReserved
     ? "bg-red-400"
     : isBooked

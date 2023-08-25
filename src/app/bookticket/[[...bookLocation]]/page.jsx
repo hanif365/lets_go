@@ -165,6 +165,7 @@ const BookTicket = ({ params }) => {
                 isBooked={seat.isBooked}
                 isReserved={seat.isReserved}
                 onClick={() => handleSeatClick(seat.id)}
+                reservedSeatCount={allReservedSeatIds.length}
               />
               {seatIndex === 1 && <div className="w-10" />}
             </React.Fragment>
@@ -261,11 +262,19 @@ const BookTicket = ({ params }) => {
     router?.push("/login");
   }
 
+  const remaining_seats = totalSeats - allReservedSeatIds?.length;
+
   if (session.status === "authenticated") {
+    // const remaining seats = {totalSeats} - {allReservedSeatIds.length}
     return (
       <div>
         <div className="flex mt-40">
           <div className="flex-1">
+            <div className="ml-44 flex">
+              <p className="mr-14">Total Seats: {totalSeats}</p>
+              <p>Remaining Seats: {remaining_seats}</p>
+            </div>
+
             {renderSeatRow("A", 1)}
             {renderSeatRow("B", 5)}
             {renderSeatRow("C", 9)}
