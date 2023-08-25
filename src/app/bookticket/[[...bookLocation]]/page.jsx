@@ -168,18 +168,37 @@ const BookTicket = ({ params }) => {
     setChildCount(newChildCount);
   };
 
+  // const renderPassengerForms = () => {
+  //   return passengerData.map((passenger, index) => (
+  //     <PassengerDetails
+  //       key={index}
+  //       passenger={passenger}
+  //       onChange={(updatedPassenger) =>
+  //         handlePassengerChange(index, updatedPassenger)
+  //       }
+  //       passengerNumber={index + 1}
+  //       seatName={passenger.seatName}
+  //     />
+  //   ));
+  // };
+
   const renderPassengerForms = () => {
-    return passengerData.map((passenger, index) => (
-      <PassengerDetails
-        key={index}
-        passenger={passenger}
-        onChange={(updatedPassenger) =>
-          handlePassengerChange(index, updatedPassenger)
-        }
-        passengerNumber={index + 1}
-        seatName={passenger.seatName}
-      />
-    ));
+    return passengerData.map((passenger, index) => {
+      const isCompleted =
+        passenger.name && passenger.gender && passenger.passengerType;
+      return (
+        <PassengerDetails
+          key={index}
+          passenger={passenger}
+          onChange={(updatedPassenger) =>
+            handlePassengerChange(index, updatedPassenger)
+          }
+          passengerNumber={index + 1}
+          seatName={passenger.seatName}
+          completed={isCompleted}
+        />
+      );
+    });
   };
 
   return (
@@ -213,6 +232,7 @@ const BookTicket = ({ params }) => {
             childCount={childCount}
             filteredEvents={filteredEvents}
             onConfirmSeats={confirmSeats}
+            passengerData={passengerData}
           />
         </div>
       </div>

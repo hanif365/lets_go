@@ -1,0 +1,8 @@
+.confirmSeats_btn span:first-child {
+  transform: translateY(-101%);
+  transition: transform 0.3s ease-in;
+}
+.confirmSeats_btn:hover span {
+  transform: translateY(0);
+}
+/* If we need horizontally moved then just use X instead of Y and viceversa*/

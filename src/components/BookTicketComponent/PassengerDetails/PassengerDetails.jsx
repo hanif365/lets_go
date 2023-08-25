@@ -5,6 +5,7 @@ const PassengerDetails = ({
   onChange,
   passengerNumber,
   seatName,
+  completed,
 }) => {
   const handleChange = (e) => {
     const { name, value } = e.target;

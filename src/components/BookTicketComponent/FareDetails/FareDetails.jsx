@@ -1,14 +1,21 @@
+import "./FareDetails.css";
+
 const FareDetails = ({
   adultCount,
   childCount,
   filteredEvents,
   onConfirmSeats,
+  passengerData,
 }) => {
   const adultFare = adultCount * filteredEvents[0].cost;
   const childFare = childCount * filteredEvents[0].costOfChild;
 
   const totalFare = adultFare + childFare;
   console.log(totalFare);
+
+  const isPassengerDetailsComplete = passengerData.every(
+    (passenger) => passenger.name && passenger.gender && passenger.passengerType
+  );
 
   return (
     <div className="w-[50%] mx-auto">
@@ -31,8 +38,19 @@ const FareDetails = ({
             )}
             {totalFare > 0 && <p>Total Fare: {totalFare}</p>}
           </div>
-          <button className="mt-40 text-green-500" onClick={onConfirmSeats}>
-            Confirm Seats
+
+          <button
+            type="submit"
+            className={`mt-40 text-[14px] lg:text-[16px] confirmSeats_btn w-full flex justify-center items-center px-10 py-8 relative border uppercase font-semibold tracking-wider leading-none overflow-hidden bg-[#070B39] rounded-md text-white cursor-pointer ${
+              isPassengerDetailsComplete ? "" : "cursor-not-allowed "
+            }`}
+            onClick={onConfirmSeats}
+            disabled={!isPassengerDetailsComplete}
+          >
+            <span className="absolute inset-0 bg-yellow-400 rounded"></span>
+            <span className="absolute inset-0 flex justify-center items-center font-bold">
+              Confirm Seats
+            </span>
           </button>
         </div>
       )}
