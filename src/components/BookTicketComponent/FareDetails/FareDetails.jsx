@@ -39,19 +39,26 @@ const FareDetails = ({
             {totalFare > 0 && <p>Total Fare: {totalFare}</p>}
           </div>
 
-          <button
-            type="submit"
-            className={`mt-40 text-[14px] lg:text-[16px] confirmSeats_btn w-full flex justify-center items-center px-10 py-8 relative border uppercase font-semibold tracking-wider leading-none overflow-hidden bg-[#070B39] rounded-md text-white cursor-pointer ${
-              isPassengerDetailsComplete ? "" : "cursor-not-allowed "
-            }`}
-            onClick={onConfirmSeats}
-            disabled={!isPassengerDetailsComplete}
-          >
-            <span className="absolute inset-0 bg-yellow-400 rounded"></span>
-            <span className="absolute inset-0 flex justify-center items-center font-bold">
-              Confirm Seats
-            </span>
-          </button>
+          <div className="group">
+            <button
+              type="submit"
+              className={`mt-32 text-[14px] lg:text-[16px] confirmSeats_btn w-full flex justify-center items-center px-10 py-8 relative border uppercase font-semibold tracking-wider leading-none overflow-hidden bg-[#070B39] rounded-md text-white cursor-pointer ${
+                isPassengerDetailsComplete ? "" : "cursor-not-allowed"
+              }`}
+              onClick={onConfirmSeats}
+              disabled={!isPassengerDetailsComplete}
+            >
+              <span className="absolute inset-0 bg-yellow-400 rounded"></span>
+              <span className="absolute inset-0 flex justify-center items-center font-bold">
+                Confirm Seats
+              </span>
+            </button>
+            {isPassengerDetailsComplete ? null : (
+              <p className="text-red-500 invisible group-hover:visible">
+                Please give all of Passenger information
+              </p>
+            )}
+          </div>
         </div>
       )}
     </div>
