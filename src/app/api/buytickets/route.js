@@ -54,7 +54,8 @@ export const POST = async (request) => {
     tran_id: transactionId, // use unique tran_id for each api call
     success_url: `${process.env.SITE_URL}/api/payment/success?transactionId=${transactionId}`,
     fail_url: `${process.env.SITE_URL}/api/payment/fail?transactionId=${transactionId}`,
-    cancel_url: `${process.env.SITE_URL}/cancel`,
+    cancel_url: `${process.env.SITE_URL}/api/payment/cancel?transactionId=${transactionId}`,
+    // cancel_url: `${process.env.SITE_URL}/cancel`,
     ipn_url: `${process.env.SITE_URL}/ipn`,
     shipping_method: "Courier",
     product_name: "Computer.",
