@@ -7,9 +7,13 @@ export const POST = async (request) => {
   const orderData = await request.json();
   // console.log("Ordered Data: ************************************************: ", orderData)
   const { filteredEvents, bookedSeats, passengers, user } = orderData;
+
+  const eventID = filteredEvents[0].id;
+  const eventLocation = filteredEvents[0].eventLocation;
+  const busId = filteredEvents[0].busId;
   const cost = filteredEvents[0].cost;
   const currency = filteredEvents[0].currency;
-  const eventLocation = filteredEvents[0].eventLocation;
+
   const seatName = bookedSeats[0].name;
   const isBooked = bookedSeats[0].isBooked;
   const userName = user.name;
@@ -22,8 +26,18 @@ export const POST = async (request) => {
     seatName,
     userName,
     userEmail,
-    bookedSeats
+    bookedSeats,
+    eventID,
+    busId
   );
+
+  const eventData = {
+    eventID,
+    eventLocation,
+    busId,
+    cost,
+    currency,
+  };
 
   const userData = {
     name: user.name,
@@ -90,11 +104,12 @@ export const POST = async (request) => {
 
     const newOrder = new Orders({
       userData,
-      eventLocation,
+      eventData,
+      // eventLocation,
       bookedSeats: bookedSeatDetails,
       transactionId,
-      cost,
-      currency,
+      // cost,
+      // currency,
       paid: false,
     });
 
@@ -118,7 +133,6 @@ export const GET = async (request, response) => {
     return NextResponse.json(allOrders);
     // return response.status(200).json(allOrders);
   } catch (error) {
-    return NextResponse.json({error: "Data not fetched Correctly!"});
+    return NextResponse.json({ error: "Data not fetched Correctly!" });
   }
-  
-}
+};

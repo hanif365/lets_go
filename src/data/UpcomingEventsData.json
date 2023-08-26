@@ -29,6 +29,7 @@
     "famousFor": "Iconic landmarks like the Statue of Liberty and Times Square",
     "eventsMainDescription": "Pristine beaches, longest natural sea stretch in Bangladesh.",
     "conclusion": "Experience the energy of the city that never sleeps.",
+    "busId": "bus1",
     "events": [
       {
         "eventName": "Sunset Beach Party",
@@ -71,6 +72,7 @@
     "famousFor": "Eiffel Tower, Louvre Museum, and charming cafes",
     "eventsMainDescription": "Stroll along the Seine and enjoy classical concerts",
     "conclusion": "Create lasting memories in the most romantic city in the world.",
+    "busId": "bus2",
     "events": [
       {
         "eventName": "Candlelit Seine Cruise",
@@ -108,6 +110,7 @@
     "famousFor": "Skyscrapers, ancient temples, and sushi delights",
     "eventsMainDescription": "Witness traditional tea ceremonies and sumo wrestling",
     "conclusion": "Immerse yourself in the unique culture of Tokyo.",
+    "busId": "bus3",
     "events": [
       {
         "eventName": "Shinjuku Neon Nights",
@@ -145,6 +148,7 @@
     "famousFor": "The Tower of London, Buckingham Palace, and vibrant markets",
     "eventsMainDescription": "Experience West End theater and classical music concerts",
     "conclusion": "Explore the rich history and cultural diversity of London.",
+    "busId": "bus4",
     "events": [
       {
         "eventName": "West End Theater Extravaganza",
@@ -182,6 +186,7 @@
     "famousFor": "Sydney Opera House, Bondi Beach, and Sydney Harbour Bridge",
     "eventsMainDescription": "Experience exciting water sports and beach festivals",
     "conclusion": "Discover the laid-back lifestyle and natural beauty of Sydney.",
+    "busId": "bus5",
     "events": [
       {
         "eventName": "Harbour Bridge Climb",
@@ -219,6 +224,7 @@
     "famousFor": "The Colosseum, Vatican City, and delicious Italian cuisine",
     "eventsMainDescription": "Enjoy art exhibits and open-air opera performances",
     "conclusion": "Experience the charm and history of the Eternal City.",
+    "busId": "bus6",
     "events": [
       {
         "eventName": "Colosseum Guided Tour",
