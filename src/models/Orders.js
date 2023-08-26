@@ -33,10 +33,6 @@ const orderSchema = new mongoose.Schema({
       required: true,
     },
   },
-  // eventLocation: {
-  //   type: String,
-  //   required: true,
-  // },
   bookedSeats: [
     {
       id: {
@@ -58,14 +54,6 @@ const orderSchema = new mongoose.Schema({
     unique: true,
     required: true,
   },
-  // cost: {
-  //   type: Number,
-  //   required: true,
-  // },
-  // currency: {
-  //   type: String,
-  //   required: true,
-  // },
   paid: {
     type: Boolean,
     required: true,

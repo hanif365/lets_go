@@ -105,11 +105,8 @@ export const POST = async (request) => {
     const newOrder = new Orders({
       userData,
       eventData,
-      // eventLocation,
       bookedSeats: bookedSeatDetails,
       transactionId,
-      // cost,
-      // currency,
       paid: false,
     });
 

@@ -88,12 +88,6 @@ const BookTicket = ({ params }) => {
 
   console.log(params);
 
-  // // Filter the data based on the eventLocation
-  // const filteredEvents = upcomingEventsData.filter(
-  //   (event) => event.eventLocationLink === params?.bookLocation[0]
-  // );
-  // console.log("FilterEvents: -------------------------------: ", filteredEvents);
-
   const totalSeats = 40; // Total number of seats on the bus
   const seatsPerRow = 4; // Number of seats in each row
 
