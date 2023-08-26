@@ -24,15 +24,30 @@ const BookTicket = ({ params }) => {
 
   console.log("allReservedSeatIds: ******: ", allReservedSeatIds);
 
+  // Filter the data based on the eventLocation
+  const filteredEvents = upcomingEventsData.filter(
+    (event) => event.eventLocationLink === params?.bookLocation[0]
+  );
+  console.log(
+    "FilterEvents: -------------------------------: ",
+    filteredEvents[0].busId
+  );
+
   useEffect(() => {
     async function fetchOrders() {
       try {
         const response = await fetch("/api/buytickets");
         const data = await response.json();
 
+        const eventBus = data.filter((order) => {
+          return order.eventData.busId === filteredEvents[0].busId;
+        });
+
+        console.log("eventBus: ++++++++++++++++++++++++: ", eventBus);
+
         const reservedAndPaidSeatIds = [];
 
-        for (const order of data) {
+        for (const order of eventBus) {
           if (order.paid === true) {
             for (const bookedSeat of order.bookedSeats) {
               reservedAndPaidSeatIds.push(bookedSeat.id);
@@ -73,11 +88,11 @@ const BookTicket = ({ params }) => {
 
   console.log(params);
 
-  // Filter the data based on the eventLocation
-  const filteredEvents = upcomingEventsData.filter(
-    (event) => event.eventLocationLink === params?.bookLocation[0]
-  );
-  console.log(filteredEvents);
+  // // Filter the data based on the eventLocation
+  // const filteredEvents = upcomingEventsData.filter(
+  //   (event) => event.eventLocationLink === params?.bookLocation[0]
+  // );
+  // console.log("FilterEvents: -------------------------------: ", filteredEvents);
 
   const totalSeats = 40; // Total number of seats on the bus
   const seatsPerRow = 4; // Number of seats in each row
