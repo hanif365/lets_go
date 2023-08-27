@@ -43,7 +43,7 @@ const BookTicket = ({ params }) => {
           return order.eventData.busId === filteredEvents[0].busId;
         });
 
-        console.log("eventBus: ++++++++++++++++++++++++: ", eventBus);
+        console.log("eventBus: ++++++++++++++++++++++++: ", eventBus); // here we get which event we are already booking
 
         const reservedAndPaidSeatIds = [];
 
@@ -256,6 +256,19 @@ const BookTicket = ({ params }) => {
     });
   };
 
+  const clearAllSelectedSeats = () => {
+    setSelectedSeats([]);
+    setPassengerData([]);
+    setSeatsData((prevSeats) =>
+      prevSeats.map((seat) => ({
+        ...seat,
+        isBooked: false,
+      }))
+    );
+    setAdultCount(0);
+    setChildCount(0);
+  };
+
   if (session.status === "loading") {
     return (
       <div className="mt-40">
@@ -297,6 +310,19 @@ const BookTicket = ({ params }) => {
             {renderSeatRow("H", 29)}
             {renderSeatRow("I", 33)}
             {renderSeatRow("J", 37)}
+
+            {selectedSeatNames.length > 0 && (
+              <button
+                type="submit"
+                className={`text-[10px] lg:text-[14px] ml-44 flex justify-center items-center px-14 py-6 relative border uppercase font-semibold tracking-wider leading-none overflow-hidden  rounded-md text-white`}
+                onClick={clearAllSelectedSeats}
+              >
+                <span className="absolute inset-0 bg-red-500 rounded"></span>
+                <span className="absolute inset-0 flex justify-center items-center font-bold">
+                  Reset
+                </span>
+              </button>
+            )}
           </div>
           <div className="flex-1">
             <JourneyDetails
