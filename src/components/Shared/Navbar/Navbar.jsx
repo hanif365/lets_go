@@ -131,7 +131,7 @@ function Navbar() {
                     Home
                   </Link>
                 </li>
-                <li
+                {/* <li
                   className={`text-xl font-bold py-2 md:px-6 text-center border-b-2 md:border-b-0 hover:text-[#7EA0FF] transition duration-700 ease-in-out ${
                     pathname === "/about" ? "text-[#7EA0FF]" : "text-[#00095E]"
                   }`}
@@ -147,8 +147,8 @@ function Navbar() {
                   >
                     About
                   </Link>
-                </li>
-                <li
+                </li> */}
+                {/* <li
                   className={`text-xl font-bold py-2 px-6 text-center border-b-2 md:border-b-0 hover:text-[#7EA0FF] transition duration-700 ease-in-out ${
                     pathname === "/blogs" ? "text-[#7EA0FF]" : "text-[#00095E]"
                   }`}
@@ -164,7 +164,7 @@ function Navbar() {
                   >
                     Blogs
                   </Link>
-                </li>
+                </li> */}
 
                 {/* new */}
                 {session.status === "authenticated" && (
