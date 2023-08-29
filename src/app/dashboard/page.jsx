@@ -7,7 +7,7 @@ import React, { useState } from "react";
 
 const Dashboard = () => {
   const session = useSession();
-  console.log(session);
+  // console.log(session);
   const router = useRouter();
   const [isDark, setIsDark] = useState(false);
 

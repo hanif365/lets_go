@@ -7,8 +7,8 @@ const Page = () => {
   const searchParams = useSearchParams();
   const transactionId = searchParams.get("transactionId");
   const successMsg = searchParams.get("successMsg");
-  console.log(transactionId);
-  console.log(successMsg);
+  // console.log(transactionId);
+  // console.log(successMsg);
 
   return (
     <div className="m-40 text-green-500">

@@ -30,7 +30,7 @@ const Login = () => {
   const [success, setSuccess] = useState("");
   const [showPassword, setShowPassword] = useState(false);
 
-  console.log(session.status);
+  // console.log(session.status);
 
   useEffect(() => {
     setError(params.get("error"));
@@ -81,7 +81,7 @@ const Login = () => {
     return emailRegex.test(email);
   };
 
-  console.log(error);
+  // console.log(error);
 
   const settings = {
     // dots: true,

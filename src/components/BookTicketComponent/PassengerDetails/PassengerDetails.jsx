@@ -12,10 +12,10 @@ const PassengerDetails = ({
     onChange({ ...passenger, [name]: value });
   };
 
-  console.log(seatName);
+  // console.log(seatName);
 
-  console.log("Passenger number: *******************: ", passengerNumber);
-  console.log("Passenger: *******************: ", passenger);
+  // console.log("Passenger number: *******************: ", passengerNumber);
+  // console.log("Passenger: *******************: ", passenger);
 
   return (
     <div className="">

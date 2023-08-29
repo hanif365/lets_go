@@ -18,18 +18,18 @@ export const POST = async (request) => {
   const isBooked = bookedSeats[0].isBooked;
   const userName = user.name;
   const userEmail = user.email;
-  console.log(
-    cost,
-    currency,
-    eventLocation,
-    isBooked,
-    seatName,
-    userName,
-    userEmail,
-    bookedSeats,
-    eventID,
-    busId
-  );
+  // console.log(
+  //   cost,
+  //   currency,
+  //   eventLocation,
+  //   isBooked,
+  //   seatName,
+  //   userName,
+  //   userEmail,
+  //   bookedSeats,
+  //   eventID,
+  //   busId
+  // );
 
   const eventData = {
     eventID,
@@ -51,8 +51,8 @@ export const POST = async (request) => {
     };
   });
 
-  console.log(typeof cost, typeof currency);
-  console.log(process.env.SITE_URL);
+  // console.log(typeof cost, typeof currency);
+  // console.log(process.env.SITE_URL);
 
   await connectDB();
 
@@ -100,7 +100,7 @@ export const POST = async (request) => {
 
     // Redirect the user to payment gateway
     const GatewayPageURL = apiResponse.GatewayPageURL;
-    console.log("API Response: ", GatewayPageURL);
+    // console.log("API Response: ", GatewayPageURL);
 
     const newOrder = new Orders({
       userData,
@@ -114,7 +114,7 @@ export const POST = async (request) => {
 
     return NextResponse.json({ url: GatewayPageURL });
   } catch (err) {
-    console.log("Error: ", err);
+    // console.log("Error: ", err);
     return {
       status: 500,
       json: { error: `Failed because of ${err}` },

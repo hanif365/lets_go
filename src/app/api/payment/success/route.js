@@ -4,10 +4,10 @@ import { NextResponse } from "next/server";
 
 export const POST = async (request) => {
   const url = new URL(request.url);
-  console.log(url);
+  // console.log(url);
   const searchParams = new URLSearchParams(url.search);
   const transactionId = searchParams.get("transactionId");
-  console.log(transactionId);
+  // console.log(transactionId);
 
   await connectDB();
 
@@ -17,7 +17,7 @@ export const POST = async (request) => {
       "Transaction not complete, Something went wrong! Please try again later.";
 
     const redirectFailPageURL = `${process.env.SITE_URL}/payment/fail?transactionId=${transactionId}&errorMsg=${errorMsg}`;
-    console.log(redirectFailPageURL);
+    // console.log(redirectFailPageURL);
 
     return new Response(null, {
       status: 302, // Found/Temporary Redirect
@@ -38,13 +38,13 @@ export const POST = async (request) => {
     { new: true }
   );
 
-  console.log("Update Order: *************************: ", updatedOrder);
+  // console.log("Update Order: *************************: ", updatedOrder);
 
   if (!updatedOrder) {
     const errorMsg = "Order not found or already paid!";
 
     const redirectFailPageURL = `${process.env.SITE_URL}/payment/fail?transactionId=${transactionId}&errorMsg=${errorMsg}`;
-    console.log(redirectFailPageURL);
+    // console.log(redirectFailPageURL);
 
     return new Response(null, {
       status: 302,
@@ -57,7 +57,7 @@ export const POST = async (request) => {
   if (updatedOrder.paid) {
     const successMsg = "Transaction complete successfully!";
     const redirectSuccessPageURL = `${process.env.SITE_URL}/payment/success?transactionId=${transactionId}&successMsg=${successMsg}`;
-    console.log(redirectSuccessPageURL);
+    // console.log(redirectSuccessPageURL);
 
     return new Response(null, {
       status: 302, // Found/Temporary Redirect

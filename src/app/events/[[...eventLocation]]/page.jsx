@@ -8,7 +8,7 @@ import EventsExplore from "@/components/UpcomingPageComponent/EventsExplore/Even
 // console.log(upcomingEventsData);
 
 const page = ({ params }) => {
-  console.log(params);
+  // console.log(params);
 
   // Filter the data based on the eventLocation
   const filteredEvents = upcomingEventsData.filter(

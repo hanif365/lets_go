@@ -7,8 +7,8 @@ const Page = () => {
   const searchParams = useSearchParams();
   const transactionId = searchParams.get("transactionId");
   const errorMsg = searchParams.get("errorMsg");
-  console.log(transactionId);
-  console.log(errorMsg);
+  // console.log(transactionId);
+  // console.log(errorMsg);
 
   return (
     <div className="m-40 text-red-500">

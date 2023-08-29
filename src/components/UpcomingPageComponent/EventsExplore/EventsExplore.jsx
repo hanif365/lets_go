@@ -16,10 +16,12 @@ const EventsExplore = ({ eventData }) => {
       });
 
       const responseData = await response.json();
-      console.log(
-        "Response Data: *****************************: ",
-        responseData.url
-      );
+
+      // console.log(
+      //   "Response Data: *****************************: ",
+      //   responseData.url
+      // );
+      
       window.location.replace(responseData.url);
     } catch (error) {
       console.error("Error making POST request:", error);

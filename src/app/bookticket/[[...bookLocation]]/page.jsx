@@ -15,23 +15,24 @@ const BookTicket = ({ params }) => {
   const session = useSession();
   const router = useRouter();
   const userData = session?.data?.user;
-  console.log(
-    "session: **********************************************: ",
-    userData
-  );
+  // console.log(
+  //   "session: **********************************************: ",
+  //   userData
+  // );
 
   const [allReservedSeatIds, setAllReservedSeatIds] = useState([]);
 
-  console.log("allReservedSeatIds: ******: ", allReservedSeatIds);
+  // console.log("allReservedSeatIds: ******: ", allReservedSeatIds);
 
   // Filter the data based on the eventLocation
   const filteredEvents = upcomingEventsData.filter(
     (event) => event.eventLocationLink === params?.bookLocation[0]
   );
-  console.log(
-    "FilterEvents: -------------------------------: ",
-    filteredEvents[0].busId
-  );
+
+  // console.log(
+  //   "FilterEvents: -------------------------------: ",
+  //   filteredEvents[0].busId
+  // );
 
   useEffect(() => {
     async function fetchOrders() {
@@ -43,7 +44,7 @@ const BookTicket = ({ params }) => {
           return order.eventData.busId === filteredEvents[0].busId;
         });
 
-        console.log("eventBus: ++++++++++++++++++++++++: ", eventBus); // here we get which event we are already booking
+        // console.log("eventBus: ++++++++++++++++++++++++: ", eventBus); // here we get which event we are already booking
 
         const reservedAndPaidSeatIds = [];
 
@@ -64,7 +65,7 @@ const BookTicket = ({ params }) => {
 
         setSeatsData(updatedSeatsData);
       } catch (error) {
-        console.error("Error fetching orders:", error);
+        // console.error("Error fetching orders:", error);
       }
     }
 
@@ -86,7 +87,7 @@ const BookTicket = ({ params }) => {
   const [adultCount, setAdultCount] = useState(initialAdultCount);
   const [childCount, setChildCount] = useState(initialChildCount);
 
-  console.log(params);
+  // console.log(params);
 
   const totalSeats = 40; // Total number of seats on the bus
   const seatsPerRow = 4; // Number of seats in each row
@@ -108,14 +109,14 @@ const BookTicket = ({ params }) => {
 
   const [seatsData, setSeatsData] = useState(initialSeatsData);
 
-  console.log("initialSeatsData: ", initialSeatsData);
-  console.log("SeatsData: ", seatsData);
+  // console.log("initialSeatsData: ", initialSeatsData);
+  // console.log("SeatsData: ", seatsData);
 
   const selectedSeatNames = selectedSeats.map(
     (seatId) => seatsData.find((seat) => seat.id === seatId)?.name
   );
 
-  console.log(seatsData);
+  // console.log(seatsData);
 
   const handleSeatClick = (seatId) => {
     const isSeatSelected = selectedSeats.includes(seatId);
@@ -189,7 +190,7 @@ const BookTicket = ({ params }) => {
 
   const confirmSeats = async () => {
     const bookedSeats = seatsData.filter((seat) => seat.isBooked);
-    console.log("Booked Seats:", bookedSeats);
+    // console.log("Booked Seats:", bookedSeats);
 
     const orderedData = {
       filteredEvents: filteredEvents,
@@ -198,7 +199,7 @@ const BookTicket = ({ params }) => {
       user: userData,
     };
 
-    console.log("Ordered Data: ******************:, ", orderedData);
+    // console.log("Ordered Data: ******************:, ", orderedData);
 
     try {
       const response = await fetch("/api/buytickets", {
@@ -216,7 +217,7 @@ const BookTicket = ({ params }) => {
       // );
       window.location.replace(responseData.url);
     } catch (error) {
-      console.error("Error making POST request:", error);
+      // console.error("Error making POST request:", error);
     }
   };
 

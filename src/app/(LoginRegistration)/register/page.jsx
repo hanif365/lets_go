@@ -52,7 +52,7 @@ const Register = () => {
       }
     } catch (err) {
       setError("Something went wrong!");
-      console.log(err);
+      // console.log(err);
     }
   };
 
@@ -76,7 +76,7 @@ const Register = () => {
     return formData.password === formData.confirmPassword;
   };
 
-  console.log(error);
+  // console.log(error);
 
   const settings = {
     // dots: true,

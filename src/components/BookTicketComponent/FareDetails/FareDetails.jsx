@@ -11,7 +11,7 @@ const FareDetails = ({
   const childFare = childCount * filteredEvents[0].costOfChild;
 
   const totalFare = adultFare + childFare;
-  console.log(totalFare);
+  // console.log(totalFare);
 
   const isPassengerDetailsComplete = passengerData.every(
     (passenger) => passenger.name && passenger.gender && passenger.passengerType

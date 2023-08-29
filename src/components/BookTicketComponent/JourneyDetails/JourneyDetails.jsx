@@ -1,11 +1,12 @@
 import React from "react";
 
 const JourneyDetails = ({ filteredEvents, selectedSeatNames }) => {
-  console.log(
-    "Gallllllll: *********************: ",
-    filteredEvents[0]?.eventTitle
-  );
-  console.log("Heellllll: *********************: ", selectedSeatNames);
+  // console.log(
+  //   "Gallllllll: *********************: ",
+  //   filteredEvents[0]?.eventTitle
+  // );
+  // console.log("Heellllll: *********************: ", selectedSeatNames);
+
   return (
     <div className="w-[50%] mx-auto">
       <div>
