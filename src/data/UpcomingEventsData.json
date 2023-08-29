@@ -25,10 +25,10 @@
     "currency": "BDT",
     "specialOffer": "20% off",
     "title": "Bangladesh's Serene Coastal Paradise",
-    "locationIntroduction": "Welcome to the vibrant city of New York!",
-    "famousFor": "Iconic landmarks like the Statue of Liberty and Times Square",
+    "locationIntroduction": "Welcome to Cox's Bazar: World's longest sea beach by the Bay of Bengal",
+    "famousFor": "Cox's Bazar is renowned for having the world's longest natural sea beach",
     "eventsMainDescription": "Pristine beaches, longest natural sea stretch in Bangladesh.",
-    "conclusion": "Experience the energy of the city that never sleeps.",
+    "conclusion": "In summary, Cox's Bazar beckons with its mesmerizing beach beauty and coastal allure",
     "busId": "bus1",
     "events": [
       {
@@ -55,191 +55,265 @@
   },
   {
     "id": "2",
-    "eventTitle": "Let's explore Paris",
-    "eventLocation": "Paris",
-    "eventLocationLink": "Paris",
-    "locationHeaderImg": "https://i.ibb.co/d0Gwrd1/cox-sbazargalleryimg2.jpg",
-    "locationThumbnailImg": "https://i.ibb.co/d0Gwrd1/cox-sbazargalleryimg2.jpg",
-    "gallery": ["paris_1.jpg", "paris_2.jpg", "paris_3.jpg"],
+    "eventTitle": "Let's explore Sajek Valley",
+    "eventLocation": "Sajek Valley",
+    "eventLocationLink": "sajekvalley",
+    "locationHeaderImg": "https://i.ibb.co/tmbyXFG/sajekvalley2.jpg",
+    "locationThumbnailImg": "https://i.ibb.co/G59Cw4T/sajekvalley1.jpg",
+    "gallery": [
+      "https://i.ibb.co/G59Cw4T/sajekvalley1.jpg",
+      "https://i.ibb.co/tmbyXFG/sajekvalley2.jpg",
+      "https://i.ibb.co/MNxxJdC/sajekvalley3.jpg",
+      "https://i.ibb.co/M9KBHMG/sajekvalley4.jpg",
+      "https://i.ibb.co/wRNHf9w/sajekvalley5.jpg",
+      "https://i.ibb.co/yqdRc0R/sajekvalley6.jpg",
+      "https://i.ibb.co/WcckDh0/sajekvalley7.jpg",
+      "https://i.ibb.co/1mzBx8d/sajekvalley8.jpg",
+      "https://i.ibb.co/x2nL45s/sajekvalley9.jpg",
+      "https://i.ibb.co/WgmRL6Y/sajekvalley10.jpg",
+      "https://i.ibb.co/ynTR3Tp/sajekvalley11.jpg"
+    ],
     "date": "2023-09-10",
     "days": "7 days",
     "cost": 1800,
     "costOfChild": 1200,
     "currency": "BDT",
     "specialOffer": "15% off",
-    "title": "Romantic Parisian Getaway",
-    "locationIntroduction": "Bienvenue à Paris, the city of love!",
-    "famousFor": "Eiffel Tower, Louvre Museum, and charming cafes",
-    "eventsMainDescription": "Stroll along the Seine and enjoy classical concerts",
-    "conclusion": "Create lasting memories in the most romantic city in the world.",
+    "title": "Sajek Valley: Bangladesh's Cloud Kingdom",
+    "locationIntroduction": "Welcome to the untouched beauty of Sajek Valley",
+    "famousFor": "Sajek Valley is famed for landscapes, culture, Cloud Kingdom, viewpoints, and hidden waterfalls",
+    "eventsMainDescription": "Discover Sajek Valley's untouched beauty in Bangladesh's Chittagong Hill Tracts",
+    "conclusion": "Sajek Valley, a harmonious blend of nature and culture, awaits your exploration",
     "busId": "bus2",
     "events": [
       {
-        "eventName": "Candlelit Seine Cruise",
-        "eventDescription": "Experience a magical evening on a candlelit cruise along the Seine River, admiring the illuminated landmarks of Paris.",
-        "eventImage": "https://i.ibb.co/ZS1zHpr/paris-cruise.jpg"
+        "eventName": "Hilltop Bliss",
+        "eventDescription": "Revel in the serenity of Sajek's hills. Experience the tranquility of early mornings as the mist gently blankets the lush landscape",
+        "eventImage": "https://i.ibb.co/tmbyXFG/sajekvalley2.jpg"
       },
       {
-        "eventName": "Art and Wine Tasting",
-        "eventDescription": "Indulge in the finest French wines while exploring world-renowned art collections in Parisian galleries.",
-        "eventImage": "https://i.ibb.co/b3tbXwm/art-wine-tasting.jpg"
+        "eventName": "Panoramic Vistas",
+        "eventDescription": "Take in stunning panoramic views from the Sajek View Tower, where a sea of hills stretches as far as the eye can see",
+        "eventImage": "https://i.ibb.co/MNxxJdC/sajekvalley3.jpg"
       },
       {
-        "eventName": "Montmartre Bohemian Night",
-        "eventDescription": "Join a night of bohemian revelry in Montmartre, with live music, dance, and the vibrant spirit of Parisian artistry.",
-        "eventImage": "https://i.ibb.co/n7yvbW6/montmartre-night.jpg"
+        "eventName": "Harmony and Connection",
+        "eventDescription": "Create lasting memories as you gather for a delightful picnic 610m above sea level. It's a moment of unity amidst breathtaking natural beauty",
+        "eventImage": "https://i.ibb.co/yqdRc0R/sajekvalley6.jpg"
+      },
+      {
+        "eventName": "Hilltop Adventure",
+        "eventDescription": " Explore hills and valleys aboard a 'Chander Gari', a captivating traditional hillside transport, adding a touch of nostalgia to your journey",
+        "eventImage": "https://i.ibb.co/wRNHf9w/sajekvalley5.jpg"
       }
     ]
   },
   {
     "id": "3",
-    "eventTitle": "Let's explore Cox's Bazar",
-    "eventLocation": "Tokyo",
-    "eventLocationLink": "Tokyo",
-    "locationHeaderImg": "https://i.ibb.co/pxmjtJY/cox-sbazarheroimage.jpg",
-    "locationThumbnailImg": "https://i.ibb.co/pxmjtJY/cox-sbazarheroimage.jpg",
-    "gallery": ["tokyo_1.jpg", "tokyo_2.jpg", "tokyo_3.jpg"],
+    "eventTitle": "Let's explore Sylhet",
+    "eventLocation": "Sylhet",
+    "eventLocationLink": "sylhet",
+    "locationHeaderImg": "https://i.ibb.co/4gmg20s/bisnakandi.jpg",
+    "locationThumbnailImg": "https://i.ibb.co/hfKNMm5/sylhetteagarden.jpg",
+    "gallery": [
+      "https://i.ibb.co/B2zW7nv/Ratargul-Swamp-forest.jpg",
+      "https://i.ibb.co/L1FPjWY/sylhet-river.jpg",
+      "https://i.ibb.co/M7J3q5d/teagarden.jpg",
+      "https://i.ibb.co/4gmg20s/bisnakandi.jpg",
+      "https://i.ibb.co/NxnScBx/hakaluki-haor.jpg",
+      "https://i.ibb.co/nMD3hck/Hazrat-Shah-Jalal-Mazar.jpg",
+      "https://i.ibb.co/RbQVG9S/Pangthumai-Waterfall-Sylhet.jpg",
+      "https://i.ibb.co/hfKNMm5/sylhetteagarden.jpg"
+    ],
     "date": "2023-11-05",
     "days": "6 days",
     "cost": 2200,
     "costOfChild": 1800,
     "currency": "BDT",
     "specialOffer": "10% off",
-    "title": "Discover Tokyo's Wonders",
-    "locationIntroduction": "Konnichiwa! Welcome to Tokyo, a blend of tradition and modernity.",
-    "famousFor": "Skyscrapers, ancient temples, and sushi delights",
-    "eventsMainDescription": "Witness traditional tea ceremonies and sumo wrestling",
-    "conclusion": "Immerse yourself in the unique culture of Tokyo.",
+    "title": "Enchanting Sylhet: Explore the Magic",
+    "locationIntroduction": "Welcome to Sylhet, in northeastern Bangladesh, famed for its scenic landscapes and rich culture",
+    "famousFor": "Sylhet is renowned for its lush tea gardens, spiritual shrines, and stunning landscapes",
+    "eventsMainDescription": "Discover Sylhet, a land of tea gardens, spiritual sites, and natural beauty",
+    "conclusion": "Sylhet's captivating blend of nature and spirituality promises an enriching journey",
     "busId": "bus3",
     "events": [
       {
-        "eventName": "Shinjuku Neon Nights",
-        "eventDescription": "Experience the vibrant nightlife of Shinjuku with its dazzling neon lights, entertainment districts, and izakayas.",
-        "eventImage": "https://i.ibb.co/cgTH1jx/shinjuku-night.jpg"
+        "eventName": "Tea Garden Retreat",
+        "eventDescription": "Immerse yourself in Sylhet's famed tea estates, where emerald hills are adorned with meticulously manicured tea bushes",
+        "eventImage": "https://i.ibb.co/M7J3q5d/teagarden.jpg"
       },
       {
-        "eventName": "Harajuku Fashion Walk",
-        "eventDescription": "Join a guided tour through the trendy streets of Harajuku, where colorful street fashion and quirky styles collide.",
-        "eventImage": "https://i.ibb.co/QPtjfYX/harajuku-fashion.jpg"
+        "eventName": "Bisnakandi Magic",
+        "eventDescription": "Discover the ethereal beauty of Bisnakandi, known for its crystal-clear river and breathtaking surroundings",
+        "eventImage": "https://i.ibb.co/4gmg20s/bisnakandi.jpg"
       },
       {
-        "eventName": "Traditional Tea Ceremony",
-        "eventDescription": "Participate in an authentic Japanese tea ceremony, learning about the art and significance of tea in Japanese culture.",
-        "eventImage": "https://i.ibb.co/nDzvn5g/tea-ceremony.jpg"
+        "eventName": "Ratargul Exploration",
+        "eventDescription": "Navigate through Ratargul Swamp Forest, one of the few swamp forests in Bangladesh, known for its unique charm",
+        "eventImage": "https://i.ibb.co/B2zW7nv/Ratargul-Swamp-forest.jpg"
+      },
+      {
+        "eventName": "Spiritual Sojourn",
+        "eventDescription": "Visit Hazrat Shah Jalal Mazar and Hazrat Shah Paran Mazar, revered Sufi shrines radiating spiritual tranquility",
+        "eventImage": "https://i.ibb.co/nMD3hck/Hazrat-Shah-Jalal-Mazar.jpg"
       }
     ]
   },
   {
     "id": "4",
-    "eventTitle": "Let's explore Cox's Bazar",
-    "eventLocation": "London",
-    "eventLocationLink": "London",
-    "locationHeaderImg": "https://i.ibb.co/pxmjtJY/cox-sbazarheroimage.jpg",
-    "locationThumbnailImg": "https://i.ibb.co/pxmjtJY/cox-sbazarheroimage.jpg",
-    "gallery": ["london_1.jpg", "london_2.jpg", "london_3.jpg"],
+    "eventTitle": "Let's explore Khagrachari",
+    "eventLocation": "Khagrachari",
+    "eventLocationLink": "khagrachari",
+    "locationHeaderImg": "https://i.ibb.co/xsMW9dw/Khagrachari1.jpg",
+    "locationThumbnailImg": "https://i.ibb.co/NxVN0Ks/Khagrachari9.jpg",
+    "gallery": [
+      "https://i.ibb.co/xsMW9dw/Khagrachari1.jpg",
+      "https://i.ibb.co/cL7cktV/Khagrachari2.jpg",
+      "https://i.ibb.co/v1LdjgR/Khagrachari3.jpg",
+      "https://i.ibb.co/LvnFt7K/Khagrachari4.jpg",
+      "https://i.ibb.co/xM1dBZX/Khagrachari5.jpg",
+      "https://i.ibb.co/WthLsVC/Khagrachari6.jpg",
+      "https://i.ibb.co/YdCxC4Z/Khagrachari7.jpg",
+      "https://i.ibb.co/ct1764j/Khagrachari8.jpg",
+      "https://i.ibb.co/NxVN0Ks/Khagrachari9.jpg",
+      "https://i.ibb.co/FgQjBfS/Khagrachari10.jpg"
+    ],
     "date": "2023-10-20",
     "days": "4 days",
     "cost": 1500,
     "costOfChild": 1200,
     "currency": "BDT",
     "specialOffer": "25% off",
-    "title": "London Calling",
-    "locationIntroduction": "Welcome to the historic city of London!",
-    "famousFor": "The Tower of London, Buckingham Palace, and vibrant markets",
-    "eventsMainDescription": "Experience West End theater and classical music concerts",
-    "conclusion": "Explore the rich history and cultural diversity of London.",
+    "title": "Khagrachari: Nature's Splendor Unveiled",
+    "locationIntroduction": "Welcome to Khagrachari: Bangladesh's southeastern gem nestled in the lush Chittagong Hill Tracts",
+    "famousFor": "Khagrachari is renowned for its captivating landscapes, indigenous culture, and serene ambiance",
+    "eventsMainDescription": "Where Tranquility Meets Nature's Majesty",
+    "conclusion": "In summary, Khagrachari stands as an exquisite tapestry of nature and culture, inviting exploration and awe",
     "busId": "bus4",
     "events": [
       {
-        "eventName": "West End Theater Extravaganza",
-        "eventDescription": "Indulge in the world of London's West End with a night of captivating theater performances and musicals.",
-        "eventImage": "https://i.ibb.co/YWnLdJz/west-end-theater.jpg"
+        "eventName": "Hilltop Retreat",
+        "eventDescription": "Find serenity amidst Khagrachari's verdant hills, a haven away from urban bustle",
+        "eventImage": "https://i.ibb.co/xsMW9dw/Khagrachari1.jpg"
       },
       {
-        "eventName": "Afternoon Tea at The Ritz",
-        "eventDescription": "Savor a quintessential British experience with an elegant afternoon tea at the iconic Ritz hotel in London.",
-        "eventImage": "https://i.ibb.co/2yKdd2r/ritz-tea.jpg"
+        "eventName": "Indigenous Culture",
+        "eventDescription": "Engage with local tribal communities, experiencing their way of life, traditions, and age-old practices",
+        "eventImage": "https://i.ibb.co/ct1764j/Khagrachari8.jpg"
       },
       {
-        "eventName": "British Museum Exploration",
-        "eventDescription": "Embark on a cultural journey through history at the British Museum, home to a vast collection of world treasures.",
-        "eventImage": "https://i.ibb.co/FYpF5cG/british-museum.jpg"
+        "eventName": "Alutila Cave Exploration",
+        "eventDescription": "Uncover the enigmatic beauty of Alutila's limestone caves, a subterranean world waiting to be discovered",
+        "eventImage": "https://i.ibb.co/WthLsVC/Khagrachari6.jpg"
+      },
+      {
+        "eventName": "Waterfall Charms",
+        "eventDescription": "Trek to refreshing waterfalls, such as Nunchhari and Bijoypur, relishing their natural beauty and soothing ambiance",
+        "eventImage": "https://i.ibb.co/LvnFt7K/Khagrachari4.jpg"
       }
     ]
   },
   {
     "id": "5",
-    "eventTitle": "Let's explore Cox's Bazar",
-    "eventLocation": "Sydney",
-    "eventLocationLink": "Sydney",
-    "locationHeaderImg": "https://i.ibb.co/pxmjtJY/cox-sbazarheroimage.jpg",
-    "locationThumbnailImg": "https://i.ibb.co/pxmjtJY/cox-sbazarheroimage.jpg",
-    "gallery": ["sydney_1.jpg", "sydney_2.jpg", "sydney_3.jpg"],
+    "eventTitle": "Let's explore Bandarban",
+    "eventLocation": "Bandarban",
+    "eventLocationLink": "bandarban",
+    "locationHeaderImg": "https://i.ibb.co/8KkPyHD/bandarban1.jpg",
+    "locationThumbnailImg": "https://i.ibb.co/pQxjF7Y/nilgiri2.jpg",
+    "gallery": [
+      "https://i.ibb.co/HrCtyrh/Nafakhum.jpg",
+      "https://i.ibb.co/ggkGpyW/Nafakhum1.jpg",
+      "https://i.ibb.co/YyL07cN/nilgiri.jpg",
+      "https://i.ibb.co/pQxjF7Y/nilgiri2.jpg",
+      "https://i.ibb.co/8KkPyHD/bandarban1.jpg",
+      "https://i.ibb.co/8KqzPqz/bandarban2.jpg",
+      "https://i.ibb.co/6NRG59N/bandarban3.jpg",
+      "https://i.ibb.co/ftMf9HF/bogalake.jpg",
+      "https://i.ibb.co/HVbDkxS/chimbukhill.jpg",
+      "https://i.ibb.co/wwWVNzx/niceplace.jpg"
+    ],
     "date": "2024-01-05",
     "days": "8 days",
     "cost": 2400,
     "costOfChild": 2000,
     "currency": "BDT",
     "specialOffer": "30% off",
-    "title": "Sydney Adventure",
-    "locationIntroduction": "G'day mate! Welcome to the stunning city of Sydney!",
-    "famousFor": "Sydney Opera House, Bondi Beach, and Sydney Harbour Bridge",
-    "eventsMainDescription": "Experience exciting water sports and beach festivals",
-    "conclusion": "Discover the laid-back lifestyle and natural beauty of Sydney.",
+    "title": "Bandarban: Serene Hills, Indigenous Marvels",
+    "locationIntroduction": "Welcome to Bandarban, a tranquil haven in Bangladesh's Hill Tracts",
+    "famousFor": "Famous for lush landscapes, indigenous cultures, and trekking adventures",
+    "eventsMainDescription": "Explore Bandarban's dynamic cultural and natural events",
+    "conclusion": "Bandarban's harmonious blend of culture and nature leaves lasting impressions",
     "busId": "bus5",
     "events": [
       {
-        "eventName": "Harbour Bridge Climb",
-        "eventDescription": "Embark on a thrilling climb to the top of the Sydney Harbour Bridge, enjoying panoramic views of the city and harbor.",
-        "eventImage": "https://i.ibb.co/FWKyHgK/bridge-climb.jpg"
+        "eventName": "Breathtaking Peaks",
+        "eventDescription": " Explore Bandarban's majestic hills, including the iconic Nilgiri and Chimbuk peaks",
+        "eventImage": "https://i.ibb.co/YyL07cN/nilgiri.jpg"
       },
       {
-        "eventName": "Bondi Beach Surfing",
-        "eventDescription": "Learn to ride the waves with a professional surf lesson at famous Bondi Beach, a paradise for surf enthusiasts.",
-        "eventImage": "https://i.ibb.co/YLny5Rf/bondi-surf.jpg"
+        "eventName": "Nafakhum Adventure",
+        "eventDescription": "Embark on a trek to Nafakhum, Bangladesh's largest waterfall, immersed in lush wilderness",
+        "eventImage": "https://i.ibb.co/wwWVNzx/niceplace.jpg"
       },
       {
-        "eventName": "Sydney Festival Celebration",
-        "eventDescription": "Join the vibrant Sydney Festival, featuring music, art, and performances that showcase the city's creative spirit.",
-        "eventImage": "https://i.ibb.co/QmMQw9p/sydney-festival.jpg"
+        "eventName": "Cultural Diversity",
+        "eventDescription": " Engage with diverse tribal communities, embracing their distinct traditions and way of life",
+        "eventImage": "https://i.ibb.co/8KqzPqz/bandarban2.jpg"
+      },
+      {
+        "eventName": "Chimbuk Vista",
+        "eventDescription": "Witness breathtaking hillscapes from Chimbuk's summit, the highest peak in Bangladesh",
+        "eventImage": "https://i.ibb.co/HVbDkxS/chimbukhill.jpg"
       }
     ]
   },
   {
     "id": "6",
-    "eventTitle": "Let's explore Cox's Bazar",
-    "eventLocation": "Rome",
-    "eventLocationLink": "Rome",
-    "locationHeaderImg": "https://i.ibb.co/pxmjtJY/cox-sbazarheroimage.jpg",
-    "locationThumbnailImg": "https://i.ibb.co/pxmjtJY/cox-sbazarheroimage.jpg",
-    "gallery": ["rome_1.jpg", "rome_2.jpg", "rome_3.jpg"],
+    "eventTitle": "Let's explore Chattogram",
+    "eventLocation": "Chattogram",
+    "eventLocationLink": "chattogram",
+    "locationHeaderImg": "https://i.ibb.co/0rbr2Lc/mohamayalake1.jpg",
+    "locationThumbnailImg": "https://i.ibb.co/mRV24C3/napittachoratrail.jpg",
+    "gallery": [
+      "https://i.ibb.co/0rbr2Lc/mohamayalake1.jpg",
+      "https://i.ibb.co/mRV24C3/napittachoratrail.jpg",
+      "https://i.ibb.co/CnbVpTg/patengaseabeach.jpg",
+      "https://i.ibb.co/v47PWGH/fayeslake.jpg",
+      "https://i.ibb.co/ydQKMqd/mohamayalake.jpg"
+    ],
     "date": "2024-03-15",
     "days": "6 days",
     "cost": 2100,
     "costOfChild": 1800,
     "currency": "BDT",
     "specialOffer": "10% off",
-    "title": "Eternal City Exploration",
-    "locationIntroduction": "Benvenuti a Roma! Welcome to the eternal city!",
-    "famousFor": "The Colosseum, Vatican City, and delicious Italian cuisine",
-    "eventsMainDescription": "Enjoy art exhibits and open-air opera performances",
-    "conclusion": "Experience the charm and history of the Eternal City.",
+    "title": "Chattogram: Urban Excitement, Natural Beauty",
+    "locationIntroduction": "Welcome to Chattogram, where urban dynamism meets coastal enchantment in Bangladesh.",
+    "famousFor": "Famous for its bustling seaport, lush hill tracts, and rich cultural heritage",
+    "eventsMainDescription": "Seaport city with hills, culture, and vibrant coastal ambiance to explore",
+    "conclusion": "Chattogram beckons with diverse treasures and captivating experiences for all",
     "busId": "bus6",
     "events": [
       {
-        "eventName": "Colosseum Guided Tour",
-        "eventDescription": "Embark on a captivating guided tour of the ancient Colosseum, learning about its history and grandeur.",
-        "eventImage": "https://i.ibb.co/9t5BGYx/colosseum-tour.jpg"
+        "eventName": "Foy's Lake Adventure",
+        "eventDescription": "Experience adventure at Foy's Lake Amusement World, offering rides and boating against a scenic backdrop",
+        "eventImage": "https://i.ibb.co/v47PWGH/fayeslake.jpg"
       },
       {
-        "eventName": "Vatican Museums Discovery",
-        "eventDescription": "Explore the awe-inspiring Vatican Museums, home to an extraordinary collection of art and historical treasures.",
-        "eventImage": "https://i.ibb.co/f08FCSd/vatican-museums.jpg"
+        "eventName": "Patenga Charm",
+        "eventDescription": "Relax on Patenga Beach, enjoying the sea breeze and stunning sunsets over the Bay of Bengal",
+        "eventImage": "https://i.ibb.co/CnbVpTg/patengaseabeach.jpg"
       },
       {
-        "eventName": "Rooftop Opera Experience",
-        "eventDescription": "Savor an unforgettable evening with a rooftop opera performance, set against the backdrop of Rome's iconic skyline.",
-        "eventImage": "https://i.ibb.co/rGFZbGP/rooftop-opera.jpg"
+        "eventName": "Napittachora Trail Discovery",
+        "eventDescription": "Embark on the Napittachora Trail, traversing lush landscapes and embracing nature's tranquility",
+        "eventImage": "https://i.ibb.co/mRV24C3/napittachoratrail.jpg"
+      },
+      {
+        "eventName": "Mohamaya Lake Retreat",
+        "eventDescription": "Find solace at Mohamaya Lake, a serene freshwater expanse inviting reflection and respite",
+        "eventImage": "https://i.ibb.co/ydQKMqd/mohamayalake.jpg"
       }
     ]
   }

@@ -14,7 +14,7 @@ const UPCHeroSection = ({ eventData }) => {
           // className="w-full min-h-screen lg:max-h-screen"
         />
         <div className="absolute top-0 left-0 right-0 bottom-0 flex flex-col items-center justify-center px-10 z-[1]">
-          <h1 className="text-[#071952] text-2xl lg:text-8xl 2xl:text-9xl font-bold ">
+          <h1 className="text-[#071952] text-2xl lg:text-7xl 2xl:text-8xl font-bold ">
             {eventData[0]?.title}
           </h1>
           <p className="text-lg lg:text-2xl 2xl:text-4xl font-bold pt-10 text-[#071952]">
