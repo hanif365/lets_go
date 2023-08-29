@@ -46,10 +46,10 @@ const PhotoGallery = () => {
       imageSrc: "https://i.ibb.co/ydQKMqd/mohamayalake.jpg",
     },
     {
-      imageSrc: "https://i.ibb.co/wwWVNzx/niceplace.jpg",
+      imageSrc: "https://i.ibb.co/8KqzPqz/bandarban2.jpg",
     },
     {
-      imageSrc: "https://i.ibb.co/8KqzPqz/bandarban2.jpg",
+      imageSrc: "https://i.ibb.co/wwWVNzx/niceplace.jpg",
     },
   ];
 
