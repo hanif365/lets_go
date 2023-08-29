@@ -15,23 +15,23 @@ const Testimonials = () => {
       designation: "CEO of Susastho",
       imageSrc: "/hanif.jpg",
       description:
-        "When it is your time When it is your time When it is your time When it is your time When it is your time When it is your time When it is your time When it is your time When it is your time When it is your time When it is your time When it is your time",
+        "Bangladesh's rich biodiversity, from its rare species to its verdant rainforests, is a testament to its status as a natural wonder",
     },
 
     {
-      name: "Abdur Rahman",
+      name: "Christopher",
       designation: "CEO of Love",
-      imageSrc: "/testimonials_people1.png",
+      imageSrc: "/Christopher.png",
       description:
-        "When it is your time When it is your time When it is your time When it is your time When it is your time When it is your time When it is your time When it is your time When it is your time When it is your time When it is your time When it is your time",
+        "Every corner of Bangladesh seems to hold a piece of paradise - its diverse ecosystems are a testament to its natural splendor",
     },
 
     {
-      name: "Abdullah",
+      name: "Vladimir",
       designation: "CEO of Happy",
-      imageSrc: "/testimonials_people1.png",
+      imageSrc: "/Vladimir.png",
       description:
-        "When it is your time When it is your time When it is your time When it is your time When it is your time When it is your time When it is your time When it is your time When it is your time When it is your time When it is your time When it is your time",
+        "Nature enthusiasts, like myself, find solace in Bangladesh's serene backwaters and lush hills, a hidden gem of tranquility",
     },
 
     {
@@ -39,7 +39,7 @@ const Testimonials = () => {
       designation: "CEO of Joy",
       imageSrc: "/testimonials_people1.png",
       description:
-        "When it is your time When it is your time When it is your time When it is your time When it is your time When it is your time When it is your time When it is your time When it is your time When it is your time When it is your time When it is your time",
+        "The intricate network of rivers and the verdant landscapes make Bangladesh a true haven for those seeking unspoiled beauty",
     },
   ];
 
@@ -53,23 +53,24 @@ const Testimonials = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 10000,
     // swipeToSlide: true,
     fade: true,
     centerMode: true, // Enable center mode
     centerPadding: "0px", // Adjust padding to center the cards (60px for left and right showing)
   };
   return (
-    <div className='mt-24 lg:mt-40 text-center text-white py-16 lg:py-32 bg-[url("/bg_testimonials.jpg")] lg:bg-center bg-cover bg-no-repeat '>
+    // <div className='mt-24 lg:mt-40 text-center text-white py-16 lg:py-32 bg-[url("/bg_testimonials.jpg")] lg:bg-center bg-cover bg-no-repeat '>
+    <div className='mt-24 lg:mt-40 text-center text-white py-16 lg:py-32 bg-[url("/bangladesh_flag1.png")] bg-center bg-cover bg-no-repeat bg-fixed'>
       <h1 className="text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl font-extrabold mt-4 mb-10 ">
-        What Customers Say
+        What People Are Saying About Bangladesh
       </h1>
       <div>
         <Slider {...settings}>
           {peoplesData.map((people, index) => (
             <div key={index} className="py-5 md:py-10">
               <div>
-                <h3 className="text-lg lg:text-2xl lg:leading-10 px-5 lg:px-36 ">
+                <h3 className="text-lg lg:text-2xl lg:leading-10 font-bold px-5 lg:px-36">
                   " {people.description} "
                 </h3>
                 <div className="flex justify-center pt-5">
