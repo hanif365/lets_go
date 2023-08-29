@@ -52,6 +52,7 @@ const PhotoGallery = () => {
       imageSrc: "https://i.ibb.co/wwWVNzx/niceplace.jpg",
     },
   ];
+  
 
   const settings = {
     // dots: true,
