@@ -10,29 +10,46 @@ import { FaInstagram } from "react-icons/fa6";
 const PhotoGallery = () => {
   const photoData = [
     {
-      imageSrc: "https://i.ibb.co/cYygt9n/photo-gallery1.jpg",
+      imageSrc: "https://i.ibb.co/NxnScBx/hakaluki-haor.jpg",
     },
 
     {
-      imageSrc: "https://i.ibb.co/L9z6qtw/photo-gallery2.jpg",
+      imageSrc: "https://i.ibb.co/YdCxC4Z/Khagrachari7.jpg",
     },
 
     {
-      imageSrc: "https://i.ibb.co/VSPHqSg/photo-gallery3.jpg",
+      imageSrc: "https://i.ibb.co/tmbyXFG/sajekvalley2.jpg",
     },
 
     {
-      imageSrc: "https://i.ibb.co/0KdxwCF/photo-gallery4.jpg",
-    },
-
-    {
-      imageSrc: "https://i.ibb.co/bNyPBxX/photo-gallery5.jpg",
+      imageSrc: "https://i.ibb.co/NxVN0Ks/Khagrachari9.jpg",
     },
     {
-      imageSrc: "https://i.ibb.co/cYygt9n/photo-gallery1.jpg",
+      imageSrc: "https://i.ibb.co/MNxxJdC/sajekvalley3.jpg",
     },
     {
-      imageSrc: "https://i.ibb.co/L9z6qtw/photo-gallery2.jpg",
+      imageSrc: "https://i.ibb.co/mTJ4pgg/cox-sbazargalleryimg1.jpg",
+    },
+    {
+      imageSrc: "https://i.ibb.co/1mzBx8d/sajekvalley8.jpg",
+    },
+    {
+      imageSrc: "https://i.ibb.co/d0Gwrd1/cox-sbazargalleryimg2.jpg",
+    },
+    {
+      imageSrc: "https://i.ibb.co/0rbr2Lc/mohamayalake1.jpg",
+    },
+    {
+      imageSrc: "https://i.ibb.co/8KkPyHD/bandarban1.jpg",
+    },
+    {
+      imageSrc: "https://i.ibb.co/ydQKMqd/mohamayalake.jpg",
+    },
+    {
+      imageSrc: "https://i.ibb.co/8KqzPqz/bandarban2.jpg",
+    },
+    {
+      imageSrc: "https://i.ibb.co/wwWVNzx/niceplace.jpg",
     },
   ];
 
@@ -66,7 +83,7 @@ const PhotoGallery = () => {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 3,
         },
       },
     ],
@@ -79,9 +96,9 @@ const PhotoGallery = () => {
             <Image
               src={data.imageSrc}
               alt="photo gallery"
-              width={500}
-              height={500}
-              className="mx-auto w-full  hover:mix-blend-overlay"
+              width={1000}
+              height={1000}
+              className="mx-auto w-full h-[8rem] md:h-[15rem] 2xl:h-[20rem] hover:mix-blend-overlay"
             />
             <FaInstagram
               style={{ width: "50px", height: "50px", color: "#ffffff" }}
