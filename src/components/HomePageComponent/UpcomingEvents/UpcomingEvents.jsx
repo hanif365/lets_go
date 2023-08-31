@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 import {
   FaArrowRightLong,
+  FaBangladeshiTakaSign,
   FaDollarSign,
   FaLocationArrow,
   FaLocationDot,
@@ -78,7 +79,7 @@ const UpcomingEvents = () => {
 
                 <div className="absolute px-5 bottom-5 text-white group-hover:text-black text-left transition-all duration-300 z-10 w-full">
                   <div className="flex space-x-2">
-                    <FaDollarSign
+                    <FaBangladeshiTakaSign
                       className="self-center text-yellow-500 group-hover:text-green-500 transition-all duration-300"
                       style={{ width: "20px", height: "20px" }}
                     />

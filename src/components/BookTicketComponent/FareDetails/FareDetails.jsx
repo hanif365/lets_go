@@ -27,16 +27,16 @@ const FareDetails = ({
             <p>Ticket Price:</p>
             {adultCount > 0 && (
               <p>
-                {adultCount} adult * {filteredEvents[0].cost} = {adultFare}
+                {adultCount} adult * {filteredEvents[0].cost} = {adultFare} BDT
               </p>
             )}
             {childCount > 0 && (
               <p>
                 {childCount} child * {filteredEvents[0].costOfChild} ={" "}
-                {childFare}
+                {childFare} BDT
               </p>
             )}
-            {totalFare > 0 && <p>Total Fare: {totalFare}</p>}
+            {totalFare > 0 && <p>Total Fare: {totalFare} BDT</p>}
           </div>
 
           <div className="group">
