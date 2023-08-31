@@ -47,6 +47,10 @@ const orderSchema = new mongoose.Schema({
         type: Boolean,
         required: true,
       },
+      passengerName: {
+        type: String,
+        required: true,
+      },
     },
   ],
   transactionId: {

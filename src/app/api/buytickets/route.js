@@ -5,7 +5,10 @@ const SSLCommerzPayment = require("sslcommerz-lts");
 
 export const POST = async (request) => {
   const orderData = await request.json();
-  // console.log("Ordered Data: ************************************************: ", orderData)
+  console.log(
+    "Ordered Data: ************************************************: ",
+    orderData
+  );
   const { filteredEvents, bookedSeats, passengers, user } = orderData;
 
   const eventID = filteredEvents[0].id;
@@ -43,11 +46,26 @@ export const POST = async (request) => {
     name: user.name,
     email: user.email,
   };
+
+  // const bookedSeatDetails = bookedSeats.map((seat) => {
+  //   return {
+  //     id: seat.id,
+  //     name: seat.name,
+  //     isBooked: seat.isBooked,
+  //   };
+  // });
+
   const bookedSeatDetails = bookedSeats.map((seat) => {
+    const passenger = passengers.find(
+      (passenger) =>
+        passenger.seatId === seat.id && passenger.seatName === seat.name
+    );
+
     return {
       id: seat.id,
       name: seat.name,
       isBooked: seat.isBooked,
+      passengerName: passenger ? passenger.name : null,
     };
   });
 

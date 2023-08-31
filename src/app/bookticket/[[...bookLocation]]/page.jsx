@@ -199,7 +199,7 @@ const BookTicket = ({ params }) => {
       user: userData,
     };
 
-    // console.log("Ordered Data: ******************:, ", orderedData);
+    console.log("Ordered Data: ******************:, ", orderedData);
 
     try {
       const response = await fetch("/api/buytickets", {
