@@ -18,7 +18,7 @@ const FareDetails = ({
   );
 
   return (
-    <div className="w-[50%] mx-auto">
+    <div className="md:w-[50%] md:mx-auto">
       {totalFare > 0 && (
         <div>
           <h4 className="text-xl">Fare Details</h4>

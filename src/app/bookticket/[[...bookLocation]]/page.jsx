@@ -294,9 +294,9 @@ const BookTicket = ({ params }) => {
     // const remaining seats = {totalSeats} - {allReservedSeatIds.length}
     return (
       <div>
-        <div className="flex mt-40">
-          <div className="flex-1">
-            <div className="ml-44 flex">
+        <div className="flex flex-col-reverse md:flex-row mt-40">
+          <div className="flex-1 mt-10 md:mt-0">
+            <div className="flex justify-center">
               <p className="mr-14">Total Seats: {totalSeats}</p>
               <p>Remaining Seats: {remaining_seats}</p>
             </div>
@@ -315,17 +315,17 @@ const BookTicket = ({ params }) => {
             {selectedSeatNames.length > 0 && (
               <button
                 type="submit"
-                className={`text-[10px] lg:text-[14px] ml-44 flex justify-center items-center px-14 py-6 relative border uppercase font-semibold tracking-wider leading-none overflow-hidden  rounded-md text-white`}
+                className={`text-[16px] lg:text-[18px] w-80 mx-auto flex justify-center items-center px-14 py-6 relative border uppercase font-semibold tracking-wider leading-none overflow-hidden  rounded-md text-white`}
                 onClick={clearAllSelectedSeats}
               >
                 <span className="absolute inset-0 bg-red-500 rounded"></span>
                 <span className="absolute inset-0 flex justify-center items-center font-bold">
-                  Reset
+                  Reset Seats
                 </span>
               </button>
             )}
           </div>
-          <div className="flex-1">
+          <div className="flex-1 mx-auto">
             <JourneyDetails
               filteredEvents={filteredEvents}
               selectedSeatNames={selectedSeatNames}
@@ -333,9 +333,9 @@ const BookTicket = ({ params }) => {
           </div>
         </div>
 
-        <div className="flex mt-10">
-          <div className="flex-1">{renderPassengerForms()}</div>
-          <div className="flex-1">
+        <div className="flex flex-col md:flex-row mt-10 md:mx-10">
+          <div className="flex-1 mx-6 md:mx-auto">{renderPassengerForms()}</div>
+          <div className="flex-1 mx-auto mt-10 md:mt-0">
             <FareDetails
               adultCount={adultCount}
               childCount={childCount}

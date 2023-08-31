@@ -8,7 +8,7 @@ const JourneyDetails = ({ filteredEvents, selectedSeatNames }) => {
   // console.log("Heellllll: *********************: ", selectedSeatNames);
 
   return (
-    <div className="w-[50%] mx-auto">
+    <div className="md:w-[50%] mx-6 md:mx-auto">
       <div>
         <h4 className="text-xl">Journey Details</h4>
         <hr />
