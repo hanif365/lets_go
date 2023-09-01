@@ -10,9 +10,37 @@ const orderSchema = new mongoose.Schema({
       type: String,
       required: true,
     },
+    phoneNumber: {
+      type: String,
+      required: true,
+    },
+    address: {
+      type: String,
+      required: true,
+    },
   },
   eventData: {
     eventID: {
+      type: String,
+      required: true,
+    },
+    eventTitle: {
+      type: String,
+      required: true,
+    },
+    eventDate: {
+      type: String,
+      required: true,
+    },
+    eventTime: {
+      type: String,
+      required: true,
+    },
+    eventDays: {
+      type: String,
+      required: true,
+    },
+    journeyStartFrom: {
       type: String,
       required: true,
     },
@@ -48,6 +76,14 @@ const orderSchema = new mongoose.Schema({
         required: true,
       },
       passengerName: {
+        type: String,
+        required: true,
+      },
+      passengerGender: {
+        type: String,
+        required: true,
+      },
+      passengerType: {
         type: String,
         required: true,
       },

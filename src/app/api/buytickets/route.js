@@ -1,4 +1,5 @@
 import Orders from "@/models/Orders";
+import User from "@/models/User";
 import connectDB from "@/utils/db";
 import { NextResponse } from "next/server";
 const SSLCommerzPayment = require("sslcommerz-lts");
@@ -13,14 +14,19 @@ export const POST = async (request) => {
 
   const eventID = filteredEvents[0].id;
   const eventLocation = filteredEvents[0].eventLocation;
+  const eventTitle = filteredEvents[0].eventTitle;
+  const eventDate = filteredEvents[0].date;
+  const eventTime = filteredEvents[0].time;
+  const eventDays = filteredEvents[0].days;
+  const journeyStartFrom = filteredEvents[0].journeyStartFrom;
   const busId = filteredEvents[0].busId;
   const cost = filteredEvents[0].cost;
   const currency = filteredEvents[0].currency;
 
-  const seatName = bookedSeats[0].name;
-  const isBooked = bookedSeats[0].isBooked;
-  const userName = user.name;
-  const userEmail = user.email;
+  // const seatName = bookedSeats[0].name;
+  // const isBooked = bookedSeats[0].isBooked;
+  // const userName = user.name;
+  // const userEmail = user.email;
   // console.log(
   //   cost,
   //   currency,
@@ -36,6 +42,11 @@ export const POST = async (request) => {
 
   const eventData = {
     eventID,
+    eventTitle,
+    eventDate,
+    eventTime,
+    eventDays,
+    journeyStartFrom,
     eventLocation,
     busId,
     cost,
@@ -45,15 +56,25 @@ export const POST = async (request) => {
   const userData = {
     name: user.name,
     email: user.email,
+    phoneNumber: null,
+    address: null,
   };
 
-  // const bookedSeatDetails = bookedSeats.map((seat) => {
-  //   return {
-  //     id: seat.id,
-  //     name: seat.name,
-  //     isBooked: seat.isBooked,
-  //   };
-  // });
+  // Perform a database query to fetch user details
+  try {
+    const userRecord = await User.findOne({ email: user.email });
+
+    if (userRecord) {
+      // If the user record exists, update userData with phoneNumber and address
+      userData.phoneNumber = userRecord.phoneNumber;
+      userData.address = userRecord.address;
+    } else {
+      console.error("User not found");
+    }
+  } catch (error) {
+    console.error("Error fetching user details:", error);
+  }
+  //
 
   const bookedSeatDetails = bookedSeats.map((seat) => {
     const passenger = passengers.find(
@@ -66,6 +87,8 @@ export const POST = async (request) => {
       name: seat.name,
       isBooked: seat.isBooked,
       passengerName: passenger ? passenger.name : null,
+      passengerGender: passenger ? passenger.gender : null,
+      passengerType: passenger ? passenger.passengerType : null,
     };
   });
 

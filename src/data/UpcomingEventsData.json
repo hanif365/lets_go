@@ -19,7 +19,9 @@
       "https://i.ibb.co/fGwP6Hr/cox-sbazargalleryimg8.jpg"
     ],
     "date": "2023-08-15",
+    "time": "10:00 PM",
     "days": "5 days",
+    "journeyStartFrom": "Dhaka",
     "cost": 8000,
     "costOfChild": 5000,
     "currency": "BDT",
@@ -74,7 +76,9 @@
       "https://i.ibb.co/ynTR3Tp/sajekvalley11.jpg"
     ],
     "date": "2023-09-10",
+    "time": "11:00 PM",
     "days": "3 days",
+    "journeyStartFrom": "Rajshahi",
     "cost": 5000,
     "costOfChild": 3000,
     "currency": "BDT",
@@ -126,7 +130,9 @@
       "https://i.ibb.co/hfKNMm5/sylhetteagarden.jpg"
     ],
     "date": "2023-11-05",
+    "time": "9:00 PM",
     "days": "2 days",
+    "journeyStartFrom": "Dhaka",
     "cost": 3000,
     "costOfChild": 2000,
     "currency": "BDT",
@@ -180,7 +186,9 @@
       "https://i.ibb.co/FgQjBfS/Khagrachari10.jpg"
     ],
     "date": "2023-10-20",
+    "time": "10:00 PM",
     "days": "4 days",
+    "journeyStartFrom": "Dhaka",
     "cost": 6000,
     "costOfChild": 4000,
     "currency": "BDT",
@@ -234,7 +242,9 @@
       "https://i.ibb.co/wwWVNzx/niceplace.jpg"
     ],
     "date": "2024-01-05",
+    "time": "11:00 PM",
     "days": "3 days",
+    "journeyStartFrom": "Dhaka",
     "cost": 5000,
     "costOfChild": 3000,
     "currency": "BDT",
@@ -283,7 +293,9 @@
       "https://i.ibb.co/ydQKMqd/mohamayalake.jpg"
     ],
     "date": "2024-03-15",
+    "time": "10:00 PM",
     "days": "3 days",
+    "journeyStartFrom": "Dhaka",
     "cost": 5000,
     "costOfChild": 3000,
     "currency": "BDT",

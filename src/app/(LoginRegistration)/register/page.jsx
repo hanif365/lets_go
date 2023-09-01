@@ -303,6 +303,7 @@ const Register = () => {
                   placeholder="Phone Number"
                   value={formData.phoneNumber}
                   onChange={handleInputChange}
+                  required
                 />
               </div>
 
@@ -315,6 +316,7 @@ const Register = () => {
                   placeholder="Date of Birth"
                   value={formData.dateOfBirth}
                   onChange={handleInputChange}
+                  required
                 />
               </div>
 
@@ -328,6 +330,7 @@ const Register = () => {
                   placeholder="Address"
                   value={formData.address}
                   onChange={handleInputChange}
+                  required
                 />
               </div>
 
