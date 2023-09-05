@@ -11,7 +11,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div className="mt-24 bg-[#172861] lg:px-20 2xl:px-60 pt-20">
+    <div className="mt-24 bg-[#172861] lg:px-20 2xl:px-60 pt-20 print:hidden">
       <div className="flex flex-col lg:flex-row ">
         {/* first part */}
         <div className="flex-auto lg:w-32 px-10 lg:px-0">

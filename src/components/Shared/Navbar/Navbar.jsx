@@ -44,7 +44,7 @@ function Navbar() {
   }, []);
 
   return (
-    <div>
+    <div className="print:hidden">
       {/* <nav className={showNavbar ? 'navbar showNavbar navbar-expand-lg fixed-top navbar-light' : 'navbar navbar-expand-lg fixed-top navbar-light'} style={{ backgroundColor: navBg }}></nav> */}
 
       <nav

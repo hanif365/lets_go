@@ -3,6 +3,7 @@
 import { useSession } from "next-auth/react";
 import { useSearchParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
+import "./page.css";
 
 const Page = () => {
   const searchParams = useSearchParams();
@@ -57,19 +58,45 @@ const Page = () => {
 
   console.log(successfulOrder);
 
+  // function for format date
+  let formattedDate = "";
+  if (
+    successfulOrder &&
+    successfulOrder.eventData &&
+    successfulOrder.eventData.eventDate
+  ) {
+    formattedDate = formatDate(successfulOrder.eventData.eventDate);
+  }
+
+  function formatDate(inputDate) {
+    const dateObj = inputDate ? new Date(inputDate) : null;
+    return dateObj instanceof Date && !isNaN(dateObj)
+      ? dateObj
+          .toLocaleDateString("en", { day: "numeric", month: "long" })
+          .split(" ")
+          .reverse()
+          .join(" ")
+      : "Invalid Date";
+  }
+
+  console.log(formattedDate);
+
   return (
-    <div className="m-40">
+    <div className="mt-40 px-6 lg:px-16">
       {successfulOrder === null ? (
         <p>Loading...</p>
       ) : successfulOrder ? (
-        <div className="flex">
+        <div className="flex flex-col lg:flex-row">
           <div className="flex-1">
             <div>
               <h1 className="text-xl lg:text-4xl 2xl:text-6xl text-green-500 font-bold">
                 Booking Confirmation
               </h1>
               <p className="text-base lg:text-xl 2xl:text-2xl font-bold pt-5">
-                {currentUserName} Your booking has been confirmed!
+                <span className="text-green-500 text-md lg:text-2xl 2xl:text-4xl">
+                  {currentUserName},
+                </span>{" "}
+                Your booking has been confirmed!
               </p>
             </div>
             <div className="pt-10">
@@ -152,8 +179,45 @@ const Page = () => {
               <hr />
             </div>
           </div>
-          <div className="flex-1">
-            <p>Right side div</p>
+
+          {/* right side content */}
+          <div className="flex-1 mt-20 lg:mt-0 print:hidden">
+            {formattedDate ? (
+              <div className="flex flex-col w-full lg:w-3/5 p-10 items-center justify-center text-center  rounded-2xl shadow-sm shadow-[#00000034] mx-auto">
+                <div>
+                  <p className="text-4xl font-bold text-green-500">
+                    {formattedDate.split(" ").map((part, index) => (
+                      <span
+                        key={index}
+                        className={index === 0 ? "text-9xl" : "text-4xl"}
+                      >
+                        {part}
+                        {index < formattedDate.split(" ").length - 1 && <br />}
+                      </span>
+                    ))}
+                  </p>
+                  <p className="pb-5 pt-2 text-base lg:text-xl 2xl:text-2xl font-bold">
+                    {successfulOrder.eventData.eventDate}{" "}
+                    {successfulOrder.eventData.eventTime}
+                  </p>
+                </div>
+                <hr className="w-full mx-auto pb-5" />
+                <p className="text-base lg:text-xl 2xl:text-2xl">Order ID</p>
+                <h4 className="text-xl lg:text-2xl 2xl:text-4xl font-bold">
+                  {transactionId}
+                </h4>
+              </div>
+            ) : null}
+
+            <button
+              onClick={() => window.print()}
+              className="print:hidden text-[18px] lg:text-[22px] register_btn w-full lg:w-3/5 mx-auto flex justify-center items-center px-10 py-8 mt-10 relative border uppercase font-semibold tracking-wider leading-none overflow-hidden bg-green-400 rounded-md text-white cursor-pointer"
+            >
+              <span className="absolute inset-0 bg-green-500 rounded"></span>
+              <span className="absolute inset-0 flex justify-center items-center font-bold">
+                Print Ticket
+              </span>
+            </button>
           </div>
         </div>
       ) : (
