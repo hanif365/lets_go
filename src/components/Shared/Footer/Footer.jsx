@@ -127,38 +127,46 @@ const Footer = () => {
         </div>
         {/* third part */}
         <div className="flex-1 p-10 lg:p-0">
-          <h4 className="text-white text-lg font-bold pb-5">Service</h4>
+          <h4 className="text-white text-lg font-bold pb-5">Events</h4>
           <ul className="text-[#8A8FBE] space-y-4">
             <li>
               <Link
-                href="/"
+                href={`/events/Cox'sBazar`}
                 className="hover:text-white hover:underline hover:underline-offset-4 transition-all ease-out duration-300"
               >
-                Blackforest
+                Cox's Bazar
               </Link>
             </li>
             <li>
               <Link
-                href="/"
+                href={`/events/sajekvalley`}
                 className="hover:text-white hover:underline hover:underline-offset-4 transition-all ease-out duration-300"
               >
-                Bodhubon
+                Sajek Valley
               </Link>
             </li>
             <li>
               <Link
-                href="/"
+                href={`/events/sylhet`}
                 className="hover:text-white hover:underline hover:underline-offset-4 transition-all ease-out duration-300"
               >
-                Rongdhonu
+                Sylhet
               </Link>
             </li>
             <li>
               <Link
-                href="/"
+                href={`/events/khagrachari`}
                 className="hover:text-white hover:underline hover:underline-offset-4 transition-all ease-out duration-300"
               >
-                Meghrong
+                Khagrachari
+              </Link>
+            </li>
+            <li>
+              <Link
+                href={`/events/bandarban`}
+                className="hover:text-white hover:underline hover:underline-offset-4 transition-all ease-out duration-300"
+              >
+                Bandarban
               </Link>
             </li>
           </ul>

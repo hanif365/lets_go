@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import upcomingEventsData from "../../../data/UpcomingEventsData.json";
 import Image from "next/image";
 import UPCHeroSection from "@/components/UpcomingPageComponent/UPCHeroSection/UPCHeroSection";
@@ -8,6 +8,10 @@ import EventsExplore from "@/components/UpcomingPageComponent/EventsExplore/Even
 // console.log(upcomingEventsData);
 
 const page = ({ params }) => {
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, []);
+
   // console.log(params);
 
   // Filter the data based on the eventLocation
