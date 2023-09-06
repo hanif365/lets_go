@@ -14,7 +14,7 @@ export const POST = async (request) => {
   // show eror if transaction id not present
   if (!transactionId) {
     const errorMsg =
-      "Transaction not complete, Something went wrong! Please try again later";
+      "Transaction not complete";
 
     const redirectFailPageURL = `${process.env.SITE_URL}/payment/cancel?transactionId=${transactionId}&errorMsg=${errorMsg}`;
     // console.log(redirectFailPageURL);
@@ -29,7 +29,7 @@ export const POST = async (request) => {
 
   const result = await Orders.deleteOne({ transactionId });
   if (result.deletedCount) {
-    const errorMsg = "Your Order Cancel Successfully!";
+    const errorMsg = "Your Order is Canceled";
 
     const redirectFailPageURL = `${process.env.SITE_URL}/payment/cancel?transactionId=${transactionId}&errorMsg=${errorMsg}`;
     // console.log(redirectFailPageURL);

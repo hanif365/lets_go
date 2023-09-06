@@ -20,7 +20,7 @@ export const POST = async (request) => {
     // console.log(redirectFailPageURL);
 
     return new Response(null, {
-      status: 400,
+      status: 302,
       headers: {
         Location: redirectFailPageURL,
       },
@@ -36,7 +36,7 @@ export const POST = async (request) => {
     // console.log(redirectFailPageURL);
 
     return new Response(null, {
-      status: 400,
+      status: 302,
       headers: {
         Location: redirectFailPageURL,
       },
