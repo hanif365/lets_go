@@ -180,7 +180,7 @@ const Footer = () => {
                 href="/"
                 className="transition-all ease-out duration-300 pointer-events-none"
               >
-                76/A, Green Lane, Dhanmondi, NYC
+                Pabna, Rajshahi, Bangladesh
               </Link>
             </li>
             <li>
@@ -188,7 +188,7 @@ const Footer = () => {
                 href="/"
                 className="transition-all ease-out duration-300 pointer-events-none"
               >
-                m.a.hanif380@gmail.com
+                abuhanif.cse3@gmail.com
               </Link>
             </li>
             <li>
@@ -196,7 +196,7 @@ const Footer = () => {
                 href="/"
                 className="text-yellow-400 transition-all ease-out duration-300 pointer-events-none"
               >
-                +10 (78) 738-9083
+                +88 01933412692
               </Link>
             </li>
           </ul>
