@@ -211,7 +211,7 @@ const Page = () => {
 
             <button
               onClick={() => window.print()}
-              className="print:hidden text-[18px] lg:text-[22px] register_btn w-full lg:w-3/5 mx-auto flex justify-center items-center px-10 py-8 mt-10 relative border uppercase font-semibold tracking-wider leading-none overflow-hidden bg-green-400 rounded-md text-white cursor-pointer"
+              className="print:hidden text-[18px] lg:text-[22px] success_page_btn w-full lg:w-3/5 mx-auto flex justify-center items-center px-10 py-8 mt-10 relative border uppercase font-semibold tracking-wider leading-none overflow-hidden bg-green-400 rounded-md text-white cursor-pointer"
             >
               <span className="absolute inset-0 bg-green-500 rounded"></span>
               <span className="absolute inset-0 flex justify-center items-center font-bold">

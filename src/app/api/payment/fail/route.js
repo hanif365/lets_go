@@ -14,13 +14,13 @@ export const POST = async (request) => {
   // show eror if transaction id not present
   if (!transactionId) {
     const errorMsg =
-      "Transaction not complete, Something went wrong! Please try again later.";
+      "Transaction not complete";
 
     const redirectFailPageURL = `${process.env.SITE_URL}/payment/fail?transactionId=${transactionId}&errorMsg=${errorMsg}`;
     // console.log(redirectFailPageURL);
 
     return new Response(null, {
-      status: 302, // Found/Temporary Redirect
+      status: 400,
       headers: {
         Location: redirectFailPageURL,
       },
@@ -30,13 +30,13 @@ export const POST = async (request) => {
   const result = await Orders.deleteOne({ transactionId });
   if (result.deletedCount) {
     const errorMsg =
-      "Transaction Aborted, Something went wrong! Please try again later.";
+      "Transaction Aborted";
 
     const redirectFailPageURL = `${process.env.SITE_URL}/payment/fail?transactionId=${transactionId}&errorMsg=${errorMsg}`;
     // console.log(redirectFailPageURL);
 
     return new Response(null, {
-      status: 302, // Found/Temporary Redirect
+      status: 400,
       headers: {
         Location: redirectFailPageURL,
       },

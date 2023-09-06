@@ -1,8 +1,8 @@
-.success_page_btn span:first-child {
+.fail_page_btn span:first-child {
   transform: translateX(-101%);
   transition: transform 0.3s ease-in;
 }
-.success_page_btn:hover span {
+.fail_page_btn:hover span {
   transform: translateX(0);
 }
 /* If we need horizontally moved then just use X instead of Y and viceversa*/
