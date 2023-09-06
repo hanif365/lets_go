@@ -32,18 +32,6 @@ const Dashboard = () => {
   if (session.status === "authenticated") {
     return (
       <div className="m-40">
-        {/* <div className={isDark ? "dark" : ""}>
-          <p className="bg-red-500 dark:bg-yellow-500 dark:text-white">
-            This is dashboard
-          </p>
-          <button onClick={() => setIsDark((prev) => !prev)}>
-            {isDark ? "Light" : "Dark"}
-          </button>
-
-          <div className="bg-[#bada55] dark:bg-[yellow] text-[#fff] text-[42px] after:content-['Festivus']">
-            Hello
-          </div>
-        </div> */}
         <p className="text-red-500">Dashboard: Comming soon</p>
       </div>
     );

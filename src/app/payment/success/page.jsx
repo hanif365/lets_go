@@ -38,7 +38,8 @@ const Page = () => {
         const matchedOrder = data.find((order) => {
           return (
             order.userData.email === email &&
-            order.transactionId === parseInt(transactionId)
+            order.transactionId === parseInt(transactionId) &&
+            order.paid === true
           );
         });
 
@@ -226,7 +227,10 @@ const Page = () => {
             Booking Error
           </h1>
           <p className="text-base lg:text-xl 2xl:text-2xl font-bold pt-5">
-            {currentUserName} There was an error with your booking.
+            <span className="text-green-500 text-md lg:text-2xl 2xl:text-4xl">
+              {currentUserName},
+            </span>{" "}
+            There was an error with your booking
           </p>
         </div>
       )}
