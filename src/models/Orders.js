@@ -48,6 +48,10 @@ const orderSchema = new mongoose.Schema({
       type: String,
       required: true,
     },
+    eventImg: {
+      type: String,
+      required: true,
+    },
     busId: {
       type: String,
       required: true,

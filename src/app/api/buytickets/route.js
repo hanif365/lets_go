@@ -14,6 +14,7 @@ export const POST = async (request) => {
 
   const eventID = filteredEvents[0].id;
   const eventLocation = filteredEvents[0].eventLocation;
+  const eventImg = filteredEvents[0].locationThumbnailImg;
   const eventTitle = filteredEvents[0].eventTitle;
   const eventDate = filteredEvents[0].date;
   const eventTime = filteredEvents[0].time;
@@ -48,6 +49,7 @@ export const POST = async (request) => {
     eventDays,
     journeyStartFrom,
     eventLocation,
+    eventImg,
     busId,
     cost,
     currency,

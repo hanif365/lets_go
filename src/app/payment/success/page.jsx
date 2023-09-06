@@ -183,7 +183,7 @@ const Page = () => {
           {/* right side content */}
           <div className="flex-1 mt-20 lg:mt-0 print:hidden">
             {formattedDate ? (
-              <div className="flex flex-col w-full lg:w-3/5 p-10 items-center justify-center text-center  rounded-2xl shadow-sm shadow-[#00000034] mx-auto">
+              <div className="flex flex-col w-full lg:w-3/5 p-10 items-center justify-center text-center  rounded-2xl shadow-sm shadow-[#00000034] mx-auto bg-slate-50">
                 <div>
                   <p className="text-4xl font-bold text-green-500">
                     {formattedDate.split(" ").map((part, index) => (
