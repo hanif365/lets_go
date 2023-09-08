@@ -4,10 +4,11 @@ import Sidebar from "@/components/DashboardComponent/Sidebar/Sidebar";
 import React, { useContext } from "react";
 import { GlobalContext } from "@/context";
 
-export const metadata = {
-  title: "Dashboard",
-  description: "Dashboard Content",
-};
+// vercel error when we use export metadata in client component
+// export const metadata = {
+//   title: "Dashboard",
+//   description: "Dashboard Content",
+// };
 
 export default function DashboardLayout({ children }) {
   const { isSidebarCollapsed, setIsSidebarCollapsed } =
