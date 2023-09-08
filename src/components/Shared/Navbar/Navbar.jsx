@@ -43,7 +43,7 @@ function Navbar() {
     };
   }, []);
 
-  if (pathname !== "/dashboard" && pathname !== "/dashboard/link1" && pathname !== "/dashboard/link2") {
+  if (pathname !== "/dashboard" && pathname !== "/dashboard/mybooking" && pathname !== "/dashboard/wishlist") {
     return (
       <div className="print:hidden">
         {/* <nav className={showNavbar ? 'navbar showNavbar navbar-expand-lg fixed-top navbar-light' : 'navbar navbar-expand-lg fixed-top navbar-light'} style={{ backgroundColor: navBg }}></nav> */}

@@ -66,17 +66,17 @@ const Dashboard = ({ params }) => {
       content = (
         <>
           <h1 className="text-2xl font-semibold">Dashboard Page</h1>
-          <p>This is the content of Dashboard page.</p>
+          <p>This is the content of Dashboard page</p>
         </>
       );
       break;
-    case "link1":
+    case "mybooking":
       content = <BookingHistory />;
       break;
-    case "link2":
+    case "wishlist":
       content = (
         <>
-          <h1 className="text-2xl font-semibold">Link 2 Page</h1>
+          <h1 className="text-2xl font-semibold">wishlist Page</h1>
           <p>This is the content of Link 2 page.</p>
         </>
       );
@@ -84,20 +84,18 @@ const Dashboard = ({ params }) => {
     default:
       content = (
         <>
-          <h1 className="text-2xl font-semibold">Dashboard Home</h1>
-          <p>Welcome to the travel company dashboard!</p>
+          <h1 className="text-2xl font-semibold">Dashboard Default page</h1>
+          <p>(when route is /dashboard/123)</p>
         </>
       );
   }
 
   if (session.status === "authenticated") {
     return (
-        <DashboardLayout>
-          <div className="">
-            <Link href='/'>Home</Link>
-            <p className="text-red-500">{content}</p>
-          </div>
-        </DashboardLayout>
+      <div className="">
+        <Link href="/">Home</Link>
+        <div className="text-red-500">{content}</div>
+      </div>
     );
   }
 };
