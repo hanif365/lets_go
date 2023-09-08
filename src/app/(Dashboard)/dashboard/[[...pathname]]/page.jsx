@@ -2,7 +2,6 @@
 
 import RootLayout from "@/app/layout";
 import BookingHistory from "@/components/DashboardComponent/BookingHistory/BookingHistory";
-import DashboardLayout from "@/components/DashboardComponent/DashboardLayout/DashboardLayout";
 import Navbar from "@/components/Shared/Navbar/Navbar";
 import { useSession } from "next-auth/react";
 import Image from "next/image";
