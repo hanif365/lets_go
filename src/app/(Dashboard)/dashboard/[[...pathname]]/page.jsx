@@ -1,10 +1,7 @@
 "use client";
 
-import RootLayout from "@/app/layout";
 import BookingHistory from "@/components/DashboardComponent/BookingHistory/BookingHistory";
-import Navbar from "@/components/Shared/Navbar/Navbar";
 import { useSession } from "next-auth/react";
-import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
