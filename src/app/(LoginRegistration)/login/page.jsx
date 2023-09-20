@@ -94,6 +94,7 @@ const Login = () => {
     await signIn(provider);
     router.push("/dashboard");
   };
+  
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
