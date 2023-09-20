@@ -53,20 +53,9 @@ const Login = () => {
 
   console.log(session);
 
-  // if (session.status === "authenticated") {
-  //   router?.push("/dashboard");
-  // }
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   const email = e.target[0].value;
-  //   const password = e.target[1].value;
-
-  //   signIn("credentials", {
-  //     email,
-  //     password,
-  //   });
-  // };
+  if (session.status === "authenticated") {
+    router?.push("/dashboard");
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -80,8 +69,6 @@ const Login = () => {
       redirect: false, // Disable automatic redirection
     });
 
-    console.log("Result: **********************************: ", result);
-
     if (result.error) {
       setError(result.error);
     } else {
@@ -94,7 +81,6 @@ const Login = () => {
     await signIn(provider);
     router.push("/dashboard");
   };
-  
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
