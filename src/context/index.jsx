@@ -18,7 +18,7 @@ export default function GlobalState({ children }) {
     if (status === "loading") setLoader(true);
     if (
       status === "unauthenticated" &&
-      pathName.includes("/" || "/products" || "/visitors")
+      pathName.includes("/dashboard" || "/visitors")
     ) {
       router.push("/login");
       setLoader(false);
