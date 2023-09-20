@@ -51,19 +51,48 @@ const Login = () => {
     );
   }
 
-  if (session.status === "authenticated") {
-    router?.push("/dashboard");
-  }
+  console.log(session);
 
-  const handleSubmit = (e) => {
+  // if (session.status === "authenticated") {
+  //   router?.push("/dashboard");
+  // }
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   const email = e.target[0].value;
+  //   const password = e.target[1].value;
+
+  //   signIn("credentials", {
+  //     email,
+  //     password,
+  //   });
+  // };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const email = e.target[0].value;
     const password = e.target[1].value;
 
-    signIn("credentials", {
+    // Sign in using the "credentials" provider
+    const result = await signIn("credentials", {
       email,
       password,
+      redirect: false, // Disable automatic redirection
     });
+
+    console.log("Result: **********************************: ", result);
+
+    if (result.error) {
+      setError(result.error);
+    } else {
+      router.push("/dashboard");
+    }
+  };
+
+  // Sign in using the "google / github" provider
+  const providerSignInAndRedirect = async (provider) => {
+    await signIn(provider);
+    router.push("/dashboard");
   };
 
   const handleInputChange = (e) => {
@@ -310,17 +339,13 @@ const Login = () => {
 
             <div className="flex flex-row justify-center items-center space-x-3">
               <button
-                onClick={() => {
-                  signIn("google");
-                }}
+                onClick={() => providerSignInAndRedirect("google")}
                 className="w-11 h-11 items-center justify-center inline-flex rounded-2xl font-bold text-lg bg-blue-500 hover:shadow-lg cursor-pointer transition ease-in duration-300"
               >
                 <FaGoogle className="w-6 h-6 text-white" />
               </button>
               <button
-                onClick={() => {
-                  signIn("github");
-                }}
+                onClick={() => providerSignInAndRedirect("github")}
                 className="w-11 h-11 items-center justify-center inline-flex rounded-2xl font-bold text-lg bg-blue-400 hover:shadow-lg cursor-pointer transition ease-in duration-300"
               >
                 <FaGithub className="w-6 h-6 text-white" />
