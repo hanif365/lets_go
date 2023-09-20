@@ -54,10 +54,10 @@ const Sidebar = () => {
   console.log(currentPath);
 
   const handlenavigate = (getMenuItem) => {
-    if (status === "unauthenticated") {
-      router.push("/login");
-      return;
-    }
+    // if (status === "unauthenticated") {
+    //   router.push("/login");
+    //   return;
+    // }
     router.push(getMenuItem.path);
   };
 
