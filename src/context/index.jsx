@@ -22,9 +22,7 @@ export default function GlobalState({ children }) {
     ) {
       router.push("/login");
       setLoader(false);
-    }
-
-    if (status === "authenticated") setLoader(false);
+    } else setLoader(false);
   }, [status]);
 
   if (loader) {
@@ -45,7 +43,9 @@ export default function GlobalState({ children }) {
   };
 
   return (
-    <GlobalContext.Provider value={{ isSidebarCollapsed, setIsSidebarCollapsed, toggleSidebar }}>
+    <GlobalContext.Provider
+      value={{ isSidebarCollapsed, setIsSidebarCollapsed, toggleSidebar }}
+    >
       {children}
     </GlobalContext.Provider>
   );
