@@ -40,8 +40,12 @@ export default function GlobalState({ children }) {
     );
   }
 
+  const toggleSidebar = () => {
+    setIsSidebarCollapsed(!isSidebarCollapsed);
+  };
+
   return (
-    <GlobalContext.Provider value={{ isSidebarCollapsed, setIsSidebarCollapsed }}>
+    <GlobalContext.Provider value={{ isSidebarCollapsed, setIsSidebarCollapsed, toggleSidebar }}>
       {children}
     </GlobalContext.Provider>
   );

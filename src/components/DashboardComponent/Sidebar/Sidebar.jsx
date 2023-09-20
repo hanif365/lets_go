@@ -1,13 +1,19 @@
 "use client";
 
-import React from "react";
+import React, { useContext } from "react";
 import { LuLayoutDashboard } from "react-icons/lu";
 import { TbBrandProducthunt } from "react-icons/tb";
-import { PiUsersFourLight } from "react-icons/pi";
+import {
+  PiArrowFatLinesLeftFill,
+  PiArrowFatLinesRightFill,
+  PiUsersFourLight,
+} from "react-icons/pi";
 import { usePathname, useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
 import Link from "next/link";
 import Image from "next/image";
+import { FcHome } from "react-icons/fc";
+import { GlobalContext } from "@/context";
 
 const menuItems = [
   {
@@ -30,7 +36,8 @@ const menuItems = [
   },
 ];
 
-const Sidebar = ({ isSidebarCollapsed }) => {
+const Sidebar = () => {
+  const { isSidebarCollapsed, setIsSidebarCollapsed, toggleSidebar } = useContext(GlobalContext);
   const { status } = useSession();
 
   const pathName = usePathname();
@@ -56,10 +63,31 @@ const Sidebar = ({ isSidebarCollapsed }) => {
 
   return (
     <aside
-      className={`min-h-screen bg-blue-500 ease-linear duration-300 ${
+      className={`min-h-screen border-r bg-white ease-linear duration-300 ${
         isSidebarCollapsed ? "w-24" : "w-72"
       }`}
     >
+      <div className="flex justify-end pt-3 px-3 space-x-3">
+        <Link href="/">
+          <FcHome
+            className="self-center"
+            style={{ width: "20px", height: "20px" }}
+          />
+        </Link>
+        <button onClick={toggleSidebar}>
+          {isSidebarCollapsed ? (
+            <PiArrowFatLinesRightFill
+              className="text-[#17286136]"
+              style={{ width: "20px", height: "20px" }}
+            />
+          ) : (
+            <PiArrowFatLinesLeftFill
+              className="text-[#172861a6]"
+              style={{ width: "20px", height: "20px" }}
+            />
+          )}
+        </button>
+      </div>
       {/*  */}
       <div className="flex pb-7 px-6 pt-8">
         <Image
@@ -81,7 +109,7 @@ const Sidebar = ({ isSidebarCollapsed }) => {
       <hr />
       {/*  */}
 
-      <div className="flex flex-col duration-300 ease-linear text-white">
+      <div className="flex flex-col duration-300 ease-linear">
         <nav className="mt-3 py-4 px-4 lg:mt-5 lg:px-6">
           <div>
             <ul className="mb-6 flex flex-col gap-1.5">
@@ -94,8 +122,8 @@ const Sidebar = ({ isSidebarCollapsed }) => {
                     }
                              ${
                                currentPath.includes(menuItem.id)
-                                 ? "bg-red-200"
-                                 : "hover:bg-green-400"
+                                 ? "bg-[#172861] text-white"
+                                 : "hover:bg-[#17286136]"
                              }
                             `}
                   >
@@ -119,9 +147,7 @@ const Sidebar = ({ isSidebarCollapsed }) => {
           </div>
         </nav>
       </div>
-        <div>
-            
-        </div>
+      <div></div>
     </aside>
   );
 };

@@ -33,7 +33,7 @@ const AboutUs = () => {
 
           <div className="flex justify-center lg:justify-normal">
             <Link
-              activeClassName="active"
+              // activeClassName="active"
               to="upcomingEvents"
               spy={true}
               smooth={true}

@@ -106,7 +106,7 @@ const Faq = () => {
       </div>
       <div className="flex justify-center">
         <Link
-          activeClassName="active"
+          // activeClassName="active"
           to="upcomingEvents"
           spy={true}
           smooth={true}

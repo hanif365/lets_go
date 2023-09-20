@@ -21,7 +21,7 @@ const Footer = () => {
               width={80}
               height={80}
               alt="logo"
-              className="h-16 animate_rocket_footer"
+              className="animate_rocket_footer"
             />
             <h2 className="self-center text-3xl font-bold text-white">
               Let's Go

@@ -1,8 +1,8 @@
 "use client";
 
-import BookingHistory from "@/components/DashboardComponent/BookingHistory/BookingHistory";
+import DashboardContent from "@/components/DashboardComponent/DashboardContent/DashboardContent";
+import MyBooking from "@/components/DashboardComponent/MyBooking/MyBooking";
 import { useSession } from "next-auth/react";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
@@ -59,15 +59,10 @@ const Dashboard = ({ params }) => {
   let content = null;
   switch (path) {
     case "/":
-      content = (
-        <>
-          <h1 className="text-2xl font-semibold">Dashboard Page</h1>
-          <p>This is the content of Dashboard page</p>
-        </>
-      );
+      content = <DashboardContent />
       break;
     case "mybooking":
-      content = <BookingHistory />;
+      content = <MyBooking />;
       break;
     case "wishlist":
       content = (
@@ -89,8 +84,7 @@ const Dashboard = ({ params }) => {
   if (session.status === "authenticated") {
     return (
       <div className="">
-        <Link href="/">Home</Link>
-        <div className="text-red-500">{content}</div>
+        <div className="">{content}</div>
       </div>
     );
   }

@@ -17,7 +17,7 @@ const HeroSection = () => {
         </p>
 
         <Link
-          activeClassName="active"
+          // activeClassName="active"
           to="upcomingEvents"
           spy={true}
           smooth={true}

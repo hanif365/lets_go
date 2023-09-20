@@ -68,7 +68,7 @@ function Navbar() {
                       width={80}
                       height={80}
                       alt="logo"
-                      className="h-16 animate-rocket"
+                      className="animate-rocket"
                     />
                     <h1 className="text-black text-1xl hidden md:block  md:text-3xl font-extrabold ml-2">
                       <div className="loader">

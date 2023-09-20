@@ -1,8 +1,4 @@
-"use client";
-
 import Sidebar from "@/components/DashboardComponent/Sidebar/Sidebar";
-import React, { useContext } from "react";
-import { GlobalContext } from "@/context";
 
 // vercel error when we use export metadata in client component
 // export const metadata = {
@@ -11,23 +7,20 @@ import { GlobalContext } from "@/context";
 // };
 
 export default function DashboardLayout({ children }) {
-  const { isSidebarCollapsed, setIsSidebarCollapsed } =
-    useContext(GlobalContext);
-
-  const toggleSidebar = () => {
-    setIsSidebarCollapsed(!isSidebarCollapsed);
-  };
-
-  console.log(isSidebarCollapsed);
+  
   return (
     <div className="flex bg-[#F5FAF8]">
-      <Sidebar isSidebarCollapsed={isSidebarCollapsed} />
+      <Sidebar/>
 
       {/* Dashboard main content */}
       <main className={`flex-1 p-6 `}>
-        <button onClick={toggleSidebar}>collapse</button>
         {children}
       </main>
+
+      {/* <div class="flex flex-col w-full h-screen">
+        <div class="h-1/2 w-full bg-red-500"></div>
+        <div class="h-1/2 w-full bg-blue-500"></div>
+      </div> */}
 
       {/* <aside className={`w-80 bg-white border-l`}>
         <p>I am here</p>
