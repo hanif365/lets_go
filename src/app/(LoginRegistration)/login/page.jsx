@@ -57,6 +57,8 @@ const Login = () => {
   //   router?.push("/dashboard");
   // }
 
+  console.log(session.status);
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -70,16 +72,20 @@ const Login = () => {
     const { email, password } = formData;
 
     // Sign in using the "credentials" provider
-    const result = await signIn("credentials", {
-      email,
-      password,
-      redirect: false, // Disable automatic redirection
-    });
+    try {
+      const result = await signIn("credentials", {
+        email,
+        password,
+        redirect: false,
+      });
 
-    if (result.error) {
-      setError(result.error);
-    } else {
-      router.push("/dashboard");
+      if (result.error) {
+        setError(result.error);
+      } else {
+        router.push("/dashboard");
+      }
+    } catch (error) {
+      setError("An error occurred, Please try Again!");
     }
   };
 
