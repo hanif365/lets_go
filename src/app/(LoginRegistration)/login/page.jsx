@@ -53,14 +53,21 @@ const Login = () => {
 
   console.log(session);
 
-  if (session.status === "authenticated") {
-    router?.push("/dashboard");
-  }
+  // if (session.status === "authenticated") {
+  //   router?.push("/dashboard");
+  // }
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const email = e.target[0].value;
-    const password = e.target[1].value;
+    const { email, password } = formData;
 
     // Sign in using the "credentials" provider
     const result = await signIn("credentials", {
@@ -80,14 +87,6 @@ const Login = () => {
   const providerSignInAndRedirect = async (provider) => {
     await signIn(provider);
     router.push("/dashboard");
-  };
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
   };
 
   const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
@@ -122,7 +121,10 @@ const Login = () => {
         <div className="sm:w-1/2 md:w-1/2 hidden md:block">
           <Slider {...settings}>
             {upcomingEventsData.map((event, index) => (
-              <div className="sm:w-1/2 md:w-2/5 h-full hidden md:flex flex-auto justify-center items-center  overflow-hidden text-white bg-no-repeat bg-cover relative  bg-gradient-to-r from-sky-500 to-indigo-400  rounded-bl-[10px] 2xl:rounded-none">
+              <div
+                key={index}
+                className="sm:w-1/2 md:w-2/5 h-full hidden md:flex flex-auto justify-center items-center  overflow-hidden text-white bg-no-repeat bg-cover relative  bg-gradient-to-r from-sky-500 to-indigo-400  rounded-bl-[10px] 2xl:rounded-none"
+              >
                 <div className="relative">
                   <Image
                     src={event.locationThumbnailImg}
@@ -213,9 +215,9 @@ const Login = () => {
                       stroke="currentColor"
                     >
                       <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
                         d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                       ></path>
                     </svg>
