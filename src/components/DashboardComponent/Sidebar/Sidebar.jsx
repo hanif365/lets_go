@@ -33,10 +33,6 @@ const Sidebar = () => {
   const { theme, setTheme } = useTheme();
   console.log(theme);
 
-  const handleLogoClick = () => {
-    router.push("/");
-  };
-
   const menuItems = [
     {
       id: "dashboard",
@@ -151,7 +147,7 @@ const Sidebar = () => {
         </button>
       </div> */}
 
-      <div className="flex pb-0 px-3 lg:px-6 pt-5">
+      <Link href="/" className="flex pb-0 px-3 lg:px-6 pt-5">
         <Image
           src={
             isSidebarCollapsed
@@ -164,7 +160,6 @@ const Sidebar = () => {
           width={120}
           height={120}
           className="mx-auto rounded-full hidden md:block cursor-pointer"
-          onClick={handleLogoClick}
         />
 
         <Image
@@ -179,9 +174,8 @@ const Sidebar = () => {
           width={60}
           height={60}
           className="rounded-xl block md:hidden cursor-pointer"
-          onClick={handleLogoClick}
         />
-      </div>
+      </Link>
 
       <div className="flex flex-col">
         <nav className="mt-3 py-4 px-4 lg:mt-3 lg:px-6">
@@ -233,7 +227,7 @@ const Sidebar = () => {
           </div>
         </nav>
       </div>
-      <div></div>
+      {/* <div></div> */}
     </aside>
   );
 };
