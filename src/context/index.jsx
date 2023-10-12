@@ -29,7 +29,7 @@ export default function GlobalState({ children }) {
     return (
       <div className="w-full min-h-screen flex justify-center items-center">
         <PropagateLoader
-          color="#81d636"
+          color="#D5E6FB"
           loading={loader}
           size={25}
           data-textid="Loader"

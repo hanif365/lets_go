@@ -1,7 +1,7 @@
 "use client";
 
-import DashboardContent from "@/components/DashboardComponent/DashboardContent/DashboardContent";
-import MyBooking from "@/components/DashboardComponent/MyBooking/MyBooking";
+import DashboardContentLayout from "@/components/DashboardComponent/DashboardContentLayout/DashboardContentLayout";
+import MyBookingContentLayout from "@/components/DashboardComponent/MyBookingContentLayout/MyBookingContentLayout";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
@@ -59,11 +59,31 @@ const Dashboard = ({ params }) => {
   let content = null;
   switch (path) {
     case "/":
-      content = <DashboardContent />
+      content = <DashboardContentLayout />;
       break;
+
     case "mybooking":
-      content = <MyBooking />;
+      content = <MyBookingContentLayout />;
       break;
+
+    case "profile":
+      content = (
+        <>
+          <h1 className="text-2xl font-semibold">profile Page</h1>
+          <p>This is the content of Link 2 page.</p>
+        </>
+      );
+      break;
+
+    case "myreview":
+      content = (
+        <>
+          <h1 className="text-2xl font-semibold">myreview Page</h1>
+          <p>This is the content of Link 2 page.</p>
+        </>
+      );
+      break;
+
     case "wishlist":
       content = (
         <>
@@ -72,6 +92,25 @@ const Dashboard = ({ params }) => {
         </>
       );
       break;
+
+    case "setting":
+      content = (
+        <>
+          <h1 className="text-2xl font-semibold">setting Page</h1>
+          <p>This is the content of Link 2 page.</p>
+        </>
+      );
+      break;
+
+    case "help":
+      content = (
+        <>
+          <h1 className="text-2xl font-semibold">help Page</h1>
+          <p>This is the content of Link 2 page.</p>
+        </>
+      );
+      break;
+
     default:
       content = (
         <>

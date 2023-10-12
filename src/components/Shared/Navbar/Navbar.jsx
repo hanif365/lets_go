@@ -43,7 +43,7 @@ function Navbar() {
     };
   }, []);
 
-  if (pathname !== "/dashboard" && pathname !== "/dashboard/mybooking" && pathname !== "/dashboard/wishlist") {
+  if (!pathname.startsWith("/dashboard")) {
     return (
       <div className="print:hidden">
         {/* <nav className={showNavbar ? 'navbar showNavbar navbar-expand-lg fixed-top navbar-light' : 'navbar navbar-expand-lg fixed-top navbar-light'} style={{ backgroundColor: navBg }}></nav> */}
@@ -64,23 +64,12 @@ function Navbar() {
                 <Link href="/" onClick={() => {}}>
                   <div className="flex items-center">
                     <Image
-                      src="/logo.png"
+                      src="/logo.gif"
                       width={80}
                       height={80}
                       alt="logo"
-                      className="animate-rocket"
+                      className="logo_navbar"
                     />
-                    <h1 className="text-black text-1xl hidden md:block  md:text-3xl font-extrabold ml-2">
-                      <div className="loader">
-                        <span>L</span>
-                        <span>e</span>
-                        <span>t'</span>
-                        <span>s</span>
-                        <span className="px-1"> </span>
-                        <span>G</span>
-                        <span>o</span>
-                      </div>
-                    </h1>
                   </div>
                 </Link>
 

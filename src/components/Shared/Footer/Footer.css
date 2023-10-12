@@ -1,5 +1,5 @@
 /* Rocket animation */
-@keyframes rocketAnimationsFooter {
+@keyframes animationsFooter {
     0%,
     100% {
       transform: translateX(0);
@@ -13,8 +13,8 @@
     }
   }
   
-  .animate_rocket_footer {
-    animation-name: rocketAnimationsFooter;
+  .logo_footer {
+    animation-name: animationsFooter;
     animation-duration: 2s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;

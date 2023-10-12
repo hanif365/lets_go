@@ -7,15 +7,12 @@ import Sidebar from "@/components/DashboardComponent/Sidebar/Sidebar";
 // };
 
 export default function DashboardLayout({ children }) {
-  
   return (
     <div className="flex bg-[#F5FAF8]">
-      <Sidebar/>
+      <Sidebar />
 
       {/* Dashboard main content */}
-      <main className={`flex-1 p-6 `}>
-        {children}
-      </main>
+      <main className={`flex-1`}>{children}</main>
 
       {/* <div class="flex flex-col w-full h-screen">
         <div class="h-1/2 w-full bg-red-500"></div>
