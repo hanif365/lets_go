@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useContext } from "react";
+import React from "react";
 import { RiDashboardFill, RiSettings5Fill } from "react-icons/ri";
 import { CgArrowsExchange } from "react-icons/cg";
 import { AiOutlineUser } from "react-icons/ai";
@@ -22,12 +22,12 @@ import {
   BsMoon,
   BsSun,
 } from "react-icons/bs";
-import { GlobalContext } from "@/context";
+import { useStateContext } from "@/context/ContextProvider";
 import { FaHeart, FaPersonWalkingLuggage, FaStar } from "react-icons/fa6";
 
 const Sidebar = () => {
   const { isSidebarCollapsed, setIsSidebarCollapsed, toggleSidebar } =
-    useContext(GlobalContext);
+    useStateContext();
   const pathName = usePathname();
   const router = useRouter();
   const { theme, setTheme } = useTheme();

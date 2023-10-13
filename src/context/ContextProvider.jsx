@@ -2,12 +2,12 @@
 
 import { useSession } from "next-auth/react";
 import { usePathname, useRouter } from "next/navigation";
-import { createContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import { PropagateLoader, PulseLoader } from "react-spinners";
 
-export const GlobalContext = createContext(null);
+const StateContext = createContext(null);
 
-export default function GlobalState({ children }) {
+export const ContextProvider = ({ children }) => {
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
   const [loader, setLoader] = useState(true);
   const { status } = useSession();
@@ -43,10 +43,12 @@ export default function GlobalState({ children }) {
   };
 
   return (
-    <GlobalContext.Provider
+    <StateContext.Provider
       value={{ isSidebarCollapsed, setIsSidebarCollapsed, toggleSidebar }}
     >
       {children}
-    </GlobalContext.Provider>
+    </StateContext.Provider>
   );
-}
+};
+
+export const useStateContext = () => useContext(StateContext);

@@ -1,12 +1,12 @@
-import { GlobalContext } from "@/context";
+import { useStateContext } from "@/context/ContextProvider";
 import Image from "next/image";
-import React, { useContext } from "react";
+import React from "react";
 import { FaBars, FaChevronDown } from "react-icons/fa6";
 import { LuBellDot } from "react-icons/lu";
 
 const DashboardHeader = () => {
   const { isSidebarCollapsed, setIsSidebarCollapsed, toggleSidebar } =
-    useContext(GlobalContext);
+    useStateContext();
   return (
     <div
       className={`p-4 flex justify-end md:justify-between dark:bg-[#1C1C25] bg-white `}
