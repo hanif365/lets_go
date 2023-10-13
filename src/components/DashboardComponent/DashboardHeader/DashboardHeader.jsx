@@ -3,13 +3,20 @@ import Image from "next/image";
 import React from "react";
 import { FaBars, FaChevronDown } from "react-icons/fa6";
 import { LuBellDot } from "react-icons/lu";
+import UserProfile from "./UserProfile/UserProfile";
 
 const DashboardHeader = () => {
-  const { isSidebarCollapsed, setIsSidebarCollapsed, toggleSidebar } =
-    useStateContext();
+  const {
+    isSidebarCollapsed,
+    setIsSidebarCollapsed,
+    toggleSidebar,
+    isDashboardHeaderMenuClicked,
+    setIsDashboardHeaderMenuClicked,
+    handleDashboardHeaderMenuClick,
+  } = useStateContext();
   return (
     <div
-      className={`p-4 flex justify-end md:justify-between dark:bg-[#1C1C25] bg-white `}
+      className={`p-4 sticky top-0  flex justify-end md:justify-between dark:bg-[#1C1C25] bg-white `}
     >
       <div
         onClick={toggleSidebar}
@@ -36,8 +43,10 @@ const DashboardHeader = () => {
             />
           </div>
 
+          {/* User Profile Section */}
           <div
             className={`flex justify-evenly cursor-pointer self-center hover:dark:bg-[#131313] hover:bg-gray-50 lg:py-2 lg:px-4 rounded-xl`}
+            onClick={() => handleDashboardHeaderMenuClick("userProfile")}
           >
             <Image
               src="/hanif.jpg"
@@ -55,6 +64,8 @@ const DashboardHeader = () => {
               <FaChevronDown className="w-3 h-6 text-gray-400" />
             </div>
           </div>
+          {/* here will be User Profile */}
+          {isDashboardHeaderMenuClicked.userProfile && <UserProfile />}
         </div>
       </div>
     </div>

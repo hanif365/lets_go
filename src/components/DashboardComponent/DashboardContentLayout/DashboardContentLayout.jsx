@@ -1,12 +1,7 @@
 import React from "react";
-import DashboardHeader from "./DashboardHeader/DashboardHeader";
 
 const DashboardContentLayout = () => {
-  return (
-    <div className="">
-      <DashboardHeader />
-    </div>
-  );
+  return <div className="h-[2000px]">Hello Dashboard</div>;
 };
 
 export default DashboardContentLayout;

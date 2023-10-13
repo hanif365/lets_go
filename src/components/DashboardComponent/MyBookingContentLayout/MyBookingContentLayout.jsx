@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const MyBookingContentLayout = () => {
-  return (
-    <div>MyBookingContentLayout</div>
-  )
-}
+  return <div className="h-[2000px]">MyBookingContentLayout</div>;
+};
 
-export default MyBookingContentLayout
+export default MyBookingContentLayout;

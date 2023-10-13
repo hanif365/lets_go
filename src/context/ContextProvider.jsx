@@ -7,12 +7,20 @@ import { PropagateLoader, PulseLoader } from "react-spinners";
 
 const StateContext = createContext(null);
 
+const dashboardMenuInitialState = {
+  chat: false,
+  cart: false,
+  userProfile: false,
+  notification: false,
+};
+
 export const ContextProvider = ({ children }) => {
-  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
-  const [loader, setLoader] = useState(true);
   const { status } = useSession();
   const pathName = usePathname();
   const router = useRouter();
+  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
+  const [loader, setLoader] = useState(true);
+  const [isDashboardHeaderMenuClicked, setIsDashboardHeaderMenuClicked] = useState(dashboardMenuInitialState);
 
   useEffect(() => {
     if (status === "loading") setLoader(true);
@@ -42,9 +50,15 @@ export const ContextProvider = ({ children }) => {
     setIsSidebarCollapsed(!isSidebarCollapsed);
   };
 
+  const handleDashboardHeaderMenuClick = (clicked) => {
+    setIsDashboardHeaderMenuClicked({ ...dashboardMenuInitialState, [clicked]: true });
+  };
+
+  console.log(isDashboardHeaderMenuClicked)
+
   return (
     <StateContext.Provider
-      value={{ isSidebarCollapsed, setIsSidebarCollapsed, toggleSidebar }}
+      value={{ isSidebarCollapsed, setIsSidebarCollapsed, toggleSidebar, dashboardMenuInitialState, isDashboardHeaderMenuClicked, setIsDashboardHeaderMenuClicked, handleDashboardHeaderMenuClick }}
     >
       {children}
     </StateContext.Provider>

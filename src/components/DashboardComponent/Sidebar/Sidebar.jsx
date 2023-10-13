@@ -47,9 +47,9 @@ const Sidebar = () => {
       icon: <FaPersonWalkingLuggage size={25} />,
     },
     {
-      id: "profile",
-      label: "Profile",
-      path: "/dashboard/profile",
+      id: "myprofile",
+      label: "My Profile",
+      path: "/dashboard/myprofile",
       icon: <BsFillPersonCheckFill size={25} />,
     },
     {

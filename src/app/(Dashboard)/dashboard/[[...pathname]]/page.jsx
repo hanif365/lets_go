@@ -1,6 +1,7 @@
 "use client";
 
 import DashboardContentLayout from "@/components/DashboardComponent/DashboardContentLayout/DashboardContentLayout";
+import DashboardHeader from "@/components/DashboardComponent/DashboardHeader/DashboardHeader";
 import MyBookingContentLayout from "@/components/DashboardComponent/MyBookingContentLayout/MyBookingContentLayout";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
@@ -66,7 +67,7 @@ const Dashboard = ({ params }) => {
       content = <MyBookingContentLayout />;
       break;
 
-    case "profile":
+    case "myprofile":
       content = (
         <>
           <h1 className="text-2xl font-semibold">profile Page</h1>
@@ -123,6 +124,7 @@ const Dashboard = ({ params }) => {
   if (session.status === "authenticated") {
     return (
       <div className="">
+        {/* <DashboardHeader /> */}
         <div className="">{content}</div>
       </div>
     );

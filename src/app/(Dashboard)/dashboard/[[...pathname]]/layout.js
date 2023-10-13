@@ -1,3 +1,6 @@
+"use client";
+
+import DashboardHeader from "@/components/DashboardComponent/DashboardHeader/DashboardHeader";
 import Sidebar from "@/components/DashboardComponent/Sidebar/Sidebar";
 
 // vercel error when we use export metadata in client component
@@ -12,7 +15,10 @@ export default function DashboardLayout({ children }) {
       <Sidebar />
 
       {/* Dashboard main content */}
-      <main className={`flex-1`}>{children}</main>
+      <main className={`flex-1`}>
+        <DashboardHeader />
+        {children}
+      </main>
 
       {/* <div class="flex flex-col w-full h-screen">
         <div class="h-1/2 w-full bg-red-500"></div>
