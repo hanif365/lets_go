@@ -4,6 +4,7 @@ import React from "react";
 import { FaBars, FaChevronDown } from "react-icons/fa6";
 import { LuBellDot } from "react-icons/lu";
 import UserProfile from "./UserProfile/UserProfile";
+import Notification from "./Notification/Notification";
 
 const DashboardHeader = () => {
   const {
@@ -16,7 +17,7 @@ const DashboardHeader = () => {
   } = useStateContext();
   return (
     <div
-      className={`p-4 sticky top-0  flex justify-end md:justify-between dark:bg-[#1C1C25] bg-white `}
+      className={`p-4 sticky top-0 flex justify-end lg:justify-between dark:bg-[#1C1C25] bg-white `}
     >
       <div
         onClick={toggleSidebar}
@@ -40,6 +41,7 @@ const DashboardHeader = () => {
           <div className="self-center pr-6">
             <LuBellDot
               className={`w-6 h-6 dark:text-[#ffffff] text-[#0060FF] cursor-pointer `}
+              onClick={() => handleDashboardHeaderMenuClick("notification")}
             />
           </div>
 
@@ -66,6 +68,7 @@ const DashboardHeader = () => {
           </div>
           {/* here will be User Profile */}
           {isDashboardHeaderMenuClicked.userProfile && <UserProfile />}
+          {isDashboardHeaderMenuClicked.notification && <Notification />}
         </div>
       </div>
     </div>
