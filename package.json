@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "apexcharts": "^3.43.0",
     "autoprefixer": "10.4.14",
     "bcryptjs": "^2.4.3",
     "js-cookie": "^3.0.5",
@@ -19,6 +20,7 @@
     "next-themes": "^0.2.1",
     "postcss": "8.4.25",
     "react": "18.2.0",
+    "react-apexcharts": "^1.4.1",
     "react-dom": "18.2.0",
     "react-icons": "^4.10.1",
     "react-scroll": "^1.8.9",

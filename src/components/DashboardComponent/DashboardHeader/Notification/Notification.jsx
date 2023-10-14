@@ -23,8 +23,8 @@ const Notification = () => {
           className="rounded-full"
         />
       ),
-      title: "My Profile",
-      desc: "Account Settings",
+      title: "Notification 1",
+      desc: "Notification 1 Description",
     },
     {
       icon: (
@@ -36,8 +36,8 @@ const Notification = () => {
           className="rounded-full"
         />
       ),
-      title: "My Booking",
-      desc: "Messages & Emails",
+      title: "Notification 2",
+      desc: "Notification 2 Description",
     },
     {
       icon: (
@@ -49,8 +49,8 @@ const Notification = () => {
           className="rounded-full"
         />
       ),
-      title: "My Review",
-      desc: "To-do and Daily Tasks",
+      title: "Notification 3",
+      desc: "Notification 3 Description",
     },
   ];
 

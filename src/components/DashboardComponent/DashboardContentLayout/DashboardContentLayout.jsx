@@ -1,7 +1,10 @@
 import React from "react";
+import TravelStatus from "./TravelStatus/TravelStatus";
 
 const DashboardContentLayout = () => {
-  return <div className="h-[2000px]">Hello Dashboard</div>;
+  return <div className="p-3">
+    <TravelStatus />
+  </div>;
 };
 
 export default DashboardContentLayout;
