@@ -1,9 +1,166 @@
 .faq_btn span:first-child {
-    /* negative sign makes it reverse design */
-    transform: translateX(-101%);
-    transition: transform 0.3s ease-in;
+  /* negative sign makes it reverse design */
+  transform: translateX(-101%);
+  transition: transform 0.3s ease-in;
+}
+.faq_btn:hover span {
+  transform: translateX(0);
+}
+/* If we need horizontally moved then just use X instead of Y and viceversa */
+
+/* new code for circle animation */
+
+.circle_outer {
+  width: 546px;
+  height: 546px;
+  border-radius: 100%;
+  /* background-color: red; */
+  position: relative;
+}
+.circle_inner {
+  width: 100%;
+  height: 100%;
+  /* background-color: green; */
+  border-radius: 100%;
+}
+.circle_middle_logo {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 130px;
+  height: 130px;
+  background: #fff;
+  /* background: orangered; */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: blue; */
+}
+
+.circle_inner-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 74px;
+  height: 74px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: rgb(200, 14, 224); */
+}
+.circle_inner-item.-pos-1 {
+  transform: translate(0, -217%);
+}
+.circle_inner-item.-pos-2 {
+  transform: translate(164%, -153%);
+}
+.circle_inner-item.-pos-3 {
+  transform: translate(220%, 3%);
+}
+.circle_inner-item.-pos-4 {
+  transform: translate(164%, 159%);
+}
+.circle_inner-item.-pos-5 {
+  transform: translate(0, 225%);
+}
+.circle_inner-item.-pos-6 {
+  transform: translate(-157%, 163%);
+}
+.circle_inner-item.-pos-7 {
+  transform: translate(-209%, 3%);
+}
+.circle_inner-item.-pos-8 {
+  transform: translate(-157%, -151%);
+}
+
+.circle_inner {
+  animation: partnersRotating 30s linear infinite;
+}
+.circle_inner-item .icon {
+  display: block;
+  animation: partnersIconsRotating 30s linear infinite;
+}
+
+@keyframes partnersRotating {
+  from {
+    transform: rotate(0);
   }
-  .faq_btn:hover span {
-    transform: translateX(0);
+  /* if we want to rotate anticlockwise then just use -360deg and then also need  
+  partnersIconsRotating's to will be 360deg */
+  to {
+    transform: rotate(360deg);
   }
-  /* If we need horizontally moved then just use X instead of Y and viceversa */
+}
+@keyframes partnersIconsRotating {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+/* For screens with a maximum width of 640px (typical for mobile devices) */
+@media (max-width: 640px) {
+  /* Adjust styles for mobile devices here */
+  .circle_outer {
+    width: 300px;
+    height: 300px; /* Adjust height as needed */
+    /* background-color: aqua !important; */
+  }
+
+  .circle_inner {
+    width: 50%;
+    height: 100%;
+    margin: auto;
+    /* display: none; */
+  }
+
+  .circle_middle_logo {
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+  }
+
+  .circle_inner-item {
+    /* display: none; */
+    width: 50px;
+    height: 50px;
+  }
+
+  .circle_inner-item.-pos-1 {
+    transform: translate(0, -200%);
+  }
+  .circle_inner-item.-pos-2 {
+    transform: translate(140%, -140%);
+  }
+  .circle_inner-item.-pos-3 {
+    transform: translate(175%, 3%);
+  }
+  .circle_inner-item.-pos-4 {
+    transform: translate(140%, 140%);
+  }
+  .circle_inner-item.-pos-5 {
+    transform: translate(0, 200%);
+  }
+  .circle_inner-item.-pos-6 {
+    transform: translate(-140%, 140%);
+  }
+  .circle_inner-item.-pos-7 {
+    transform: translate(-175%, 3%);
+  }
+  .circle_inner-item.-pos-8 {
+    transform: translate(-140%, -140%);
+  }
+}

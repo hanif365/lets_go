@@ -46,8 +46,8 @@ const Faq = () => {
           Full range of travel service
         </h1>
       </div>
-      <div className="flex flex-col lg:flex-row justify-between">
-        <div className="flex-1">
+      <div className="flex flex-col lg:flex-row lg:justify-between">
+        <div className="flex-1 self-center">
           {/* Accordion start */}
           <div className="rounded overflow-hidden px-10 lg:px-20 lg:py-10">
             {/* Render accordion items dynamically */}
@@ -94,14 +94,97 @@ const Faq = () => {
           </div>
           {/* Accordion end */}
         </div>
-        <div className="flex-1 p-10 lg:p-0">
-          <Image
-            src="/faq_img.png"
-            alt="Faq Image"
-            width={600}
-            height={600}
-            className="mx-auto"
-          />
+
+        <div className="flex-1 self-center pt-10 lg:p-0">
+          {/* Circle code start */}
+          <div className="circle_outer bg-[url('/bg_circle.png')] bg-cover">
+            <div className="circle_inner">
+              <div className="circle_inner-item -pos-1">
+                <Image
+                  src="/bus_logo.png"
+                  alt="Bus Logo"
+                  width={80}
+                  height={80}
+                  className="icon w-[50%] h-[50%] lg:w-[100%] lg:h-[100%]"
+                />
+              </div>
+              <div className="circle_inner-item -pos-2">
+                <Image
+                  src="/train_logo.png"
+                  alt="Train Logo"
+                  width={80}
+                  height={80}
+                  className="icon w-[50%] h-[50%] lg:w-[100%] lg:h-[100%]"
+                />
+              </div>
+              <div className="circle_inner-item -pos-3">
+                <Image
+                  src="/airplane_logo.png"
+                  alt="Airplane Logo"
+                  width={80}
+                  height={80}
+                  className="icon w-[50%] h-[50%] lg:w-[100%] lg:h-[100%]"
+                />
+              </div>
+              <div className="circle_inner-item -pos-4">
+                <Image
+                  src="/car_logo.png"
+                  alt="Car Logo"
+                  width={80}
+                  height={80}
+                  className="icon w-[50%] h-[50%] lg:w-[100%] lg:h-[100%]"
+                />
+              </div>
+              <div className="circle_inner-item -pos-5">
+                <Image
+                  src="/hotel_logo.png"
+                  alt="Hotel Logo"
+                  width={80}
+                  height={80}
+                  className="icon w-[50%] h-[50%] lg:w-[100%] lg:h-[100%]"
+                />
+              </div>
+
+              <div className="circle_inner-item -pos-6">
+                <Image
+                  src="/bbq_logo.png"
+                  alt="BBQ Logo"
+                  width={80}
+                  height={80}
+                  className="icon w-[50%] h-[50%] lg:w-[100%] lg:h-[100%]"
+                />
+              </div>
+              <div className="circle_inner-item -pos-7">
+                <Image
+                  src="/travel_bag.png"
+                  alt="Travel Bag Logo"
+                  width={80}
+                  height={80}
+                  className="icon w-[50%] h-[50%] lg:w-[100%] lg:h-[100%]"
+                />
+              </div>
+
+              <div className="circle_inner-item -pos-8">
+                <Image
+                  src="/camping_logo.png"
+                  alt="Camping Logo"
+                  width={80}
+                  height={80}
+                  className="icon w-[50%] h-[50%] lg:w-[100%] lg:h-[100%]"
+                />
+              </div>
+            </div>
+            <div className="circle_middle_logo">
+              <Image
+                src="/logo.gif"
+                alt="Logo"
+                width={100}
+                height={100}
+                className=""
+              />
+            </div>
+          </div>
+          {/* Circle code end */}
         </div>
       </div>
       <div className="flex justify-center">
