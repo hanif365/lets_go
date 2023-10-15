@@ -29,6 +29,7 @@ const faqData = [
 
 const Faq = () => {
   const [activeAccordion, setActiveAccordion] = useState(1);
+  const [isAnimationFast, setIsAnimationFast] = useState(false);
 
   const toggleAccordion = (itemNo) => {
     setActiveAccordion((prevActive) => (prevActive === itemNo ? null : itemNo));
@@ -36,6 +37,10 @@ const Faq = () => {
 
   const isAccordionOpen = (itemNo) => {
     return itemNo === activeAccordion;
+  };
+
+  const handleCircleClick = () => {
+    setIsAnimationFast((prevIsFast) => !prevIsFast);
   };
 
   return (
@@ -98,7 +103,12 @@ const Faq = () => {
         <div className="flex-1 self-center pt-10 lg:p-0">
           {/* Circle code start */}
           <div className="circle_outer bg-[url('/bg_circle.png')] bg-cover">
-            <div className="circle_inner">
+            <div
+              className="circle_inner"
+              style={{
+                animationDuration: isAnimationFast ? "3s" : "30s",
+              }}
+            >
               <div className="circle_inner-item -pos-1">
                 <Image
                   src="/bus_logo.png"
@@ -174,13 +184,16 @@ const Faq = () => {
                 />
               </div>
             </div>
-            <div className="circle_middle_logo">
+            <div
+              className="circle_middle_logo cursor-pointer"
+              onClick={handleCircleClick}
+            >
               <Image
                 src="/logo.gif"
                 alt="Logo"
                 width={100}
                 height={100}
-                className=""
+                className={isAnimationFast && "animate-ping"}
               />
             </div>
           </div>

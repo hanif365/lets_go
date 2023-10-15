@@ -8,19 +8,17 @@
 }
 /* If we need horizontally moved then just use X instead of Y and viceversa */
 
-/* new code for circle animation */
+/* Code for circle animation */
 
 .circle_outer {
   width: 546px;
   height: 546px;
   border-radius: 100%;
-  /* background-color: red; */
   position: relative;
 }
 .circle_inner {
   width: 100%;
   height: 100%;
-  /* background-color: green; */
   border-radius: 100%;
 }
 .circle_middle_logo {
@@ -33,13 +31,11 @@
   width: 130px;
   height: 130px;
   background: #fff;
-  /* background: orangered; */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: blue; */
 }
 
 .circle_inner-item {
@@ -57,7 +53,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: rgb(200, 14, 224); */
 }
 .circle_inner-item.-pos-1 {
   transform: translate(0, -217%);
@@ -84,8 +79,15 @@
   transform: translate(-157%, -151%);
 }
 
-.circle_inner {
+/* .circle_inner {
   animation: partnersRotating 30s linear infinite;
+} */
+
+.circle_inner {
+  animation-name: partnersRotating;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 30s;
 }
 .circle_inner-item .icon {
   display: block;
@@ -113,18 +115,15 @@
 
 /* For screens with a maximum width of 640px (typical for mobile devices) */
 @media (max-width: 640px) {
-  /* Adjust styles for mobile devices here */
   .circle_outer {
     width: 300px;
-    height: 300px; /* Adjust height as needed */
-    /* background-color: aqua !important; */
+    height: 300px;
   }
 
   .circle_inner {
     width: 50%;
     height: 100%;
     margin: auto;
-    /* display: none; */
   }
 
   .circle_middle_logo {
@@ -134,7 +133,6 @@
   }
 
   .circle_inner-item {
-    /* display: none; */
     width: 50px;
     height: 50px;
   }
