@@ -16,22 +16,26 @@ const dashboardMenuInitialState = {
 
 export const ContextProvider = ({ children }) => {
   const { status } = useSession();
-  const pathName = usePathname();
+  const pathname = usePathname();
   const router = useRouter();
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
   const [loader, setLoader] = useState(true);
-  const [isDashboardHeaderMenuClicked, setIsDashboardHeaderMenuClicked] = useState(dashboardMenuInitialState);
+  const [isDashboardHeaderMenuClicked, setIsDashboardHeaderMenuClicked] =
+    useState(dashboardMenuInitialState);
 
   useEffect(() => {
     if (status === "loading") setLoader(true);
+    // Although we use middleware to protect our private route, but more security we also used below -
+    // check (If we just use it without middleware private route pages shows for some seconds)
+    // middleware is more save to use
     if (
       status === "unauthenticated" &&
-      pathName.includes("/dashboard" || "/visitors")
+      (pathname.startsWith("/dashboard") || pathname.startsWith("/bookticket"))
     ) {
       router.push("/login");
       setLoader(false);
     } else setLoader(false);
-  }, [status]);
+  }, [status, pathname]);
 
   if (loader) {
     return (
@@ -51,14 +55,25 @@ export const ContextProvider = ({ children }) => {
   };
 
   const handleDashboardHeaderMenuClick = (clicked) => {
-    setIsDashboardHeaderMenuClicked({ ...dashboardMenuInitialState, [clicked]: true });
+    setIsDashboardHeaderMenuClicked({
+      ...dashboardMenuInitialState,
+      [clicked]: true,
+    });
   };
 
-  console.log(isDashboardHeaderMenuClicked)
+  console.log(isDashboardHeaderMenuClicked);
 
   return (
     <StateContext.Provider
-      value={{ isSidebarCollapsed, setIsSidebarCollapsed, toggleSidebar, dashboardMenuInitialState, isDashboardHeaderMenuClicked, setIsDashboardHeaderMenuClicked, handleDashboardHeaderMenuClick }}
+      value={{
+        isSidebarCollapsed,
+        setIsSidebarCollapsed,
+        toggleSidebar,
+        dashboardMenuInitialState,
+        isDashboardHeaderMenuClicked,
+        setIsDashboardHeaderMenuClicked,
+        handleDashboardHeaderMenuClick,
+      }}
     >
       {children}
     </StateContext.Provider>

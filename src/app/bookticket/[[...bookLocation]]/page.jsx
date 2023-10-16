@@ -96,21 +96,21 @@ const BookTicket = ({ params }) => {
 
   const initialSeatsData = Array.from({ length: totalSeats }, (_, index) => {
     const seatNumber = index + 1;
-    const isReserved = allReservedSeatIds.includes(seatNumber);
+    // const isReserved = allReservedSeatIds.includes(seatNumber);
     return {
       id: seatNumber,
       name: `${rows[Math.floor(index / seatsPerRow)]}${
         (index % seatsPerRow) + 1
       }`,
       isBooked: false,
-      isReserved: isReserved, // Check if the seat is reserved
+      // isReserved: isReserved, // delete that parameter, it's added within useEffect (up)
     };
   });
 
   const [seatsData, setSeatsData] = useState(initialSeatsData);
 
   // console.log("initialSeatsData: ", initialSeatsData);
-  // console.log("SeatsData: ", seatsData);
+  console.log("SeatsData: ", seatsData[0]?.isReserved);
 
   const selectedSeatNames = selectedSeats.map(
     (seatId) => seatsData.find((seat) => seat.id === seatId)?.name
@@ -176,7 +176,9 @@ const BookTicket = ({ params }) => {
               <BookingInfo
                 seatName={seat.name}
                 isBooked={seat.isBooked}
-                isReserved={seat.isReserved}
+                isReserved={
+                  seat.isReserved !== undefined ? seat.isReserved : null
+                }
                 onClick={() => handleSeatClick(seat.id)}
                 reservedSeatCount={allReservedSeatIds.length}
               />
@@ -270,84 +272,63 @@ const BookTicket = ({ params }) => {
     setChildCount(0);
   };
 
-  if (session.status === "loading") {
-    return (
-      <div className="mt-40">
-        <Image
-          src="/loading.gif"
-          alt="Loading Image"
-          width={30}
-          height={30}
-          className="mx-auto"
-        />
-      </div>
-    );
-  }
-
-  if (session.status === "unauthenticated") {
-    router?.push("/login");
-  }
-
   const remaining_seats = totalSeats - allReservedSeatIds?.length;
 
-  if (session.status === "authenticated") {
-    // const remaining seats = {totalSeats} - {allReservedSeatIds.length}
-    return (
-      <div>
-        <div className="flex flex-col-reverse md:flex-row mt-40">
-          <div className="flex-1 mt-10 md:mt-0">
-            <div className="flex justify-center">
-              <p className="mr-14">Total Seats: {totalSeats}</p>
-              <p>Remaining Seats: {remaining_seats}</p>
-            </div>
-
-            {renderSeatRow("A", 1)}
-            {renderSeatRow("B", 5)}
-            {renderSeatRow("C", 9)}
-            {renderSeatRow("D", 13)}
-            {renderSeatRow("E", 17)}
-            {renderSeatRow("F", 21)}
-            {renderSeatRow("G", 25)}
-            {renderSeatRow("H", 29)}
-            {renderSeatRow("I", 33)}
-            {renderSeatRow("J", 37)}
-
-            {selectedSeatNames.length > 0 && (
-              <button
-                type="submit"
-                className={`text-[16px] lg:text-[18px] w-80 mx-auto flex justify-center items-center px-14 py-6 relative border uppercase font-semibold tracking-wider leading-none overflow-hidden  rounded-md text-white`}
-                onClick={clearAllSelectedSeats}
-              >
-                <span className="absolute inset-0 bg-red-500 rounded"></span>
-                <span className="absolute inset-0 flex justify-center items-center font-bold">
-                  Reset Seats
-                </span>
-              </button>
-            )}
+  return (
+    <div>
+      <div className="flex flex-col-reverse md:flex-row mt-40">
+        <div className="flex-1 mt-10 md:mt-0">
+          <div className="flex justify-center">
+            <p className="mr-14">Total Seats: {totalSeats}</p>
+            <p>Remaining Seats: {remaining_seats}</p>
           </div>
-          <div className="flex-1 mx-auto">
-            <JourneyDetails
-              filteredEvents={filteredEvents}
-              selectedSeatNames={selectedSeatNames}
-            />
-          </div>
+
+          {renderSeatRow("A", 1)}
+          {renderSeatRow("B", 5)}
+          {renderSeatRow("C", 9)}
+          {renderSeatRow("D", 13)}
+          {renderSeatRow("E", 17)}
+          {renderSeatRow("F", 21)}
+          {renderSeatRow("G", 25)}
+          {renderSeatRow("H", 29)}
+          {renderSeatRow("I", 33)}
+          {renderSeatRow("J", 37)}
+
+          {selectedSeatNames.length > 0 && (
+            <button
+              type="submit"
+              className={`text-[16px] lg:text-[18px] w-80 mx-auto flex justify-center items-center px-14 py-6 relative border uppercase font-semibold tracking-wider leading-none overflow-hidden  rounded-md text-white`}
+              onClick={clearAllSelectedSeats}
+            >
+              <span className="absolute inset-0 bg-red-500 rounded"></span>
+              <span className="absolute inset-0 flex justify-center items-center font-bold">
+                Reset Seats
+              </span>
+            </button>
+          )}
         </div>
-
-        <div className="flex flex-col md:flex-row mt-10 md:mx-10">
-          <div className="flex-1 mx-6 md:mx-auto">{renderPassengerForms()}</div>
-          <div className="flex-1 mx-auto mt-10 md:mt-0">
-            <FareDetails
-              adultCount={adultCount}
-              childCount={childCount}
-              filteredEvents={filteredEvents}
-              onConfirmSeats={confirmSeats}
-              passengerData={passengerData}
-            />
-          </div>
+        <div className="flex-1 mx-auto">
+          <JourneyDetails
+            filteredEvents={filteredEvents}
+            selectedSeatNames={selectedSeatNames}
+          />
         </div>
       </div>
-    );
-  }
+
+      <div className="flex flex-col md:flex-row mt-10 md:mx-10">
+        <div className="flex-1 mx-6 md:mx-auto">{renderPassengerForms()}</div>
+        <div className="flex-1 mx-auto mt-10 md:mt-0">
+          <FareDetails
+            adultCount={adultCount}
+            childCount={childCount}
+            filteredEvents={filteredEvents}
+            onConfirmSeats={confirmSeats}
+            passengerData={passengerData}
+          />
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default BookTicket;
