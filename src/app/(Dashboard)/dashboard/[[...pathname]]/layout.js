@@ -11,7 +11,7 @@ import Sidebar from "@/components/DashboardComponent/Sidebar/Sidebar";
 
 export default function DashboardLayout({ children }) {
   return (
-    <div className="flex bg-[#F5FAF8]">
+    <div className="flex bg-[#F5FAF8] min-h-screen">
       <Sidebar />
 
       {/* Dashboard main content */}
