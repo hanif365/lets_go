@@ -23,11 +23,22 @@ export const ContextProvider = ({ children }) => {
   const [isDashboardHeaderMenuClicked, setIsDashboardHeaderMenuClicked] =
     useState(dashboardMenuInitialState);
 
+  const [successfullOrders, setSuccessfulOrders] = useState([]);
+
+  const handleSuccessfullOrders = (success_orders) => {
+    setSuccessfulOrders(success_orders);
+  };
+
+  console.log(
+    "Successfull ORders from Context: ******************: ",
+    successfullOrders
+  );
+
   useEffect(() => {
     if (status === "loading") setLoader(true);
     // Although we use middleware to protect our private route, but more security we also used below -
     // check (If we just use it without middleware private route pages shows for some seconds)
-    // middleware is more save to use
+    // middleware is more secure to use
     if (
       status === "unauthenticated" &&
       (pathname.startsWith("/dashboard") || pathname.startsWith("/bookticket"))
@@ -73,6 +84,8 @@ export const ContextProvider = ({ children }) => {
         isDashboardHeaderMenuClicked,
         setIsDashboardHeaderMenuClicked,
         handleDashboardHeaderMenuClick,
+        successfullOrders,
+        handleSuccessfullOrders,
       }}
     >
       {children}

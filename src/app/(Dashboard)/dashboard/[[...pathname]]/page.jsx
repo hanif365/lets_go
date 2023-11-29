@@ -3,15 +3,17 @@
 import DashboardContentLayout from "@/components/DashboardComponent/DashboardContentLayout/DashboardContentLayout";
 import DashboardHeader from "@/components/DashboardComponent/DashboardHeader/DashboardHeader";
 import MyBookingContentLayout from "@/components/DashboardComponent/MyBookingContentLayout/MyBookingContentLayout";
+import { useStateContext } from "@/context/ContextProvider";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
 const Dashboard = ({ params }) => {
+  const { successfullOrders, handleSuccessfullOrders } = useStateContext();
   const path = params?.pathname ? params?.pathname[0] : "/";
   const session = useSession();
   const router = useRouter();
-  const [successfulOrders, setSuccessfulOrders] = useState([]);
+
   // const [seatNames, setSeatNames] = useState([]);
 
   useEffect(() => {
@@ -22,12 +24,12 @@ const Dashboard = ({ params }) => {
     const name = session.data.user.name;
 
     // Now that you have the email, you can proceed with your fetch request
-    async function fetchAllOrders() {
+    const fetchAllOrders = async () => {
       try {
         const response = await fetch("/api/buytickets");
         const data = await response.json();
 
-        console.log("Success page Data: *******************: ", data);
+        console.log("All Successfull Order Data: *******************: ", data);
 
         // Filter the data array for the orders with the matching email and paid status
         const matchedOrders = data.filter((order) => {
@@ -39,19 +41,18 @@ const Dashboard = ({ params }) => {
         //   return order.bookedSeats.map((seat) => seat.name);
         // });
 
-        // Set the matched orders and seatNames
-        setSuccessfulOrders(matchedOrders);
+        // Set the matched orders and seatNames (Here, matchedOrders means Successfull Orders)
+        await handleSuccessfullOrders(matchedOrders);
         // setSeatNames(seatNamesByOrder);
       } catch (error) {
         console.error("Error fetching orders:", error);
       }
-    }
+    };
 
     fetchAllOrders();
   }, [session]);
 
-  console.log(successfulOrders);
-  // console.log(seatNames);
+  console.log("success_orders", successfullOrders);
 
   if (session.status === "unauthenticated") {
     router?.push("/login");
