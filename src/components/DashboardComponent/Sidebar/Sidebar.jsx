@@ -99,9 +99,12 @@ const Sidebar = () => {
     router.push(getMenuItem.path);
   };
 
+  // here we hidden sidebar for mobile device (ai hidden feature pore add korsi, so age conditionally mobile device er jonno width add kora silo, 
+  // ja ekhono roye gese, ai conditionally bisoy ta remove korelo hoy na korleo problem nai). aknon mobile device er jonno profile 
+  // theke navigate korte hobe
   return (
     <aside
-      className={`max-h-screen sticky top-0 overflow-y-auto dark:bg-[#1C1C25] dark:border-none bg-white ${
+      className={`hidden lg:block max-h-screen sticky top-0 overflow-y-auto dark:bg-[#1C1C25] dark:border-none bg-white ${
         isSidebarCollapsed ? "w-24" : "w-20 lg:w-72"
       }`}
     >

@@ -79,9 +79,11 @@ const data = {
 
 const BookingStatisticsChart = () => {
   return (
-    <div className="lg:w-1/2 mt-3 p-5 bg-white rounded-lg shadow-sm">
+    <div className="mt-3 p-2 bg-white rounded-lg shadow-sm flex-1">
       <h4 className="text-lg pb-5">Booking Statistics</h4>
-      <Bar options={options} data={data} />
+      <div className="">
+        <Bar options={options} data={data} className="" />
+      </div>
     </div>
   );
 };

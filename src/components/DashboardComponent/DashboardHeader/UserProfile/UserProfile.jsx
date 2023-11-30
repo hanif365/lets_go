@@ -15,9 +15,9 @@ const UserProfile = () => {
   const userProfileData = [
     {
       icon: <BsFillPersonCheckFill />,
-      title: "My Profile",
-      desc: "Account Settings",
-      path: "/dashboard/myprofile",
+      title: "Dashboard",
+      desc: "Dashboard Management",
+      path: "/dashboard",
       iconColor: "#03C9D7",
       iconBg: "#E5FAFB",
     },
@@ -28,6 +28,14 @@ const UserProfile = () => {
       path: "/dashboard/mybooking",
       iconColor: "rgb(0, 194, 146)",
       iconBg: "rgb(235, 250, 242)",
+    },
+    {
+      icon: <BsFillPersonCheckFill />,
+      title: "My Profile",
+      desc: "Account Settings",
+      path: "/dashboard/myprofile",
+      iconColor: "#03C9D7",
+      iconBg: "#E5FAFB",
     },
     {
       icon: <FaStar />,
