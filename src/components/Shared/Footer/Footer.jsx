@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React from "react";
 import "./Footer.css";
@@ -15,9 +15,16 @@ import { usePathname } from "next/navigation";
 const Footer = () => {
   const pathname = usePathname();
 
+  /* 
+    background-color
+    #172861
+    #092540
+    #0B1720 (more cool)
+  */
+
   if (!pathname.startsWith("/dashboard")) {
     return (
-      <div className="mt-24 bg-[#172861] lg:px-20 2xl:px-60 pt-20 print:hidden">
+      <div className="mt-24 bg-[#0B1720] lg:px-20 2xl:px-60 pt-20 print:hidden">
         <div className="flex flex-col lg:flex-row ">
           {/* first part */}
           <div className="flex-auto lg:w-32 px-10 lg:px-0">
