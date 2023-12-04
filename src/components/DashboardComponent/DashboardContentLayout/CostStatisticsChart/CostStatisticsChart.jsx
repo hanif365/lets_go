@@ -31,6 +31,7 @@ const labels = [
 ];
 
 const dataValues = ["৳15000", "৳10000", "৳5000", "৳8000", "৳4000", "৳10000"];
+const currentMonth = new Date().getMonth();
 
 const data = {
   labels,
@@ -38,20 +39,44 @@ const data = {
     {
       data: dataValues.map((value) => parseInt(value.replace("৳", ""))),
       backgroundColor: [
-        "rgba(255, 99, 132, 0.2)",
-        "rgba(54, 162, 235, 0.2)",
-        "rgba(255, 206, 86, 0.2)",
-        "rgba(75, 192, 192, 0.2)",
-        "rgba(153, 102, 255, 0.2)",
-        "rgba(255, 159, 64, 0.2)",
+        currentMonth === 0 || currentMonth === 1
+          ? "rgb(56, 132, 255, 0.5)"
+          : "rgba(255, 99, 132, 0.2)",
+        currentMonth === 2 || currentMonth === 3
+          ? "rgb(56, 132, 255, 0.5)"
+          : "rgba(54, 162, 235, 0.2)",
+        currentMonth === 4 || currentMonth === 5
+          ? "rgb(56, 132, 255, 0.5)"
+          : "rgba(255, 206, 86, 0.2)",
+        currentMonth === 6 || currentMonth === 7
+          ? "rgb(56, 132, 255, 0.5)"
+          : "rgba(75, 192, 192, 0.2)",
+        currentMonth === 8 || currentMonth === 9
+          ? "rgb(56, 132, 255, 0.5)"
+          : "rgba(153, 102, 255, 0.2)",
+        currentMonth === 10 || currentMonth === 11
+          ? "rgb(56, 132, 255, 0.5)"
+          : "rgba(255, 159, 64, 0.2)",
       ],
       borderColor: [
-        "rgba(255, 99, 132, 0.3)",
-        "rgba(54, 162, 235, 0.3)",
-        "rgba(255, 206, 86, 0.3)",
-        "rgba(75, 192, 192, 0.3)",
-        "rgba(153, 102, 255, 0.3)",
-        "rgba(255, 159, 64, 0.3)",
+        currentMonth === 0 || currentMonth === 1
+          ? "rgb(56, 132, 255, 1)"
+          : "rgba(255, 99, 132, 0.3)",
+        currentMonth === 2 || currentMonth === 3
+          ? "rgb(56, 132, 255, 1)"
+          : "rgba(54, 162, 235, 0.3)",
+        currentMonth === 4 || currentMonth === 5
+          ? "rgb(56, 132, 255, 1)"
+          : "rgba(255, 206, 86, 0.3)",
+        currentMonth === 6 || currentMonth === 7
+          ? "rgb(56, 132, 255, 1)"
+          : "rgba(75, 192, 192, 0.3)",
+        currentMonth === 8 || currentMonth === 9
+          ? "rgb(56, 132, 255, 1)"
+          : "rgba(153, 102, 255, 0.3)",
+        currentMonth === 10 || currentMonth === 11
+          ? "rgb(56, 132, 255, 1)"
+          : "rgba(255, 159, 64, 0.3)",
       ],
       borderWidth: 1,
     },
