@@ -55,10 +55,7 @@ const labels = [
   "Dec",
 ];
 
-const getCurrentMonth = () => {
-  const currentDate = new Date();
-  return currentDate.getMonth(); // Returns the index of the current month (0-indexed)
-};
+const currentMonthIndex = new Date().getMonth();
 
 const dataValues = [15, 8, 10, 3, 5, 7, 10, 3, 5, 2, 10, 13];
 
@@ -70,7 +67,7 @@ const data = {
     {
       data: dataValues,
       backgroundColor: labels.map((_, index) =>
-        index === getCurrentMonth() ? highlightColor : "#D5E6FB"
+        index === currentMonthIndex ? highlightColor : "#D5E6FB"
       ),
       borderRadius: 5,
     },
