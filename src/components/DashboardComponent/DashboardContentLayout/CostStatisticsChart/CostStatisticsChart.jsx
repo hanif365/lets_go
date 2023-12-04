@@ -60,13 +60,14 @@ const data = {
 
 const CostStatisticsChart = () => {
   return (
-    <div className="mt-3 p-2 bg-white rounded-lg shadow-sm flex-1">
+    <div className="mt-3 p-3 bg-white rounded-lg shadow-sm w-full lg:w-1/2">
       <h4 className="text-lg pb-5">Cost Statistics</h4>
-      <div className="">
+      <div className="h-[80%]">
         <Doughnut
           options={options}
           data={data}
-          className="max-h-60 2xl:max-h-96"
+          // className="max-h-60 2xl:max-h-96"
+          className="m-auto"
         />
       </div>
     </div>

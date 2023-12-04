@@ -99,13 +99,12 @@ const Sidebar = () => {
     router.push(getMenuItem.path);
   };
 
-  // here we hidden sidebar for mobile device (ai hidden feature pore add korsi, so age conditionally mobile device er jonno width add kora silo, 
-  // ja ekhono roye gese, ai conditionally bisoy ta remove korelo hoy na korleo problem nai). aknon mobile device er jonno profile 
-  // theke navigate korte hobe
+  // remove all conditional width remove for mobile device, rather we hidden sidebar in mobile device
+  // User can show sidebar from click their profile icon in mobile device
   return (
     <aside
       className={`hidden lg:block max-h-screen sticky top-0 overflow-y-auto dark:bg-[#1C1C25] dark:border-none bg-white ${
-        isSidebarCollapsed ? "w-24" : "w-20 lg:w-72"
+        isSidebarCollapsed ? "w-24" : "w-72"
       }`}
     >
       {/* <div className="flex justify-end pt-3 px-2 space-x-3">
@@ -189,14 +188,14 @@ const Sidebar = () => {
                   {menuItem.isDivider ? (
                     <hr
                       className={`my-10 border-t-2 dark:border-[#ffffff1a] border-gray-200 ${
-                        isSidebarCollapsed ? "mx-0" : "mx-0 lg:mx-5"
+                        isSidebarCollapsed ? "mx-0" : "mx-5"
                       } `}
                     />
                   ) : (
                     <div
                       onClick={() => handlenavigate(menuItem)}
                       className={`group  cursor-pointer flex items-center gap-2.5 rounded-lg py-3 font-medium ${
-                        isSidebarCollapsed ? "px-0" : "px-0 lg:px-8"
+                        isSidebarCollapsed ? "px-0" : "px-8"
                       }
                              ${
                                currentPath.includes(menuItem.id)
@@ -210,7 +209,7 @@ const Sidebar = () => {
                           isSidebarCollapsed
                             ? // ? "w-full flex justify-center items-center"
                               "mx-auto"
-                            : "mx-auto lg:mx-0"
+                            : "mx-0"
                         } `}
                       >
                         {menuItem.icon}
