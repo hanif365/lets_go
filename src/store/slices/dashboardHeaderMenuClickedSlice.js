@@ -10,16 +10,24 @@ const dashboardMenuInitialState = {
 const dashboardHeaderMenuClickedSlice = (set) => ({
   isDashboardHeaderMenuClicked: dashboardMenuInitialState,
   setIsDashboardHeaderMenuClicked: (clicked) =>
-    set(produce((state) => {
-      state.isDashboardHeaderMenuClicked = {
-        ...dashboardMenuInitialState,
-        [clicked]: true,
-      };
-    })),
+    set(
+      produce((state) => {
+        state.isDashboardHeaderMenuClicked = {
+          ...dashboardMenuInitialState,
+          [clicked]: true,
+        };
+      }),
+      false,
+      "successfullOrdersSlice/setIsDashboardHeaderMenuClicked"
+    ),
   closeDashboardHeaderMenu: () =>
-    set(produce((state) => {
-      state.isDashboardHeaderMenuClicked = { ...dashboardMenuInitialState };
-    })),
+    set(
+      produce((state) => {
+        state.isDashboardHeaderMenuClicked = { ...dashboardMenuInitialState };
+      }),
+      false,
+      "successfullOrdersSlice/closeDashboardHeaderMenu"
+    ),
 });
 
 export default dashboardHeaderMenuClickedSlice;

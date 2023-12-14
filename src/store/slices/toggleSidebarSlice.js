@@ -1,8 +1,10 @@
+import { produce } from "immer";
+
 const toggleSidebarSlice = (set) => ({
   isSidebarCollapsed: false,
   toggleSidebar: () =>
     set(
-      (state) => ({isSidebarCollapsed: !state.isSidebarCollapsed}),
+      produce((state) => ({ isSidebarCollapsed: !state.isSidebarCollapsed })),
       false,
       "toggleSidebarSlice/toggleSidebar"
     ),
