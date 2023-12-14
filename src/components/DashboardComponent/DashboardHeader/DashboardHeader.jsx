@@ -1,20 +1,17 @@
-import { useStateContext } from "@/context/ContextProvider";
 import Image from "next/image";
 import React from "react";
 import { FaBars, FaChevronDown } from "react-icons/fa6";
 import { LuBellDot } from "react-icons/lu";
 import UserProfile from "./UserProfile/UserProfile";
 import Notification from "./Notification/Notification";
+import useStore from "@/store/store";
 
 const DashboardHeader = () => {
   const {
-    isSidebarCollapsed,
-    setIsSidebarCollapsed,
     toggleSidebar,
-    isDashboardHeaderMenuClicked,
     setIsDashboardHeaderMenuClicked,
-    handleDashboardHeaderMenuClick,
-  } = useStateContext();
+    isDashboardHeaderMenuClicked,
+  } = useStore((state) => state);
   return (
     <div
       className={`p-4 sticky top-0 flex justify-end lg:justify-between dark:bg-[#1C1C25] bg-white `}
@@ -41,14 +38,14 @@ const DashboardHeader = () => {
           <div className="self-center pr-6">
             <LuBellDot
               className={`w-6 h-6 dark:text-[#ffffff] text-[#0060FF] cursor-pointer `}
-              onClick={() => handleDashboardHeaderMenuClick("notification")}
+              onClick={() => setIsDashboardHeaderMenuClicked("notification")}
             />
           </div>
 
           {/* User Profile Section */}
           <div
             className={`flex justify-evenly cursor-pointer self-center hover:dark:bg-[#131313] hover:bg-gray-50 lg:py-2 lg:px-4 rounded-xl`}
-            onClick={() => handleDashboardHeaderMenuClick("userProfile")}
+            onClick={() => setIsDashboardHeaderMenuClicked("userProfile")}
           >
             <Image
               src="/hanif.jpg"

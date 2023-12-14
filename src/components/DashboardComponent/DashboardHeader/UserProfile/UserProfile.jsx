@@ -1,4 +1,4 @@
-import { useStateContext } from "@/context/ContextProvider";
+import useStore from "@/store/store";
 import { signOut } from "next-auth/react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -8,9 +8,8 @@ import { FaPersonWalkingLuggage, FaStar } from "react-icons/fa6";
 import { TfiClose } from "react-icons/tfi";
 
 const UserProfile = () => {
+  const { closeDashboardHeaderMenu } = useStore((state) => state);
   const router = useRouter();
-  const { setIsDashboardHeaderMenuClicked, dashboardMenuInitialState } =
-    useStateContext();
 
   const userProfileData = [
     {
@@ -48,7 +47,7 @@ const UserProfile = () => {
   ];
 
   const handlenavigate = (item) => {
-    setIsDashboardHeaderMenuClicked(dashboardMenuInitialState);
+    closeDashboardHeaderMenu();
     router.push(item.path);
   };
   return (
@@ -58,9 +57,7 @@ const UserProfile = () => {
         <button
           className="p-3 cursor-pointer rounded-full hover:text-white hover:bg-red-400"
           type="button"
-          onClick={() =>
-            setIsDashboardHeaderMenuClicked(dashboardMenuInitialState)
-          }
+          onClick={() => closeDashboardHeaderMenu()}
         >
           <TfiClose className="w-6 h-6 " />
         </button>
@@ -113,7 +110,7 @@ const UserProfile = () => {
           className="text-xl text-white bg-red-500 hover:bg-red-600 py-3 w-full rounded-lg"
           // to set dashboardMenuInitialState means all state will be false
           onClick={() => {
-            setIsDashboardHeaderMenuClicked(dashboardMenuInitialState);
+            closeDashboardHeaderMenu();
             signOut();
           }}
         >

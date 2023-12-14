@@ -1,4 +1,4 @@
-import { useStateContext } from "@/context/ContextProvider";
+import useStore from "@/store/store";
 import { signOut } from "next-auth/react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -8,9 +8,8 @@ import { FaPersonWalkingLuggage, FaStar } from "react-icons/fa6";
 import { TfiClose } from "react-icons/tfi";
 
 const Notification = () => {
+  const { closeDashboardHeaderMenu } = useStore((state) => state);
   const router = useRouter();
-  const { setIsDashboardHeaderMenuClicked, dashboardMenuInitialState } =
-    useStateContext();
 
   const userProfileData = [
     {
@@ -61,9 +60,7 @@ const Notification = () => {
         <button
           className="p-3 cursor-pointer rounded-full hover:text-white hover:bg-red-400"
           type="button"
-          onClick={() =>
-            setIsDashboardHeaderMenuClicked(dashboardMenuInitialState)
-          }
+          onClick={() => closeDashboardHeaderMenu()}
         >
           <TfiClose className="w-6 h-6 " />
         </button>
@@ -93,7 +90,7 @@ const Notification = () => {
           className="text-xl text-white bg-blue-500 hover:bg-blue-600 py-3 w-full rounded-lg"
           // to set dashboardMenuInitialState means all state will be false
           onClick={() => {
-            setIsDashboardHeaderMenuClicked(dashboardMenuInitialState);
+            closeDashboardHeaderMenu();
             // need to show all notification component
           }}
         >

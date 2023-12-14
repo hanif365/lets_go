@@ -22,12 +22,11 @@ import {
   BsMoon,
   BsSun,
 } from "react-icons/bs";
-import { useStateContext } from "@/context/ContextProvider";
 import { FaHeart, FaPersonWalkingLuggage, FaStar } from "react-icons/fa6";
+import useStore from "@/store/store";
 
 const Sidebar = () => {
-  const { isSidebarCollapsed, setIsSidebarCollapsed, toggleSidebar } =
-    useStateContext();
+  const { isSidebarCollapsed } = useStore();
   const pathName = usePathname();
   const router = useRouter();
   const { theme, setTheme } = useTheme();

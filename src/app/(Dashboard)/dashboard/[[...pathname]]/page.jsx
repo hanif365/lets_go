@@ -3,13 +3,13 @@
 import DashboardContentLayout from "@/components/DashboardComponent/DashboardContentLayout/DashboardContentLayout";
 import DashboardHeader from "@/components/DashboardComponent/DashboardHeader/DashboardHeader";
 import MyBookingContentLayout from "@/components/DashboardComponent/MyBookingContentLayout/MyBookingContentLayout";
-import { useStateContext } from "@/context/ContextProvider";
+import useStore from "@/store/store";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
 const Dashboard = ({ params }) => {
-  const { successfullOrders, handleSuccessfullOrders } = useStateContext();
+  const {successfullOrders, setSuccessfullOrders} = useStore((state) => state)
   const path = params?.pathname ? params?.pathname[0] : "/";
   const session = useSession();
   const router = useRouter();
@@ -42,7 +42,9 @@ const Dashboard = ({ params }) => {
         // });
 
         // Set the matched orders and seatNames (Here, matchedOrders means Successfull Orders)
-        await handleSuccessfullOrders(matchedOrders);
+        // await handleSuccessfullOrders(matchedOrders);
+        console.log("Matched Orders: ", matchedOrders);
+        await setSuccessfullOrders(matchedOrders);
         // setSeatNames(seatNamesByOrder);
       } catch (error) {
         console.error("Error fetching orders:", error);
