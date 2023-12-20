@@ -13,7 +13,7 @@ const HeroSection = () => {
           Lifelong memories just a <br /> few seconds away
         </h1>
         <p className="text-2xl">
-          Let's start your journey with us, your dream will come true
+          Let's start your journey with us, your dream will come false hobe
         </p>
 
         <Link
