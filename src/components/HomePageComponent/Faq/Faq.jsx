@@ -9,21 +9,33 @@ import { Link } from "react-scroll";
 const faqData = [
   {
     id: 1,
-    title: "Title for Tab - 1",
+    title: "How do I book a trip?",
     content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur adipisicing elit. ...1",
+      "Booking a trip is easy! Simply browse our upcoming events, select your desired destination, choose your dates and number of travelers, and follow the checkout process. You can pay securely online and receive instant confirmation.",
   },
   {
     id: 2,
-    title: "Title for Tab - 2",
+    title: "What's included in the package price?",
     content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur adipisicing elit. ...2",
+      "Our packages typically include transportation, accommodation, guided tours, and some meals as specified in the event details. Additional activities or services may be available at extra cost. Please check the specific event description for complete details.",
   },
   {
     id: 3,
-    title: "Title for Tab - 3",
+    title: "What is your cancellation policy?",
     content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur adipisicing elit. ...3",
+      "We offer flexible cancellation options. Cancellations made 7 days before the trip are eligible for a full refund. Cancellations within 3-7 days receive a 50% refund. Unfortunately, we cannot offer refunds for cancellations made less than 72 hours before departure.",
+  },
+  {
+    id: 4,
+    title: "Are the trips suitable for children?",
+    content:
+      "Most of our trips are family-friendly and offer special rates for children. Each event listing specifies if it's suitable for children and any age restrictions. We recommend checking the specific event details or contacting us for more information.",
+  },
+  {
+    id: 5,
+    title: "What should I pack for the trip?",
+    content:
+      "We provide a detailed packing list for each destination before departure. Generally, you should bring comfortable clothing, walking shoes, personal items, and any necessary medications. Specific requirements will vary based on the destination and season.",
   },
 ];
 

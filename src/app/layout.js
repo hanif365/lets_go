@@ -6,7 +6,11 @@ import AuthProvider from "@/Provider/AuthProvider/AuthProvider";
 import MyThemeProviders from "@/utils/ThemeProvider";
 // import { ContextProvider } from "@/context/ContextProvider";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  display: 'swap',
+  variable: '--font-inter',
+});
 
 export const metadata = {
   title: "Let's Go: Your Ultimate Travel Companion",
@@ -16,16 +20,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" className={inter.variable}>
+      <body className={`${inter.className} font-sans`}>
         <AuthProvider>
-          {/* <ContextProvider> */}
-            <MyThemeProviders>
-              <Navbar />
-              {children}
-              <Footer />
-            </MyThemeProviders>
-          {/* </ContextProvider> */}
+          <MyThemeProviders>
+            <Navbar />
+            {children}
+            <Footer />
+          </MyThemeProviders>
         </AuthProvider>
       </body>
     </html>

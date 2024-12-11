@@ -41,8 +41,8 @@ const Footer = () => {
             </h2> */}
             </div>
             <p className="text-[#8A8FBE] py-8 lg:pr-10 leading-8">
-              Land behold it created good saw after she'd Our set living. Signs
-              midst
+              Your trusted companion for exploring breathtaking destinations
+              worldwide.
             </p>
 
             {/* social links */}
