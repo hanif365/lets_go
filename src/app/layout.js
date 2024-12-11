@@ -8,8 +8,8 @@ import MyThemeProviders from "@/utils/ThemeProvider";
 
 const inter = Inter({
   subsets: ["latin"],
-  display: 'swap',
-  variable: '--font-inter',
+  display: "swap",
+  variable: "--font-inter",
 });
 
 export const metadata = {
